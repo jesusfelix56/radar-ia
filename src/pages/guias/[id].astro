@@ -37,7 +37,7 @@ const howToSteps = headings
     url: `${url}#${heading.slug}`,
   }));
 
-const schema = [
+const schema: Record<string, unknown>[] = [
   {
     '@type': 'Article',
     '@id': `${url}#article`,

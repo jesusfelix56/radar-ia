@@ -65,16 +65,15 @@ function affiliate(value: string | undefined) {
   return trimmed ? trimmed : undefined;
 }
 
-export const softwareAffiliates: Record<string, string> = Object.fromEntries(
-  (
-    [
-      ['perplexity', affiliate(env.PUBLIC_AFFILIATE_PERPLEXITY)],
-      ['elevenlabs', affiliate(env.PUBLIC_AFFILIATE_ELEVENLABS)],
-      ['copy-ai', affiliate(env.PUBLIC_AFFILIATE_COPYAI)],
-      ['runway', affiliate(env.PUBLIC_AFFILIATE_RUNWAY)],
-    ] as const
-  ).filter((entry): entry is [string, string] => Boolean(entry[1])),
-);
+export const softwareAffiliates: Record<string, string> = {};
+for (const [id, url] of [
+  ['perplexity', affiliate(env.PUBLIC_AFFILIATE_PERPLEXITY)],
+  ['elevenlabs', affiliate(env.PUBLIC_AFFILIATE_ELEVENLABS)],
+  ['copy-ai', affiliate(env.PUBLIC_AFFILIATE_COPYAI)],
+  ['runway', affiliate(env.PUBLIC_AFFILIATE_RUNWAY)],
+] as [string, string | undefined][]) {
+  if (url) softwareAffiliates[id] = url;
+}
 
 /** Endpoints de formularios. Vacío = se usa mailto como respaldo. */
 export const forms = {
