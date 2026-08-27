@@ -1,0 +1,32 @@
+---
+import { resolveToolCta, affiliateLinkAttrs } from '../lib/affiliates';
+
+interface Props {
+  tool: {
+    id: string;
+    data: { website: string; affiliateUrl?: string; name: string };
+  };
+  label?: string;
+  class?: string;
+}
+
+const { tool, label, class: className = '' } = Astro.props;
+const cta = resolveToolCta(tool);
+---
+
+<a
+  href={cta.href}
+  rel={cta.isAffiliate ? affiliateLinkAttrs.rel : 'noopener'}
+  target="_blank"
+  class:list={[
+    'inline-flex items-center justify-center rounded-lg bg-brand-400 px-4 py-2.5 text-sm font-semibold text-ink-950 transition hover:bg-brand-300',
+    className,
+  ]}
+>
+  {label ?? `Probar ${cta.name}`}
+  {
+    cta.isAffiliate && (
+      <span class="ml-1.5 text-[0.65rem] font-medium tracking-wide uppercase opacity-70">Afiliado</span>
+    )
+  }
+</a>

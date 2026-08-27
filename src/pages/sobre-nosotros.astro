@@ -1,0 +1,54 @@
+---
+import TextPage from '../layouts/TextPage.astro';
+import { site } from '../site.config';
+---
+
+<TextPage
+  title="Sobre nosotros"
+  description="Quiénes estamos detrás de Radar IA, por qué existe este proyecto y cómo puedes contactarnos."
+  heading={`Sobre ${site.name}`}
+  intro="Un proyecto pequeño, independiente y en español sobre herramientas de inteligencia artificial."
+  breadcrumbs={[{ label: 'Sobre nosotros' }]}
+>
+  <h2>Por qué existe esto</h2>
+  <p>
+    Casi todo lo que se publica sobre herramientas de IA en español son listas traducidas del inglés,
+    escritas por gente que ha abierto la web del producto pero no lo ha usado. Cuando buscas si algo
+    merece la pena para tu trabajo concreto, esas listas no sirven de nada.
+  </p>
+  <p>
+    Aquí publicamos menos y más despacio: cada herramienta se usa semanas antes de tener nota, y cada
+    análisis cuenta también lo que falla.
+  </p>
+
+  <h2>Qué encontrarás</h2>
+  <ul>
+    <li><a href="/herramientas">Análisis individuales</a> con pruebas medidas y notas por criterio.</li>
+    <li><a href="/comparativas">Comparativas</a> para decidir entre dos opciones concretas.</li>
+    <li><a href="/guias">Guías prácticas</a> para usar mejor lo que ya tienes contratado.</li>
+    <li>
+      <a href="/recursos/generador-de-prompts">Herramientas gratuitas</a> que puedes usar sin
+      registrarte.
+    </li>
+  </ul>
+
+  <h2>Qué no vas a encontrar</h2>
+  <ul>
+    <li>Publirreportajes disfrazados de análisis.</li>
+    <li>Notas de diez para todo.</li>
+    <li>Contenido generado en masa sin revisión humana.</li>
+  </ul>
+
+  <h2>Cómo trabajamos</h2>
+  <p>
+    Lo explicamos con detalle en la página de <a href="/metodologia">metodología</a>, incluyendo
+    cómo se calculan las notas y cómo nos financiamos.
+  </p>
+
+  <h2>Escríbenos</h2>
+  <p>
+    Si has detectado un error, quieres proponer una herramienta para analizar o simplemente quieres
+    discutir una nota, el <a href="/contacto">formulario de contacto</a> está abierto. Contestamos a
+    todo lo que no sea spam.
+  </p>
+</TextPage>

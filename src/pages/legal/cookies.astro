@@ -1,0 +1,130 @@
+---
+import TextPage from '../../layouts/TextPage.astro';
+---
+
+<TextPage
+  title="Política de cookies"
+  description="Qué cookies usamos, para qué sirven y cómo cambiar tus preferencias en cualquier momento."
+  heading="Política de cookies"
+  breadcrumbs={[{ label: 'Legal' }, { label: 'Cookies' }]}
+  updated="2026-08-20"
+>
+  <h2>Qué es una cookie</h2>
+  <p>
+    Un pequeño archivo que un sitio web guarda en tu dispositivo para recordar información entre
+    visitas. Algunas son imprescindibles para que la web funcione; otras sirven para medir audiencia
+    o mostrar publicidad.
+  </p>
+
+  <h2>Cookies que usamos</h2>
+
+  <h3>Técnicas y de preferencias (no requieren consentimiento)</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Finalidad</th>
+        <th>Duración</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>radar-ia:consent</code></td>
+        <td>Recordar si has aceptado o rechazado las cookies publicitarias</td>
+        <td>Almacenamiento local, hasta que lo borres</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>
+    Técnicamente no es una cookie sino una entrada de <code>localStorage</code>, pero se rige por las
+    mismas normas y te lo contamos igual.
+  </p>
+
+  <h3>Publicitarias (solo si las aceptas)</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Proveedor</th>
+        <th>Finalidad</th>
+        <th>Más información</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Google AdSense</td>
+        <td>Mostrar anuncios, limitar su repetición y medir su rendimiento</td>
+        <td>
+          <a
+            href="https://policies.google.com/technologies/partner-sites"
+            rel="noopener nofollow"
+            target="_blank">Política de Google</a
+          >
+        </td>
+      </tr>
+      <tr>
+        <td>Amazon</td>
+        <td>Atribuir una compra al enlace desde el que llegaste</td>
+        <td>
+          <a
+            href="https://www.amazon.es/gp/help/customer/display.html?nodeId=201890250"
+            rel="noopener nofollow"
+            target="_blank">Aviso de cookies de Amazon</a
+          >
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>
+    Las cookies de Amazon se instalan en el dominio de Amazon cuando haces clic en un enlace de
+    afiliado y sales de este sitio, no antes.
+  </p>
+
+  <h2>Cómo cambiar tus preferencias</h2>
+  <p>
+    Puedes revocar o modificar tu decisión cuando quieras desde el enlace
+    <button type="button" data-open-consent class="text-brand-300 underline">
+      "Cambiar preferencias de cookies"
+    </button>
+    del pie de página. Al hacerlo volverá a aparecer el aviso inicial.
+  </p>
+  <p>
+    Si rechazas las cookies publicitarias, el sitio funciona con total normalidad: verás huecos sin
+    anuncios y podrás leer todo el contenido igual.
+  </p>
+
+  <h2>Desde tu navegador</h2>
+  <p>
+    También puedes bloquear o eliminar cookies desde la configuración de tu navegador. Ten en cuenta
+    que el bloqueo total puede afectar al funcionamiento de otros sitios que visites.
+  </p>
+  <ul>
+    <li>
+      <a
+        href="https://support.google.com/chrome/answer/95647"
+        rel="noopener nofollow"
+        target="_blank">Google Chrome</a
+      >
+    </li>
+    <li>
+      <a
+        href="https://support.mozilla.org/es/kb/Borrar%20cookies"
+        rel="noopener nofollow"
+        target="_blank">Mozilla Firefox</a
+      >
+    </li>
+    <li>
+      <a
+        href="https://support.apple.com/es-es/guide/safari/sfri11471/mac"
+        rel="noopener nofollow"
+        target="_blank">Safari</a
+      >
+    </li>
+    <li>
+      <a
+        href="https://support.microsoft.com/es-es/microsoft-edge"
+        rel="noopener nofollow"
+        target="_blank">Microsoft Edge</a
+      >
+    </li>
+  </ul>
+</TextPage>

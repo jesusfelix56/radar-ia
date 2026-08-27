@@ -1,0 +1,25 @@
+---
+import AdUnit from './AdUnit.astro';
+
+/**
+ * Bloque de anuncio que se reubica después del segundo encabezado del artículo.
+ * Se renderiza al final del contenido y se mueve con JS: así el lector encuentra
+ * el anuncio dentro del texto sin que el Markdown tenga que saber nada de anuncios.
+ */
+---
+
+<div id="in-article-ad">
+  <AdUnit adSlot="inArticle" format="fluid" layout="in-article" minHeight={280} />
+</div>
+
+<script is:inline>
+  (() => {
+    const ad = document.getElementById('in-article-ad');
+    const article = document.querySelector('[data-article-body]');
+    if (!ad || !article) return;
+
+    const headings = article.querySelectorAll('h2');
+    const anchor = headings[1] ?? headings[0];
+    if (anchor) anchor.before(ad);
+  })();
+</script>

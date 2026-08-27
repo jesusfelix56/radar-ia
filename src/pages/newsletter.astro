@@ -1,0 +1,50 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Newsletter from '../components/Newsletter.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+
+const includes = [
+  'La herramienta que hemos probado esa semana y si merece la pena.',
+  'Un cambio de precio o de límites que te afecte antes de que lo anuncien a bombo y platillo.',
+  'Un prompt concreto que nos haya funcionado, listo para copiar.',
+];
+---
+
+<BaseLayout
+  title="Newsletter semanal sobre herramientas de IA"
+  description="Un correo cada viernes con la herramienta de IA que hemos probado esa semana, su precio real y si compensa. Sin spam."
+>
+  <div class="container-page max-w-3xl py-10">
+    <Breadcrumbs items={[{ label: 'Newsletter' }]} />
+
+    <div class="mt-8">
+      <Newsletter />
+    </div>
+
+    <section class="mt-14">
+      <h2 class="font-display text-2xl font-bold text-white">Qué recibes exactamente</h2>
+      <ul class="mt-5 space-y-3">
+        {
+          includes.map((item) => (
+            <li class="flex gap-3 text-slate-300">
+              <span class="mt-1 text-brand-400" aria-hidden="true">
+                →
+              </span>
+              {item}
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <section class="mt-12 rounded-2xl border border-ink-700 bg-ink-900/50 p-6">
+      <h2 class="font-display text-lg font-semibold text-white">Nuestro compromiso</h2>
+      <ul class="mt-4 space-y-2 text-sm text-slate-400">
+        <li>Un correo por semana. Nunca dos.</li>
+        <li>No vendemos ni cedemos tu dirección a nadie.</li>
+        <li>Baja en un clic, sin preguntas ni formularios de retención.</li>
+        <li>Si una semana no tenemos nada útil que contar, no escribimos.</li>
+      </ul>
+    </section>
+  </div>
+</BaseLayout>

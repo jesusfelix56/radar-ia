@@ -1,0 +1,88 @@
+---
+import { amazonProductUrl, amazonSearchUrl, affiliateLinkAttrs } from '../lib/amazon';
+import { formatPrice } from '../lib/format';
+
+interface Pick {
+  asin?: string;
+  search?: string;
+  title: string;
+  note: string;
+  price?: number;
+  currency?: string;
+}
+
+interface Props {
+  picks: Pick[];
+  title?: string;
+  intro?: string;
+  compact?: boolean;
+  moreHref?: string;
+  moreLabel?: string;
+}
+
+const {
+  picks,
+  title = 'Material recomendado en Amazon',
+  intro = 'Complementos que usamos a diario para sacar más partido a esta herramienta.',
+  compact = false,
+  moreHref,
+  moreLabel = 'Ver todas las recomendaciones',
+} = Astro.props;
+---
+
+{
+  picks.length > 0 && (
+    <section class="not-prose my-12 rounded-2xl border border-amber-500/30 bg-amber-500/[0.06] p-6">
+      <div class="flex items-start justify-between gap-4">
+        <div>
+          <h2 class="font-display text-lg font-semibold text-white">{title}</h2>
+          <p class="mt-1 text-sm text-slate-300">{intro}</p>
+        </div>
+        <span class="shrink-0 rounded-full border border-amber-500/40 px-2.5 py-1 text-[0.65rem] font-semibold tracking-wide text-amber-300 uppercase">
+          Afiliado
+        </span>
+      </div>
+
+      <ul class={`mt-5 grid gap-4 ${compact ? '' : 'sm:grid-cols-2'}`}>
+        {picks.map((pick) => (
+          <li class="flex flex-col justify-between rounded-xl border border-ink-600 bg-ink-900/60 p-4">
+            <div>
+              <h3 class="text-sm font-semibold text-white">{pick.title}</h3>
+              <p class="mt-1.5 text-sm leading-relaxed text-slate-400">{pick.note}</p>
+            </div>
+            <div class="mt-4 flex items-center justify-between gap-3">
+              {pick.price !== undefined ? (
+                <span class="text-sm text-slate-300">
+                  desde <strong class="text-white">{formatPrice(pick.price, pick.currency)}</strong>
+                </span>
+              ) : (
+                <span class="text-xs text-slate-500">Precio variable</span>
+              )}
+              <a
+                href={pick.asin ? amazonProductUrl(pick.asin) : amazonSearchUrl(pick.search ?? pick.title)}
+                rel={affiliateLinkAttrs.rel}
+                target={affiliateLinkAttrs.target}
+                class="rounded-lg bg-amber-400 px-3.5 py-2 text-sm font-semibold text-ink-950 transition hover:bg-amber-300"
+              >
+                Ver en Amazon
+              </a>
+            </div>
+          </li>
+        ))}
+      </ul>
+
+      <p class="mt-5 text-xs leading-relaxed text-slate-500">
+        Como Afiliado de Amazon, obtenemos ingresos por las compras adscritas que cumplen los
+        requisitos aplicables. El precio que pagas es exactamente el mismo.
+        {moreHref && (
+          <>
+            {' '}
+            <a href={moreHref} class="text-amber-300 underline hover:text-amber-200">
+              {moreLabel}
+            </a>
+          </>
+        )}
+      </p>
+    </section>
+  )
+}

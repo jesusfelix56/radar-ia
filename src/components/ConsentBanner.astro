@@ -1,0 +1,99 @@
+---
+/**
+ * Banner de consentimiento. AdSense solo se carga cuando el usuario acepta,
+ * que es lo que exige el RGPD para publicidad personalizada en la UE.
+ */
+import { ads } from '../site.config';
+---
+
+<div
+  id="consent-banner"
+  hidden
+  class="no-print fixed inset-x-3 bottom-3 z-50 hidden rounded-2xl border border-ink-600 bg-ink-900/95 p-5 shadow-2xl shadow-black/60 backdrop-blur md:inset-x-auto md:right-6 md:bottom-6 md:max-w-md"
+  role="dialog"
+  aria-live="polite"
+  aria-label="Aviso de cookies"
+>
+  <h2 class="text-base font-semibold text-white">Cookies y publicidad</h2>
+  <p class="mt-2 text-sm leading-relaxed text-slate-300">
+    Usamos cookies propias para recordar tus preferencias y de terceros (Google AdSense) para
+    mostrar anuncios que mantienen el proyecto en pie. Puedes rechazarlas y seguir leyendo todo el
+    contenido igual.
+  </p>
+  <div class="mt-4 flex flex-col gap-2 sm:flex-row">
+    <button
+      type="button"
+      data-consent="granted"
+      class="flex-1 rounded-lg bg-brand-400 px-4 py-2.5 text-sm font-semibold text-ink-950 transition hover:bg-brand-300"
+    >
+      Aceptar
+    </button>
+    <button
+      type="button"
+      data-consent="denied"
+      class="flex-1 rounded-lg border border-ink-600 px-4 py-2.5 text-sm font-semibold text-slate-200 transition hover:border-slate-400 hover:text-white"
+    >
+      Solo las necesarias
+    </button>
+  </div>
+  <a href="/legal/cookies" class="mt-3 inline-block text-xs text-slate-400 underline hover:text-brand-300">
+    Más información sobre cookies
+  </a>
+</div>
+
+<script is:inline define:vars={{ adsClient: ads.client, adsEnabled: ads.enabled }}>
+  (() => {
+    const STORAGE_KEY = 'radar-ia:consent';
+    const banner = document.getElementById('consent-banner');
+
+    function loadAds() {
+      if (!adsEnabled || !adsClient || window.__radarAdsLoaded) return;
+      window.__radarAdsLoaded = true;
+      const script = document.createElement('script');
+      script.async = true;
+      script.crossOrigin = 'anonymous';
+      script.src =
+        'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + adsClient;
+      script.onload = () => {
+        document.querySelectorAll('ins.adsbygoogle:not([data-filled])').forEach((slot) => {
+          slot.setAttribute('data-filled', 'true');
+          (window.adsbygoogle = window.adsbygoogle || []).push({});
+        });
+      };
+      document.head.appendChild(script);
+    }
+
+    function show() {
+      if (!banner) return;
+      banner.hidden = false;
+      banner.classList.remove('hidden');
+    }
+
+    function hide() {
+      if (!banner) return;
+      banner.hidden = true;
+      banner.classList.add('hidden');
+    }
+
+    const stored = localStorage.getItem(STORAGE_KEY);
+    if (stored === 'granted') loadAds();
+    else if (stored !== 'denied') show();
+
+    banner?.querySelectorAll('[data-consent]').forEach((button) => {
+      button.addEventListener('click', () => {
+        const choice = button.getAttribute('data-consent');
+        localStorage.setItem(STORAGE_KEY, choice);
+        hide();
+        if (choice === 'granted') loadAds();
+      });
+    });
+
+    document.querySelectorAll('[data-open-consent]').forEach((trigger) => {
+      trigger.addEventListener('click', (event) => {
+        event.preventDefault();
+        localStorage.removeItem(STORAGE_KEY);
+        show();
+      });
+    });
+  })();
+</script>

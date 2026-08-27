@@ -1,0 +1,81 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import RatingBadge from './RatingBadge.astro';
+import TryButton from './TryButton.astro';
+import { formatPrice } from '../lib/format';
+
+interface Props {
+  tool: CollectionEntry<'tools'>;
+  rank?: number;
+}
+
+const { tool, rank } = Astro.props;
+const { name, tagline, category, rating, pricing, accent } = tool.data;
+
+const accents: Record<string, string> = {
+  brand: 'from-brand-500/25 to-brand-500/5 text-brand-300 border-brand-400/30',
+  accent: 'from-accent-500/25 to-accent-500/5 text-accent-400 border-accent-400/30',
+  lime: 'from-lime-500/25 to-lime-500/5 text-lime-300 border-lime-400/30',
+  amber: 'from-amber-500/25 to-amber-500/5 text-amber-300 border-amber-400/30',
+  rose: 'from-rose-500/25 to-rose-500/5 text-rose-300 border-rose-400/30',
+};
+
+const initials = name
+  .replace(/[^\p{L}\p{N} ]/gu, '')
+  .split(' ')
+  .slice(0, 2)
+  .map((word) => word[0])
+  .join('')
+  .toUpperCase();
+
+const price = pricing.hasFreePlan
+  ? 'Plan gratuito'
+  : pricing.from !== null
+    ? `Desde ${formatPrice(pricing.from, pricing.currency)}/${pricing.period}`
+    : 'Precio a consultar';
+---
+
+<article
+  class="group relative flex h-full flex-col rounded-2xl border border-ink-700 bg-ink-900/60 p-5 transition hover:-translate-y-0.5 hover:border-brand-400/50 hover:bg-ink-800/70"
+>
+  {
+    rank !== undefined && (
+      <span class="absolute -top-3 -left-3 z-10 flex h-8 w-8 items-center justify-center rounded-full border border-ink-600 bg-ink-950 text-sm font-bold text-brand-300">
+        {rank}
+      </span>
+    )
+  }
+
+  <div class="flex items-start gap-4">
+    <div
+      class={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border bg-gradient-to-br font-display text-base font-bold ${accents[accent]}`}
+      aria-hidden="true"
+    >
+      {initials}
+    </div>
+    <div class="min-w-0 flex-1">
+      <h3 class="font-display text-lg leading-tight font-semibold text-white">
+        <a href={`/herramientas/${tool.id}`} class="hover:text-brand-300">
+          {name}
+        </a>
+      </h3>
+      <p class="mt-0.5 text-xs tracking-wide text-slate-500 uppercase">{category}</p>
+    </div>
+    <RatingBadge value={rating} size="sm" />
+  </div>
+
+  <p class="mt-4 flex-1 text-sm leading-relaxed text-slate-400">{tagline}</p>
+
+  <div class="mt-5 flex flex-wrap items-center justify-between gap-3 border-t border-ink-700 pt-4">
+    <span class="text-xs font-medium text-slate-400">{price}</span>
+    <div class="flex flex-wrap items-center gap-2">
+      <a
+        href={`/herramientas/${tool.id}`}
+        class="rounded-lg border border-ink-600 px-3 py-2 text-xs font-semibold text-slate-200 transition hover:border-brand-400/60 hover:text-white"
+      >
+        Leer análisis
+      </a>
+      <TryButton tool={tool} label="Probar" class="px-3 py-2 text-xs" />
+    </div>
+  </div>
+</article>

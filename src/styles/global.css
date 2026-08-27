@@ -1,0 +1,112 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-sora), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  --color-ink-950: #05070f;
+  --color-ink-900: #0a0f1e;
+  --color-ink-800: #111827;
+  --color-ink-700: #1c2438;
+  --color-ink-600: #2a3450;
+
+  --color-brand-300: #67e8f9;
+  --color-brand-400: #22d3ee;
+  --color-brand-500: #06b6d4;
+  --color-brand-600: #0891b2;
+
+  --color-accent-400: #c084fc;
+  --color-accent-500: #a855f7;
+  --color-accent-600: #9333ea;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+  }
+
+  body {
+    background-color: var(--color-ink-950);
+    color: #dbe3f4;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+
+  ::selection {
+    background-color: var(--color-brand-400);
+    color: var(--color-ink-950);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand-400);
+    outline-offset: 3px;
+  }
+}
+
+@utility container-page {
+  width: 100%;
+  margin-inline: auto;
+  max-width: 76rem;
+  padding-inline: 1.25rem;
+}
+
+/* Degradado de fondo reutilizable para cabeceras de sección. */
+@utility aurora {
+  background-image:
+    radial-gradient(60rem 30rem at 12% -10%, color-mix(in srgb, var(--color-brand-500) 22%, transparent), transparent),
+    radial-gradient(50rem 26rem at 88% 0%, color-mix(in srgb, var(--color-accent-500) 20%, transparent), transparent);
+}
+
+/* Ajustes del contenido Markdown renderizado. */
+.prose-radar {
+  --tw-prose-invert-links: var(--color-brand-300);
+}
+
+.prose-radar :where(h2) {
+  scroll-margin-top: 6rem;
+  margin-top: 2.5em;
+  border-top: 1px solid var(--color-ink-700);
+  padding-top: 1.25em;
+}
+
+.prose-radar :where(h2):first-of-type {
+  border-top: 0;
+  padding-top: 0;
+  margin-top: 1.5em;
+}
+
+.prose-radar :where(a) {
+  text-underline-offset: 3px;
+}
+
+.prose-radar :where(table) {
+  font-size: 0.9rem;
+}
+
+.prose-radar :where(th) {
+  background-color: var(--color-ink-800);
+}
+
+.prose-radar :where(blockquote) {
+  border-left-color: var(--color-brand-500);
+  background-color: color-mix(in srgb, var(--color-brand-500) 8%, transparent);
+  border-radius: 0 0.5rem 0.5rem 0;
+  padding: 0.25rem 1.25rem;
+  font-style: normal;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}

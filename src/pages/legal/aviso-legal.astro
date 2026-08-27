@@ -1,0 +1,84 @@
+---
+import TextPage from '../../layouts/TextPage.astro';
+import { site } from '../../site.config';
+---
+
+<TextPage
+  title="Aviso legal"
+  description="Datos identificativos del titular, condiciones de uso del sitio y régimen de propiedad intelectual."
+  heading="Aviso legal"
+  breadcrumbs={[{ label: 'Legal' }, { label: 'Aviso legal' }]}
+  updated="2026-08-20"
+>
+  <div class="rounded-xl border border-amber-500/30 bg-amber-500/[0.07] p-4 text-sm not-prose">
+    <strong class="text-amber-300">Antes de publicar:</strong>
+    <span class="text-slate-300">
+      rellena los campos entre corchetes. La LSSI-CE obliga a que estos datos identificativos sean
+      reales y accesibles.
+    </span>
+  </div>
+
+  <h2>Datos identificativos</h2>
+  <p>
+    En cumplimiento del artículo 10 de la Ley 34/2002 de Servicios de la Sociedad de la Información y
+    de Comercio Electrónico:
+  </p>
+  <ul>
+    <li><strong>Titular:</strong> [NOMBRE Y APELLIDOS O RAZÓN SOCIAL]</li>
+    <li><strong>NIF/CIF:</strong> [NÚMERO]</li>
+    <li><strong>Domicilio:</strong> [DIRECCIÓN COMPLETA]</li>
+    <li><strong>Correo electrónico:</strong> <a href={`mailto:${site.email}`}>{site.email}</a></li>
+    <li><strong>Dominio:</strong> {site.url}</li>
+  </ul>
+
+  <h2>Objeto del sitio</h2>
+  <p>
+    {site.name} es un medio informativo independiente que publica análisis, comparativas y guías sobre
+    herramientas de inteligencia artificial. El acceso al contenido es libre y gratuito.
+  </p>
+
+  <h2>Condiciones de uso</h2>
+  <p>
+    El acceso a este sitio implica la aceptación de estas condiciones. El usuario se compromete a
+    hacer un uso adecuado del contenido y a no emplearlo para actividades ilícitas, lesivas de
+    derechos de terceros o que puedan dañar el sitio o impedir su normal funcionamiento.
+  </p>
+
+  <h2>Propiedad intelectual</h2>
+  <p>
+    Los textos, análisis, puntuaciones, diseño y código de este sitio son titularidad del responsable
+    salvo indicación en contra. Se permite citar fragmentos breves indicando la fuente y enlazando a
+    la página original. No se autoriza la reproducción íntegra de artículos ni su uso para entrenar
+    modelos comerciales sin autorización expresa.
+  </p>
+  <p>
+    Las marcas, nombres comerciales y logotipos de las herramientas analizadas pertenecen a sus
+    respectivos titulares. Su mención se hace a efectos informativos y de reseña, al amparo del
+    derecho de cita, sin que implique relación comercial alguna salvo cuando se indique
+    expresamente en el <a href="/legal/afiliados">aviso de afiliados</a>.
+  </p>
+
+  <h2>Exención de responsabilidad</h2>
+  <p>
+    El contenido tiene carácter informativo y refleja la opinión del equipo tras probar cada
+    herramienta. Los precios, límites y funcionalidades cambian con frecuencia: verifica siempre la
+    información en la web oficial del proveedor antes de contratar.
+  </p>
+  <p>
+    No nos hacemos responsables de las decisiones de compra ni del uso que hagas de las herramientas
+    analizadas, ni del contenido de los sitios de terceros a los que enlazamos.
+  </p>
+
+  <h2>Enlaces externos</h2>
+  <p>
+    Este sitio contiene enlaces a webs de terceros, algunos de ellos de afiliado. No controlamos ni
+    respondemos del contenido, las políticas de privacidad ni las prácticas de esos sitios.
+  </p>
+
+  <h2>Legislación aplicable</h2>
+  <p>
+    Estas condiciones se rigen por la legislación española. Para cualquier controversia serán
+    competentes los juzgados y tribunales del domicilio del titular, salvo que la normativa de
+    consumidores establezca otro fuero.
+  </p>
+</TextPage>

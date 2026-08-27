@@ -1,0 +1,121 @@
+---
+import TextPage from '../../layouts/TextPage.astro';
+import { site } from '../../site.config';
+---
+
+<TextPage
+  title="Política de privacidad"
+  description="Qué datos recogemos, con qué base legal, durante cuánto tiempo y cómo ejercer tus derechos."
+  heading="Política de privacidad"
+  breadcrumbs={[{ label: 'Legal' }, { label: 'Privacidad' }]}
+  updated="2026-08-20"
+>
+  <div class="rounded-xl border border-amber-500/30 bg-amber-500/[0.07] p-4 text-sm not-prose">
+    <strong class="text-amber-300">Antes de publicar:</strong>
+    <span class="text-slate-300">
+      sustituye los campos entre corchetes por tus datos reales de responsable del tratamiento. Este
+      texto es una base sólida, pero conviene que lo revise un profesional si tratas datos sensibles.
+    </span>
+  </div>
+
+  <h2>1. Responsable del tratamiento</h2>
+  <ul>
+    <li><strong>Titular:</strong> [NOMBRE Y APELLIDOS O RAZÓN SOCIAL]</li>
+    <li><strong>NIF/CIF:</strong> [NÚMERO]</li>
+    <li><strong>Domicilio:</strong> [DIRECCIÓN COMPLETA]</li>
+    <li><strong>Correo electrónico:</strong> <a href={`mailto:${site.email}`}>{site.email}</a></li>
+    <li><strong>Sitio web:</strong> {site.url}</li>
+  </ul>
+
+  <h2>2. Qué datos tratamos</h2>
+  <p>Solo los que nos das voluntariamente y los que genera la navegación:</p>
+  <ul>
+    <li>
+      <strong>Formulario de contacto:</strong> nombre, correo electrónico y el contenido de tu
+      mensaje.
+    </li>
+    <li><strong>Newsletter:</strong> tu dirección de correo electrónico.</li>
+    <li>
+      <strong>Navegación:</strong> datos técnicos como dirección IP, tipo de navegador y páginas
+      visitadas, recogidos por los servicios de terceros descritos más abajo.
+    </li>
+  </ul>
+  <p>
+    Las herramientas interactivas de este sitio, como el generador de prompts, funcionan íntegramente
+    en tu navegador. Lo que escribes en ellas no se envía a ningún servidor.
+  </p>
+
+  <h2>3. Finalidad y base legal</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Finalidad</th>
+        <th>Base legal</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Responder a tus consultas</td>
+        <td>Consentimiento del interesado (art. 6.1.a RGPD)</td>
+      </tr>
+      <tr>
+        <td>Enviar la newsletter</td>
+        <td>Consentimiento del interesado (art. 6.1.a RGPD)</td>
+      </tr>
+      <tr>
+        <td>Mostrar publicidad personalizada</td>
+        <td>Consentimiento del interesado (art. 6.1.a RGPD)</td>
+      </tr>
+      <tr>
+        <td>Seguridad y funcionamiento del sitio</td>
+        <td>Interés legítimo (art. 6.1.f RGPD)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>4. Conservación</h2>
+  <p>
+    Los mensajes del formulario se conservan mientras dure la comunicación y hasta un año después.
+    Los datos de la newsletter, hasta que te des de baja. Los datos de navegación, según los plazos
+    de cada proveedor indicados en la <a href="/legal/cookies">política de cookies</a>.
+  </p>
+
+  <h2>5. Destinatarios y transferencias internacionales</h2>
+  <p>Trabajamos con los siguientes encargados del tratamiento:</p>
+  <ul>
+    <li><strong>Google Ireland Ltd.</strong> — publicidad (AdSense).</li>
+    <li><strong>[PROVEEDOR DE HOSTING]</strong> — alojamiento del sitio.</li>
+    <li><strong>[PROVEEDOR DE NEWSLETTER]</strong> — envío de correos.</li>
+  </ul>
+  <p>
+    Alguno de estos proveedores puede transferir datos fuera del Espacio Económico Europeo. En ese
+    caso, la transferencia se ampara en las Cláusulas Contractuales Tipo aprobadas por la Comisión
+    Europea o en una decisión de adecuación.
+  </p>
+
+  <h2>6. Tus derechos</h2>
+  <p>
+    Puedes ejercer los derechos de acceso, rectificación, supresión, oposición, limitación del
+    tratamiento y portabilidad escribiendo a
+    <a href={`mailto:${site.email}`}>{site.email}</a>, indicando el derecho que ejerces y adjuntando
+    copia de un documento identificativo.
+  </p>
+  <p>
+    También puedes retirar tu consentimiento en cualquier momento y presentar una reclamación ante la
+    <a href="https://www.aepd.es" rel="noopener nofollow" target="_blank">
+      Agencia Española de Protección de Datos
+    </a>.
+  </p>
+
+  <h2>7. Menores</h2>
+  <p>
+    Este sitio no está dirigido a menores de 14 años y no recogemos datos de forma consciente de
+    personas por debajo de esa edad.
+  </p>
+
+  <h2>8. Cambios en esta política</h2>
+  <p>
+    Si modificamos esta política, actualizaremos la fecha que aparece al inicio. Te recomendamos
+    revisarla periódicamente.
+  </p>
+</TextPage>

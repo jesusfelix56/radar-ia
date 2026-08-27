@@ -1,0 +1,221 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import AdUnit from '../components/AdUnit.astro';
+import Newsletter from '../components/Newsletter.astro';
+import { extraGear } from '../data/gear';
+import { amazonProductUrl, amazonSearchUrl, affiliateLinkAttrs } from '../lib/amazon';
+import { formatPrice } from '../lib/format';
+import { site } from '../site.config';
+
+interface CatalogItem {
+  title: string;
+  note: string;
+  price?: number;
+  currency?: string;
+  asin?: string;
+  search?: string;
+  category: string;
+  sourceLabel: string;
+  sourceHref?: string;
+}
+
+const tools = await getCollection('tools', ({ data }) => !data.draft);
+const guides = await getCollection('guides', ({ data }) => !data.draft);
+
+const fromContent: CatalogItem[] = [
+  ...tools.flatMap((tool) =>
+    tool.data.amazonPicks.map((pick) => ({
+      ...pick,
+      category: tool.data.category,
+      sourceLabel: `Análisis de ${tool.data.name}`,
+      sourceHref: `/herramientas/${tool.id}`,
+    })),
+  ),
+  ...guides.flatMap((guide) =>
+    guide.data.amazonPicks.map((pick) => ({
+      ...pick,
+      category: 'Guías',
+      sourceLabel: guide.data.title,
+      sourceHref: `/guias/${guide.id}`,
+    })),
+  ),
+];
+
+const extras: CatalogItem[] = extraGear.map((pick) => ({
+  ...pick,
+  sourceLabel: 'Selección de redacción',
+}));
+
+const seen = new Set<string>();
+const catalog = [...fromContent, ...extras].filter((item) => {
+  const key = (item.asin || item.search || item.title).toLowerCase();
+  if (seen.has(key)) return false;
+  seen.add(key);
+  return true;
+});
+
+const categories = [...new Set(catalog.map((item) => item.category))].sort();
+---
+
+<BaseLayout
+  title="Recomendados en Amazon: equipo para trabajar con IA"
+  description="Micrófonos, monitores, tabletas y libros que usamos de verdad al analizar herramientas de inteligencia artificial. Enlaces de afiliado identificados."
+  schema={[
+    {
+      '@type': 'CollectionPage',
+      name: 'Recomendados en Amazon',
+      description:
+        'Selección de equipo y libros para trabajar con inteligencia artificial, con enlaces de afiliado de Amazon.',
+      url: `${site.url}/recomendados`,
+    },
+  ]}
+>
+  <div class="container-page py-10">
+    <Breadcrumbs items={[{ label: 'Recomendados' }]} />
+
+    <header class="mt-5 max-w-3xl">
+      <p
+        class="inline-flex items-center gap-2 rounded-full border border-amber-500/40 bg-amber-500/10 px-3 py-1 text-xs font-semibold tracking-wide text-amber-300 uppercase"
+      >
+        Programa de afiliados de Amazon
+      </p>
+      <h1 class="mt-4 font-display text-4xl font-bold text-white">Equipo que sí usamos</h1>
+      <p class="mt-4 text-lg leading-relaxed text-slate-300">
+        No vendemos las herramientas que analizamos. Lo que enlazamos aquí son complementos físicos
+        y libros: el material que ha cambiado nuestro día a día junto a ChatGPT, Claude o Midjourney.
+      </p>
+      <p class="mt-3 text-sm text-slate-500">
+        Como Afiliado de Amazon, obtenemos ingresos por las compras adscritas que cumplen los
+        requisitos aplicables. El precio que pagas es el mismo.
+        <a href="/legal/afiliados" class="text-brand-300 underline hover:text-brand-200">
+          Cómo nos financiamos
+        </a>
+      </p>
+    </header>
+
+    <AdUnit adSlot="header" minHeight={110} class="mt-8 mb-2" />
+
+    <div class="mt-8 flex flex-wrap gap-2" role="tablist" aria-label="Filtrar por categoría">
+      <button
+        type="button"
+        data-filter=""
+        class="rounded-full border border-brand-400/50 bg-brand-400/15 px-4 py-1.5 text-sm font-medium text-brand-200"
+      >
+        Todas
+      </button>
+      {
+        categories.map((category) => (
+          <button
+            type="button"
+            data-filter={category}
+            class="rounded-full border border-ink-600 px-4 py-1.5 text-sm font-medium text-slate-300 transition hover:border-brand-400/50 hover:text-white"
+          >
+            {category}
+          </button>
+        ))
+      }
+    </div>
+
+    <p id="conteo-recomendados" class="mt-6 text-sm text-slate-500" aria-live="polite"></p>
+
+    <ul id="lista-recomendados" class="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        catalog.map((item) => (
+          <li
+            data-item
+            data-category={item.category}
+            class="flex flex-col justify-between rounded-2xl border border-ink-700 bg-ink-900/50 p-5"
+          >
+            <div>
+              <p class="text-xs tracking-wide text-slate-500 uppercase">{item.category}</p>
+              <h2 class="mt-2 font-display text-lg font-semibold text-white">{item.title}</h2>
+              <p class="mt-2 text-sm leading-relaxed text-slate-400">{item.note}</p>
+              {item.sourceHref ? (
+                <a href={item.sourceHref} class="mt-3 inline-block text-xs text-brand-300 hover:text-brand-200">
+                  {item.sourceLabel} →
+                </a>
+              ) : (
+                <p class="mt-3 text-xs text-slate-500">{item.sourceLabel}</p>
+              )}
+            </div>
+            <div class="mt-5 flex items-center justify-between gap-3">
+              {item.price !== undefined ? (
+                <span class="text-sm text-slate-300">
+                  desde <strong class="text-white">{formatPrice(item.price, item.currency)}</strong>
+                </span>
+              ) : (
+                <span class="text-xs text-slate-500">Precio variable</span>
+              )}
+              <a
+                href={item.asin ? amazonProductUrl(item.asin) : amazonSearchUrl(item.search ?? item.title)}
+                rel={affiliateLinkAttrs.rel}
+                target={affiliateLinkAttrs.target}
+                class="rounded-lg bg-amber-400 px-3.5 py-2 text-sm font-semibold text-ink-950 transition hover:bg-amber-300"
+              >
+                Ver en Amazon
+              </a>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+
+    <section class="mt-16 rounded-2xl border border-ink-700 bg-ink-900/40 p-6">
+      <h2 class="font-display text-xl font-bold text-white">Antes de comprar</h2>
+      <ul class="mt-4 space-y-2 text-sm leading-relaxed text-slate-400">
+        <li>Los precios son orientativos y cambian cada día en Amazon. Confirma en la ficha del producto.</li>
+        <li>
+          Elegimos búsquedas amplias a propósito: el modelo concreto que merecía la pena hace tres
+          meses puede haberse descatalogado.
+        </li>
+        <li>
+          Nada de esto es obligatorio para usar las herramientas que analizamos. Son mejoras de
+          entorno, no requisitos.
+        </li>
+      </ul>
+    </section>
+
+    <div class="mt-14">
+      <Newsletter />
+    </div>
+  </div>
+
+  <script is:inline>
+    (() => {
+      const buttons = Array.from(document.querySelectorAll('[data-filter]'));
+      const items = Array.from(document.querySelectorAll('[data-item]'));
+      const count = document.getElementById('conteo-recomendados');
+
+      function apply(category) {
+        let visible = 0;
+        for (const item of items) {
+          const show = !category || item.dataset.category === category;
+          item.hidden = !show;
+          if (show) visible++;
+        }
+        if (count) {
+          count.textContent =
+            visible === items.length
+              ? `${visible} productos`
+              : `${visible} de ${items.length} productos`;
+        }
+        buttons.forEach((button) => {
+          const active = button.getAttribute('data-filter') === category;
+          button.classList.toggle('border-brand-400/50', active);
+          button.classList.toggle('bg-brand-400/15', active);
+          button.classList.toggle('text-brand-200', active);
+          button.classList.toggle('border-ink-600', !active);
+          button.classList.toggle('text-slate-300', !active);
+        });
+      }
+
+      buttons.forEach((button) => {
+        button.addEventListener('click', () => apply(button.getAttribute('data-filter') || ''));
+      });
+
+      apply('');
+    })();
+  </script>
+</BaseLayout>

@@ -1,0 +1,378 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import AdUnit from '../../components/AdUnit.astro';
+import Newsletter from '../../components/Newsletter.astro';
+import { site } from '../../site.config';
+
+const presets = [
+  {
+    id: 'articulo',
+    label: 'Artículo de blog',
+    values: {
+      rol: 'redactor especializado en el sector del que trata el texto',
+      tarea: 'escribir un artículo de blog optimizado para búsqueda sobre [TEMA]',
+      contexto:
+        'El lector es [PÚBLICO] y llega buscando resolver [PROBLEMA CONCRETO]. La marca vende [PRODUCTO/SERVICIO].',
+      restricciones:
+        'Sin introducciones genéricas sobre "el mundo actual". Nada de conclusiones que resuman lo ya dicho. Evita las palabras "innovador", "revolucionario" y "en la era digital".',
+      formato: 'Encabezados H2 y H3, párrafos de 3 líneas máximo, una tabla comparativa si aporta.',
+      tono: 'Directo y profesional, tuteando al lector',
+      longitud: '1.200 palabras aproximadamente',
+    },
+  },
+  {
+    id: 'email',
+    label: 'Email profesional',
+    values: {
+      rol: 'responsable de [ÁREA] en una empresa de [SECTOR]',
+      tarea: 'escribir un email a [DESTINATARIO] para [OBJETIVO DEL EMAIL]',
+      contexto:
+        'Relación previa: [DESCRIBE LA RELACIÓN]. Lo que ha pasado antes: [ANTECEDENTES]. Lo que quiero conseguir: [RESULTADO DESEADO].',
+      restricciones:
+        'Sin disculparte por escribir. Sin frases de relleno. Termina con una única petición clara.',
+      formato: 'Asunto + cuerpo del email. Sin despedidas largas.',
+      tono: 'Cordial pero firme',
+      longitud: 'Máximo 120 palabras',
+    },
+  },
+  {
+    id: 'resumen',
+    label: 'Resumen de documento',
+    values: {
+      rol: 'analista que prepara informes para dirección',
+      tarea: 'resumir el documento que te voy a pegar a continuación',
+      contexto:
+        'Quien lo va a leer es [PERFIL] y necesita decidir sobre [DECISIÓN]. Solo le interesan los puntos que afecten a esa decisión.',
+      restricciones:
+        'No incluyas nada que no esté literalmente en el documento. Si algo es ambiguo, señálalo en vez de interpretarlo.',
+      formato:
+        'Tres bloques: (1) conclusión en una frase, (2) cinco puntos clave con la página de origen, (3) riesgos o dudas abiertas.',
+      tono: 'Neutro y factual',
+      longitud: '300 palabras máximo',
+    },
+  },
+  {
+    id: 'codigo',
+    label: 'Ayuda con código',
+    values: {
+      rol: 'desarrollador senior de [LENGUAJE] con experiencia en revisión de código',
+      tarea: 'revisar el código que te paso y proponer una versión mejorada',
+      contexto:
+        'El proyecto usa [STACK]. Restricciones: [COMPATIBILIDAD, VERSIONES, RENDIMIENTO]. El problema que quiero resolver es [PROBLEMA].',
+      restricciones:
+        'No cambies el comportamiento observable. Señala cada suposición que tengas que hacer. Si falta información, pregúntamela antes de escribir código.',
+      formato: 'Primero el diagnóstico en lista, después el código corregido con comentarios solo donde el porqué no sea evidente.',
+      tono: 'Técnico y conciso',
+      longitud: 'Sin límite, prioriza la claridad',
+    },
+  },
+];
+---
+
+<BaseLayout
+  title="Generador de prompts: crea peticiones que la IA entienda"
+  description="Herramienta gratuita para construir prompts estructurados en español. Rellena los campos, copia el resultado y pégalo en ChatGPT, Claude o Gemini."
+  schema={[
+    {
+      '@type': 'WebApplication',
+      name: 'Generador de prompts',
+      applicationCategory: 'UtilitiesApplication',
+      operatingSystem: 'Web',
+      url: `${site.url}/recursos/generador-de-prompts`,
+      offers: { '@type': 'Offer', price: 0, priceCurrency: 'EUR' },
+    },
+  ]}
+>
+  <div class="container-page py-10">
+    <Breadcrumbs items={[{ label: 'Recursos' }, { label: 'Generador de prompts' }]} />
+
+    <header class="mt-6 max-w-3xl">
+      <h1 class="font-display text-4xl font-bold text-white md:text-5xl">Generador de prompts</h1>
+      <p class="mt-4 text-lg leading-relaxed text-slate-300">
+        Rellena los bloques, copia el resultado y pégalo en cualquier asistente. Es la misma
+        estructura de cinco partes que explicamos en la
+        <a href="/guias/prompts-que-funcionan" class="text-brand-300 underline">guía de prompts</a>.
+      </p>
+    </header>
+
+    <div class="mt-8 flex flex-wrap gap-2">
+      <span class="py-2 text-sm text-slate-500">Empezar desde una plantilla:</span>
+      {
+        presets.map((preset) => (
+          <button
+            type="button"
+            data-preset={preset.id}
+            class="rounded-lg border border-ink-600 px-3.5 py-2 text-sm font-medium text-slate-300 transition hover:border-brand-400/60 hover:text-white"
+          >
+            {preset.label}
+          </button>
+        ))
+      }
+    </div>
+
+    <div class="mt-8 grid gap-8 lg:grid-cols-2">
+      <form id="prompt-form" class="space-y-5 rounded-2xl border border-ink-700 bg-ink-900/50 p-6">
+        <div>
+          <label for="rol" class="mb-1.5 block text-sm font-medium text-white">
+            1. Rol <span class="font-normal text-slate-500">— quién quieres que sea</span>
+          </label>
+          <input
+            id="rol"
+            name="rol"
+            type="text"
+            placeholder="periodista especializado en tecnología"
+            class="w-full rounded-lg border border-ink-600 bg-ink-950 px-4 py-2.5 text-sm text-white placeholder:text-slate-600 focus:border-brand-400 focus:outline-none"
+          />
+        </div>
+
+        <div>
+          <label for="tarea" class="mb-1.5 block text-sm font-medium text-white">
+            2. Tarea <span class="font-normal text-slate-500">— un solo objetivo</span>
+          </label>
+          <input
+            id="tarea"
+            name="tarea"
+            type="text"
+            placeholder="escribir una comparativa entre dos productos"
+            class="w-full rounded-lg border border-ink-600 bg-ink-950 px-4 py-2.5 text-sm text-white placeholder:text-slate-600 focus:border-brand-400 focus:outline-none"
+          />
+        </div>
+
+        <div>
+          <label for="contexto" class="mb-1.5 block text-sm font-medium text-white">
+            3. Contexto <span class="font-normal text-slate-500">— lo que solo sabes tú</span>
+          </label>
+          <textarea
+            id="contexto"
+            name="contexto"
+            rows="3"
+            placeholder="Para quién es, qué ha pasado antes, qué quieres conseguir…"
+            class="w-full rounded-lg border border-ink-600 bg-ink-950 px-4 py-2.5 text-sm text-white placeholder:text-slate-600 focus:border-brand-400 focus:outline-none"
+          ></textarea>
+        </div>
+
+        <div>
+          <label for="restricciones" class="mb-1.5 block text-sm font-medium text-white">
+            4. Restricciones <span class="font-normal text-slate-500">— qué NO quieres</span>
+          </label>
+          <textarea
+            id="restricciones"
+            name="restricciones"
+            rows="2"
+            placeholder="Sin tecnicismos, sin listas, sin la palabra…"
+            class="w-full rounded-lg border border-ink-600 bg-ink-950 px-4 py-2.5 text-sm text-white placeholder:text-slate-600 focus:border-brand-400 focus:outline-none"
+          ></textarea>
+        </div>
+
+        <div class="grid gap-5 sm:grid-cols-2">
+          <div>
+            <label for="tono" class="mb-1.5 block text-sm font-medium text-white">5. Tono</label>
+            <input
+              id="tono"
+              name="tono"
+              type="text"
+              placeholder="cercano y directo"
+              class="w-full rounded-lg border border-ink-600 bg-ink-950 px-4 py-2.5 text-sm text-white placeholder:text-slate-600 focus:border-brand-400 focus:outline-none"
+            />
+          </div>
+          <div>
+            <label for="longitud" class="mb-1.5 block text-sm font-medium text-white">
+              Longitud
+            </label>
+            <input
+              id="longitud"
+              name="longitud"
+              type="text"
+              placeholder="unas 500 palabras"
+              class="w-full rounded-lg border border-ink-600 bg-ink-950 px-4 py-2.5 text-sm text-white placeholder:text-slate-600 focus:border-brand-400 focus:outline-none"
+            />
+          </div>
+        </div>
+
+        <div>
+          <label for="formato" class="mb-1.5 block text-sm font-medium text-white">
+            Formato de salida
+          </label>
+          <input
+            id="formato"
+            name="formato"
+            type="text"
+            placeholder="tabla de tres columnas / lista numerada / párrafos"
+            class="w-full rounded-lg border border-ink-600 bg-ink-950 px-4 py-2.5 text-sm text-white placeholder:text-slate-600 focus:border-brand-400 focus:outline-none"
+          />
+        </div>
+
+        <fieldset class="space-y-2.5 border-t border-ink-700 pt-5">
+          <legend class="text-sm font-medium text-white">Extras que mejoran el resultado</legend>
+          <label class="flex cursor-pointer items-start gap-2.5 text-sm text-slate-300">
+            <input
+              type="checkbox"
+              name="preguntas"
+              checked
+              class="mt-0.5 h-4 w-4 rounded border-ink-600 bg-ink-950 accent-brand-400"
+            />
+            Que pregunte antes de empezar si le falta información
+          </label>
+          <label class="flex cursor-pointer items-start gap-2.5 text-sm text-slate-300">
+            <input
+              type="checkbox"
+              name="pasos"
+              class="mt-0.5 h-4 w-4 rounded border-ink-600 bg-ink-950 accent-brand-400"
+            />
+            Que explique su razonamiento antes de dar la respuesta
+          </label>
+          <label class="flex cursor-pointer items-start gap-2.5 text-sm text-slate-300">
+            <input
+              type="checkbox"
+              name="alternativas"
+              class="mt-0.5 h-4 w-4 rounded border-ink-600 bg-ink-950 accent-brand-400"
+            />
+            Que ofrezca tres versiones distintas para elegir
+          </label>
+          <label class="flex cursor-pointer items-start gap-2.5 text-sm text-slate-300">
+            <input
+              type="checkbox"
+              name="incertidumbre"
+              class="mt-0.5 h-4 w-4 rounded border-ink-600 bg-ink-950 accent-brand-400"
+            />
+            Que marque explícitamente lo que no puede verificar
+          </label>
+        </fieldset>
+
+        <button
+          type="reset"
+          class="text-sm text-slate-500 underline transition hover:text-slate-300"
+        >
+          Vaciar el formulario
+        </button>
+      </form>
+
+      <div class="lg:sticky lg:top-24 lg:self-start">
+        <div class="rounded-2xl border border-brand-400/30 bg-ink-900/70 p-6">
+          <div class="flex items-center justify-between gap-4">
+            <h2 class="font-display text-lg font-semibold text-white">Tu prompt</h2>
+            <div class="flex items-center gap-3">
+              <span id="contador" class="text-xs text-slate-500">0 caracteres</span>
+              <button
+                type="button"
+                id="copiar"
+                class="rounded-lg bg-brand-400 px-4 py-2 text-sm font-semibold text-ink-950 transition hover:bg-brand-300"
+              >
+                Copiar
+              </button>
+            </div>
+          </div>
+
+          <pre
+            id="salida"
+            class="mt-4 max-h-[32rem] overflow-auto rounded-xl bg-ink-950 p-5 text-sm leading-relaxed whitespace-pre-wrap text-slate-200"></pre>
+
+          <p class="mt-4 text-xs leading-relaxed text-slate-500">
+            Todo se genera en tu navegador. No enviamos ni guardamos nada de lo que escribas aquí.
+          </p>
+        </div>
+
+        <AdUnit adSlot="sidebar" format="rectangle" minHeight={250} />
+      </div>
+    </div>
+
+    <div class="mt-10">
+      <Newsletter />
+    </div>
+  </div>
+
+  <script is:inline define:vars={{ presets }}>
+  (() => {
+    const form = document.getElementById('prompt-form');
+    const output = document.getElementById('salida');
+    const counter = document.getElementById('contador');
+    const copyButton = document.getElementById('copiar');
+
+    const placeholder =
+      'Rellena al menos la tarea para ver aquí tu prompt.\n\nConsejo: cuanto más contexto des en el bloque 3, menos tendrás que corregir después.';
+
+    function build() {
+      const data = new FormData(form);
+      const value = (key) => String(data.get(key) ?? '').trim();
+
+      const rol = value('rol');
+      const tarea = value('tarea');
+      const contexto = value('contexto');
+      const restricciones = value('restricciones');
+      const tono = value('tono');
+      const longitud = value('longitud');
+      const formato = value('formato');
+
+      if (!tarea) return placeholder;
+
+      const parts = [];
+
+      if (rol) parts.push(`Actúa como ${rol}.`);
+      parts.push(`Tu tarea es ${tarea}.`);
+      if (contexto) parts.push(`\nContexto que necesitas conocer:\n${contexto}`);
+
+      const rules = [];
+      if (restricciones) rules.push(restricciones);
+      if (tono) rules.push(`Tono: ${tono}.`);
+      if (longitud) rules.push(`Extensión: ${longitud}.`);
+      if (formato) rules.push(`Formato de salida: ${formato}.`);
+      if (data.get('incertidumbre'))
+        rules.push('Marca de forma explícita cualquier dato que no puedas verificar.');
+
+      if (rules.length) {
+        parts.push('\nRequisitos:');
+        parts.push(rules.map((rule) => `- ${rule}`).join('\n'));
+      }
+
+      if (data.get('pasos'))
+        parts.push('\nAntes de la respuesta final, explica brevemente cómo vas a enfocarla.');
+      if (data.get('alternativas'))
+        parts.push('\nDame tres versiones distintas entre sí y explica en una línea cuándo usar cada una.');
+      if (data.get('preguntas'))
+        parts.push(
+          '\nSi te falta información para hacerlo bien, hazme primero las preguntas necesarias y espera mi respuesta antes de empezar.',
+        );
+
+      return parts.join('\n');
+    }
+
+    function refresh() {
+      const text = build();
+      output.textContent = text;
+      const length = text === placeholder ? 0 : text.length;
+      counter.textContent = `${length.toLocaleString('es-ES')} caracteres`;
+    }
+
+    form.addEventListener('input', refresh);
+    form.addEventListener('reset', () => setTimeout(refresh, 0));
+
+    document.querySelectorAll('[data-preset]').forEach((button) => {
+      button.addEventListener('click', () => {
+        const preset = presets.find((item) => item.id === button.dataset.preset);
+        if (!preset) return;
+        for (const [key, value] of Object.entries(preset.values)) {
+          const field = form.elements[key];
+          if (field) field.value = value;
+        }
+        refresh();
+        output.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      });
+    });
+
+    copyButton.addEventListener('click', async () => {
+      const text = output.textContent;
+      if (!text || text === placeholder) return;
+      try {
+        await navigator.clipboard.writeText(text);
+        copyButton.textContent = 'Copiado';
+      } catch {
+        copyButton.textContent = 'Copia manual';
+      }
+      setTimeout(() => (copyButton.textContent = 'Copiar'), 1800);
+    });
+
+    refresh();
+  })();
+  </script>
+</BaseLayout>

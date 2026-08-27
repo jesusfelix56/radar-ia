@@ -1,0 +1,92 @@
+---
+import { nav, site } from '../site.config';
+
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+---
+
+<header
+  class="no-print sticky top-0 z-40 border-b border-ink-800/80 bg-ink-950/80 backdrop-blur-lg"
+>
+  <div class="container-page flex h-16 items-center justify-between gap-4">
+    <a href="/" class="flex items-center gap-2.5 font-display text-lg font-bold text-white">
+      <span
+        class="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-brand-400 to-accent-500 text-ink-950"
+        aria-hidden="true"
+      >
+        <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.2">
+          <circle cx="12" cy="12" r="9" stroke-opacity=".45"></circle>
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 12 19 5" stroke-linecap="round"></path>
+        </svg>
+      </span>
+      {site.name}
+    </a>
+
+    <nav class="hidden items-center gap-1 md:flex" aria-label="Principal">
+      {
+        nav.map((item) => (
+          <a
+            href={item.href}
+            aria-current={path.startsWith(item.href) ? 'page' : undefined}
+            class:list={[
+              'rounded-lg px-3 py-2 text-sm font-medium transition',
+              path.startsWith(item.href)
+                ? 'bg-ink-800 text-white'
+                : 'text-slate-400 hover:bg-ink-800/60 hover:text-white',
+            ]}
+          >
+            {item.label}
+          </a>
+        ))
+      }
+    </nav>
+
+    <div class="flex items-center gap-2">
+      <a
+        href="/newsletter"
+        class="hidden rounded-lg bg-brand-400 px-4 py-2 text-sm font-semibold text-ink-950 transition hover:bg-brand-300 sm:inline-block"
+      >
+        Newsletter
+      </a>
+      <button
+        type="button"
+        id="menu-toggle"
+        class="rounded-lg border border-ink-700 p-2 text-slate-300 md:hidden"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <span class="sr-only">Abrir menú</span>
+        <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobile-menu" hidden class="border-t border-ink-800 bg-ink-950 md:hidden">
+    <nav class="container-page flex flex-col py-3" aria-label="Principal móvil">
+      {
+        nav.map((item) => (
+          <a href={item.href} class="rounded-lg px-3 py-2.5 text-sm text-slate-300 hover:bg-ink-800">
+            {item.label}
+          </a>
+        ))
+      }
+      <a href="/newsletter" class="rounded-lg px-3 py-2.5 text-sm font-semibold text-brand-300">
+        Newsletter
+      </a>
+    </nav>
+  </div>
+</header>
+
+<script is:inline>
+  (() => {
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+    toggle?.addEventListener('click', () => {
+      const open = menu.hidden;
+      menu.hidden = !open;
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+  })();
+</script>

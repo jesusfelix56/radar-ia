@@ -1,0 +1,192 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import RatingBadge from '../components/RatingBadge.astro';
+import AdUnit from '../components/AdUnit.astro';
+import Newsletter from '../components/Newsletter.astro';
+import { formatPrice } from '../lib/format';
+import { site } from '../site.config';
+
+const tools = (await getCollection('tools', ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.rating - a.data.rating,
+);
+
+const comparisons = (await getCollection('guides', ({ data }) => !data.draft)).filter(
+  (guide) => guide.data.category === 'Comparativa',
+);
+
+const categories = [...new Set(tools.map((tool) => tool.data.category))].sort();
+
+const columns = ['facilidad', 'resultados', 'precio', 'integraciones'] as const;
+---
+
+<BaseLayout
+  title="Comparativa de herramientas de IA: notas, precios y ganadores por categoría"
+  description="Tabla comparativa de todas las herramientas de inteligencia artificial que hemos analizado, con notas por criterio, precios de entrada y la mejor opción de cada categoría."
+  schema={[
+    {
+      '@type': 'ItemList',
+      name: 'Comparativa de herramientas de IA',
+      numberOfItems: tools.length,
+      itemListElement: tools.map((tool, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        url: `${site.url}/herramientas/${tool.id}`,
+        name: tool.data.name,
+      })),
+    },
+  ]}
+>
+  <div class="container-page py-10">
+    <Breadcrumbs items={[{ label: 'Comparativas' }]} />
+
+    <h1 class="mt-5 font-display text-4xl font-bold text-white">Comparativa completa</h1>
+    <p class="mt-3 max-w-2xl text-slate-400">
+      Todas las notas juntas, criterio por criterio. Pulsa en cualquier cabecera para reordenar la
+      tabla.
+    </p>
+
+    <AdUnit adSlot="header" minHeight={110} class="mt-8 mb-2" />
+
+    <section class="mt-8 overflow-x-auto rounded-2xl border border-ink-700 bg-ink-900/40">
+      <table id="tabla-comparativa" class="w-full min-w-[46rem] text-left text-sm">
+        <thead class="text-xs tracking-wide text-slate-400 uppercase">
+          <tr class="border-b border-ink-700">
+            <th scope="col" class="px-5 py-4 font-medium">
+              <button type="button" data-sort="name" class="hover:text-brand-300">Herramienta</button>
+            </th>
+            <th scope="col" class="px-3 py-4 font-medium">Categoría</th>
+            {
+              columns.map((column) => (
+                <th scope="col" class="px-3 py-4 font-medium capitalize">
+                  <button type="button" data-sort={column} class="hover:text-brand-300">
+                    {column}
+                  </button>
+                </th>
+              ))
+            }
+            <th scope="col" class="px-3 py-4 font-medium">Desde</th>
+            <th scope="col" class="px-5 py-4 font-medium">
+              <button type="button" data-sort="rating" class="hover:text-brand-300">Global</button>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            tools.map((tool) => (
+              <tr
+                class="border-b border-ink-800/70 transition last:border-0 hover:bg-ink-800/40"
+                data-name={tool.data.name.toLowerCase()}
+                data-rating={tool.data.rating}
+                data-facilidad={tool.data.scores.facilidad}
+                data-resultados={tool.data.scores.resultados}
+                data-precio={tool.data.scores.precio}
+                data-integraciones={tool.data.scores.integraciones}
+              >
+                <th scope="row" class="px-5 py-4 font-medium">
+                  <a href={`/herramientas/${tool.id}`} class="text-white hover:text-brand-300">
+                    {tool.data.name}
+                  </a>
+                </th>
+                <td class="px-3 py-4 text-slate-400">{tool.data.category}</td>
+                {columns.map((column) => (
+                  <td class="px-3 py-4 tabular-nums text-slate-300">
+                    {tool.data.scores[column].toFixed(1)}
+                  </td>
+                ))}
+                <td class="px-3 py-4 text-slate-400">
+                  {tool.data.pricing.hasFreePlan
+                    ? 'Gratis'
+                    : tool.data.pricing.from !== null
+                      ? formatPrice(tool.data.pricing.from, tool.data.pricing.currency)
+                      : '—'}
+                </td>
+                <td class="px-5 py-4">
+                  <RatingBadge value={tool.data.rating} size="sm" />
+                </td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </section>
+
+    <section class="mt-16">
+      <h2 class="font-display text-2xl font-bold text-white">La mejor de cada categoría</h2>
+      <div class="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {
+          categories.map((category) => {
+            const winner = tools.find((tool) => tool.data.category === category)!;
+            return (
+              <a
+                href={`/herramientas/${winner.id}`}
+                class="rounded-2xl border border-ink-700 bg-ink-900/50 p-5 transition hover:border-brand-400/50"
+              >
+                <p class="text-xs tracking-wide text-slate-500 uppercase">{category}</p>
+                <p class="mt-2 font-display text-lg font-semibold text-white">{winner.data.name}</p>
+                <p class="mt-2 text-sm leading-relaxed text-slate-400">{winner.data.bestFor}</p>
+                <span class="mt-4 inline-block">
+                  <RatingBadge value={winner.data.rating} size="sm" />
+                </span>
+              </a>
+            );
+          })
+        }
+      </div>
+    </section>
+
+    {
+      comparisons.length > 0 && (
+        <section class="mt-16">
+          <h2 class="font-display text-2xl font-bold text-white">Comparativas en profundidad</h2>
+          <div class="mt-6 grid gap-6 md:grid-cols-2">
+            {comparisons.map((guide) => (
+              <a
+                href={`/guias/${guide.id}`}
+                class="rounded-2xl border border-ink-700 bg-ink-900/50 p-6 transition hover:border-accent-400/50"
+              >
+                <h3 class="font-display text-lg font-semibold text-white">{guide.data.title}</h3>
+                <p class="mt-2 text-sm leading-relaxed text-slate-400">{guide.data.description}</p>
+              </a>
+            ))}
+          </div>
+        </section>
+      )
+    }
+
+    <div class="mt-16">
+      <Newsletter />
+    </div>
+  </div>
+
+  <script is:inline>
+  (() => {
+    const table = document.getElementById('tabla-comparativa');
+    if (!table) return;
+    const body = table.querySelector('tbody');
+    let lastKey = '';
+    let ascending = false;
+
+    table.querySelectorAll('[data-sort]').forEach((button) => {
+      button.addEventListener('click', () => {
+        const key = button.dataset.sort;
+        ascending = key === lastKey ? !ascending : false;
+        lastKey = key;
+
+        const rows = Array.from(body.querySelectorAll('tr'));
+        rows.sort((a, b) => {
+          const first = a.dataset[key];
+          const second = b.dataset[key];
+          const result =
+            key === 'name'
+              ? first.localeCompare(second, 'es')
+              : Number(first) - Number(second);
+          return ascending ? result : -result;
+        });
+        rows.forEach((row) => body.appendChild(row));
+      });
+    });
+  })();
+  </script>
+</BaseLayout>

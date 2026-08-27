@@ -1,0 +1,99 @@
+---
+import TextPage from '../../layouts/TextPage.astro';
+import { site } from '../../site.config';
+---
+
+<TextPage
+  title="Aviso de afiliados y publicidad"
+  description="Cómo se financia este sitio: enlaces de afiliado de Amazon, publicidad de Google AdSense y qué implica para ti como lector."
+  heading="Aviso de afiliados y publicidad"
+  intro="Transparencia total sobre de dónde sale el dinero que mantiene este proyecto."
+  breadcrumbs={[{ label: 'Legal' }, { label: 'Afiliados' }]}
+  updated="2026-08-20"
+>
+  <h2>Programa de Afiliados de Amazon</h2>
+  <p>
+    <strong>{site.name} participa en el Programa de Afiliados de Amazon EU</strong>, un programa de
+    publicidad para afiliados diseñado para ofrecer a sitios web un modo de obtener comisiones por
+    publicidad, publicitando e incluyendo enlaces a Amazon.es.
+  </p>
+  <p>
+    En calidad de Afiliado de Amazon, obtenemos ingresos por las compras adscritas que cumplen los
+    requisitos aplicables. Toda la selección está reunida en
+    <a href="/recomendados">Recomendados</a>.
+  </p>
+
+  <h2>Qué significa esto para ti</h2>
+  <ul>
+    <li>
+      <strong>No pagas más.</strong> El precio del producto es exactamente el mismo que si llegaras
+      a Amazon por tu cuenta. La comisión la paga Amazon con su margen.
+    </li>
+    <li>
+      <strong>Los enlaces están identificados.</strong> Todos los enlaces de afiliado llevan los
+      atributos <code>rel="sponsored nofollow"</code> y aparecen dentro de bloques marcados
+      visualmente como "Afiliado".
+    </li>
+    <li>
+      <strong>Recomendamos, no vendemos.</strong> Amazon cubre hardware y libros. Además, algunas
+      herramientas de software tienen programa de afiliados propio (Perplexity, ElevenLabs, Copy.ai,
+      Runway): si te das de alta a través de nuestros botones "Probar", podemos recibir una comisión
+      recurrente. La nota de cada análisis se decide antes y por separado.
+    </li>
+  </ul>
+
+  <h2>Publicidad de Google AdSense</h2>
+  <p>
+    Mostramos bloques publicitarios servidos por Google AdSense. Google y sus socios pueden utilizar
+    cookies para mostrar anuncios basados en visitas anteriores a este u otros sitios web.
+  </p>
+  <p>
+    No decidimos qué anuncios concretos se muestran ni mantenemos relación comercial con quienes se
+    anuncian. Si un anuncio te parece inapropiado, puedes reportarlo directamente a Google o
+    <a href="/contacto">avisarnos</a>.
+  </p>
+  <p>
+    Puedes gestionar la personalización de anuncios en la
+    <a
+      href="https://www.google.com/settings/ads"
+      rel="noopener nofollow"
+      target="_blank">configuración de anuncios de Google</a
+    > o revocar tu consentimiento desde el enlace del pie de página.
+  </p>
+
+  <h2>Programas de afiliación de software</h2>
+  <p>
+    Perplexity, ElevenLabs, Copy.ai y Runway tienen programa de afiliados. Los botones
+    <strong>Probar</strong> de esas fichas apuntan a nuestro enlace de referido y van marcados con
+    la etiqueta "Afiliado" y con <code>rel="sponsored nofollow"</code>.
+  </p>
+  <p>
+    Si te suscribes a un plan de pago a través de esos enlaces, solemos recibir una comisión mientras
+    la suscripción esté activa. Tú pagas el mismo precio. ChatGPT, Claude, Gemini, Copilot y
+    Midjourney no tienen programa público: esos botones van a la web oficial, sin comisión.
+  </p>
+  <p>
+    Las notas no se negocian. Copy.ai, por ejemplo, tiene un 7,6 a pesar de ser una de las
+    herramientas que sí nos puede dejar ingresos recurrentes.
+  </p>
+
+  <h2>Lo que no hacemos</h2>
+  <ul>
+    <li>No publicamos análisis pagados ni patrocinados.</li>
+    <li>No aceptamos dinero a cambio de una nota concreta o de una posición en el ranking.</li>
+    <li>No vendemos enlaces dentro del contenido.</li>
+    <li>No aceptamos suscripciones gratuitas de prensa a cambio de cobertura.</li>
+  </ul>
+
+  <h2>Marco legal</h2>
+  <p>
+    Esta divulgación cumple con la Ley 34/2002 de Servicios de la Sociedad de la Información y de
+    Comercio Electrónico (LSSI-CE), con la Ley 3/1991 de Competencia Desleal en lo relativo a
+    publicidad encubierta, y con los requisitos del Operating Agreement del Programa de Afiliados de
+    Amazon.
+  </p>
+
+  <p>
+    ¿Alguna duda sobre cómo nos financiamos? <a href="/contacto">Pregúntanos</a>.
+  </p>
+</TextPage>

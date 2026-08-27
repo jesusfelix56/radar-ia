@@ -1,0 +1,55 @@
+---
+import { ads, type AdSlot } from '../site.config';
+
+interface Props {
+  /**
+   * No se llama `slot`: en Astro esa palabra está reservada para proyección
+   * de contenido y el anuncio no llegaría a renderizarse.
+   */
+  adSlot: AdSlot;
+  format?: 'auto' | 'fluid' | 'rectangle' | 'horizontal';
+  layout?: string;
+  label?: string;
+  class?: string;
+  minHeight?: number;
+}
+
+const {
+  adSlot,
+  format = 'auto',
+  layout,
+  label = 'Publicidad',
+  class: className = '',
+  minHeight = 120,
+} = Astro.props;
+
+const slotId = ads.slots[adSlot];
+const live = ads.enabled && Boolean(ads.client) && Boolean(slotId);
+---
+
+<aside class={`no-print my-10 ${className}`} aria-label={label}>
+  <p class="mb-1.5 text-center text-[0.65rem] font-medium tracking-[0.2em] text-slate-500 uppercase">
+    {label}
+  </p>
+
+  {
+    live ? (
+      <ins
+        class="adsbygoogle block"
+        style={`display:block;min-height:${minHeight}px`}
+        data-ad-client={ads.client}
+        data-ad-slot={slotId}
+        data-ad-format={format}
+        data-ad-layout={layout}
+        data-full-width-responsive="true"
+      />
+    ) : (
+      <div
+        class="flex items-center justify-center rounded-xl border border-dashed border-ink-600 bg-ink-900/40 px-4 text-center text-xs text-slate-500"
+        style={`min-height:${minHeight}px`}
+      >
+        Espacio reservado para anuncios · bloque <code class="mx-1 text-slate-400">{adSlot}</code>
+      </div>
+    )
+  }
+</aside>

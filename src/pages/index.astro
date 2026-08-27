@@ -1,0 +1,254 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ToolCard from '../components/ToolCard.astro';
+import AdUnit from '../components/AdUnit.astro';
+import AmazonPicks from '../components/AmazonPicks.astro';
+import Newsletter from '../components/Newsletter.astro';
+import RatingBadge from '../components/RatingBadge.astro';
+import { site } from '../site.config';
+import { formatDate } from '../lib/format';
+
+const tools = (await getCollection('tools', ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.rating - a.data.rating,
+);
+const guides = (await getCollection('guides', ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+
+const topTools = tools.slice(0, 6);
+const featuredGuides = guides.slice(0, 6);
+const categories = [...new Set(tools.map((tool) => tool.data.category))].sort();
+
+const lastUpdate = tools.reduce<Date>((latest, tool) => {
+  const date = tool.data.updatedDate ?? tool.data.pubDate;
+  return date > latest ? date : latest;
+}, new Date(0));
+
+const homePicks = [
+  {
+    search: 'microfono usb podcast',
+    title: 'Micrófono USB de condensador',
+    note: 'El accesorio que más rendimiento añade si usas modos de voz o generas locuciones.',
+    price: 109,
+  },
+  {
+    search: 'monitor ultrawide 34 pulgadas',
+    title: 'Monitor ultrapanorámico',
+    note: 'Trabajar con la IA a un lado y tu documento al otro cambia por completo el flujo.',
+    price: 399,
+  },
+];
+---
+
+<BaseLayout
+  title={`${site.name} · ${site.tagline}`}
+  description={site.description}
+  schema={[
+    {
+      '@type': 'CollectionPage',
+      name: site.name,
+      description: site.description,
+      url: site.url,
+    },
+  ]}
+>
+  <section class="aurora relative overflow-hidden border-b border-ink-800">
+    <div class="container-page py-20 md:py-28">
+      <p
+        class="inline-flex items-center gap-2 rounded-full border border-brand-400/30 bg-brand-400/10 px-3 py-1 text-xs font-medium text-brand-300"
+      >
+        <span class="h-1.5 w-1.5 rounded-full bg-brand-400"></span>
+        Actualizado el {formatDate(lastUpdate)}
+      </p>
+
+      <h1 class="mt-6 max-w-3xl font-display text-4xl leading-[1.1] font-bold text-white md:text-6xl">
+        Herramientas de IA analizadas
+        <span
+          class="bg-gradient-to-r from-brand-300 to-accent-400 bg-clip-text text-transparent"
+        >
+          con pruebas reales
+        </span>
+      </h1>
+
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-slate-300">
+        Pagamos las suscripciones, medimos los resultados y publicamos las cifras. Sin listas
+        copiadas de notas de prensa ni puntuaciones de diez para todos.
+      </p>
+
+      <div class="mt-9 flex flex-wrap gap-3">
+        <a
+          href="/herramientas"
+          class="rounded-lg bg-brand-400 px-6 py-3 font-semibold text-ink-950 transition hover:bg-brand-300"
+        >
+          Ver las {tools.length} herramientas
+        </a>
+        <a
+          href="/comparativas"
+          class="rounded-lg border border-ink-600 px-6 py-3 font-semibold text-slate-200 transition hover:border-brand-400/60 hover:text-white"
+        >
+          Comparar precios y notas
+        </a>
+        <a
+          href="/recursos/generador-de-prompts"
+          class="rounded-lg border border-ink-600 px-6 py-3 font-semibold text-slate-200 transition hover:border-brand-400/60 hover:text-white"
+        >
+          Generador de prompts
+        </a>
+      </div>
+
+      <dl class="mt-14 grid max-w-3xl grid-cols-2 gap-6 md:grid-cols-4">
+        {
+          [
+            { value: tools.length, label: 'herramientas analizadas' },
+            { value: '6 sem.', label: 'de prueba por reseña' },
+            { value: guides.length, label: 'guías publicadas' },
+            { value: '0 €', label: 'cobrados por reseña' },
+          ].map((stat) => (
+            <div>
+              <dt class="font-display text-3xl font-bold text-white">{stat.value}</dt>
+              <dd class="mt-1 text-sm text-slate-400">{stat.label}</dd>
+            </div>
+          ))
+        }
+      </dl>
+    </div>
+  </section>
+
+  <div class="container-page">
+    <AdUnit adSlot="header" minHeight={110} class="mt-8 mb-4" />
+  </div>
+
+  <section class="container-page py-14">
+    <div class="flex flex-wrap items-end justify-between gap-4">
+      <div>
+        <h2 class="font-display text-3xl font-bold text-white">Ranking de este mes</h2>
+        <p class="mt-2 text-slate-400">
+          Ordenadas por nota global. Cada nota combina facilidad de uso, calidad de resultados,
+          precio e integraciones.
+        </p>
+      </div>
+      <a href="/metodologia" class="text-sm font-semibold text-brand-300 hover:text-brand-200">
+        Cómo puntuamos →
+      </a>
+    </div>
+
+    <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {topTools.map((tool, index) => <ToolCard tool={tool} rank={index + 1} />)}
+    </div>
+  </section>
+
+  <section class="border-y border-ink-800 bg-ink-900/30">
+    <div class="container-page py-14">
+      <h2 class="font-display text-2xl font-bold text-white">Busca por lo que necesitas hacer</h2>
+      <div class="mt-6 flex flex-wrap gap-3">
+        {
+          categories.map((category) => (
+            <a
+              href={`/herramientas?categoria=${encodeURIComponent(category)}`}
+              class="rounded-xl border border-ink-700 bg-ink-900/60 px-5 py-3 text-sm font-medium text-slate-300 transition hover:border-brand-400/50 hover:text-white"
+            >
+              {category}
+              <span class="ml-2 text-xs text-slate-500">
+                {tools.filter((tool) => tool.data.category === category).length}
+              </span>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="container-page py-14">
+    <div class="flex flex-wrap items-end justify-between gap-4">
+      <h2 class="font-display text-3xl font-bold text-white">Guías y comparativas</h2>
+      <a href="/guias" class="text-sm font-semibold text-brand-300 hover:text-brand-200">
+        Ver todas →
+      </a>
+    </div>
+
+    <div class="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {
+        featuredGuides.map((guide) => (
+          <a
+            href={`/guias/${guide.id}`}
+            class="group flex flex-col rounded-2xl border border-ink-700 bg-ink-900/50 p-6 transition hover:-translate-y-0.5 hover:border-accent-400/50"
+          >
+            <span class="text-xs font-semibold tracking-wide text-accent-400 uppercase">
+              {guide.data.category}
+            </span>
+            <h3 class="mt-3 font-display text-lg leading-snug font-semibold text-white">
+              {guide.data.title}
+            </h3>
+            <p class="mt-3 flex-1 text-sm leading-relaxed text-slate-400">
+              {guide.data.description}
+            </p>
+            <span class="mt-5 text-xs text-slate-500">{formatDate(guide.data.pubDate)}</span>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="container-page">
+    <div class="rounded-2xl border border-ink-700 bg-ink-900/40 p-8">
+      <h2 class="font-display text-2xl font-bold text-white">Comparativa rápida</h2>
+      <p class="mt-2 text-sm text-slate-400">
+        Nota, categoría y punto de entrada de precio de todas las herramientas analizadas.
+      </p>
+
+      <div class="mt-6 overflow-x-auto">
+        <table class="w-full min-w-[34rem] text-left text-sm">
+          <thead class="text-xs tracking-wide text-slate-500 uppercase">
+            <tr class="border-b border-ink-700">
+              <th class="py-3 pr-4 font-medium">Herramienta</th>
+              <th class="py-3 pr-4 font-medium">Categoría</th>
+              <th class="py-3 pr-4 font-medium">Plan gratuito</th>
+              <th class="py-3 pr-4 font-medium">Nota</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              tools.map((tool) => (
+                <tr class="border-b border-ink-800/70 last:border-0">
+                  <td class="py-3 pr-4">
+                    <a
+                      href={`/herramientas/${tool.id}`}
+                      class="font-medium text-white hover:text-brand-300"
+                    >
+                      {tool.data.name}
+                    </a>
+                  </td>
+                  <td class="py-3 pr-4 text-slate-400">{tool.data.category}</td>
+                  <td class="py-3 pr-4">
+                    {tool.data.pricing.hasFreePlan ? (
+                      <span class="text-emerald-400">Sí</span>
+                    ) : (
+                      <span class="text-slate-500">No</span>
+                    )}
+                  </td>
+                  <td class="py-3 pr-4">
+                    <RatingBadge value={tool.data.rating} size="sm" />
+                  </td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <div class="container-page">
+    <AmazonPicks
+      picks={homePicks}
+      title="El equipo que usamos para trabajar con IA"
+      intro="Nada imprescindible, pero son las compras que más han cambiado nuestro día a día."
+      moreHref="/recomendados"
+    />
+  </div>
+
+  <div class="container-page pb-10">
+    <Newsletter />
+  </div>
+</BaseLayout>

@@ -1,0 +1,26 @@
+---
+interface Props {
+  scores: Record<string, number>;
+}
+
+const { scores } = Astro.props;
+---
+
+<dl class="not-prose grid gap-3">
+  {
+    Object.entries(scores).map(([label, value]) => (
+      <div class="grid grid-cols-[7.5rem_1fr_2.5rem] items-center gap-3">
+        <dt class="text-sm text-slate-400 capitalize">{label}</dt>
+        <dd class="h-2 overflow-hidden rounded-full bg-ink-700">
+          <div
+            class="h-full rounded-full bg-gradient-to-r from-brand-500 to-accent-500"
+            style={`width:${Math.max(0, Math.min(10, value)) * 10}%`}
+          />
+        </dd>
+        <dd class="text-right text-sm font-semibold tabular-nums text-white">
+          {value.toFixed(1)}
+        </dd>
+      </div>
+    ))
+  }
+</dl>

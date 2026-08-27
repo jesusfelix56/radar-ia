@@ -1,0 +1,78 @@
+---
+import { forms, site } from '../site.config';
+
+interface Props {
+  compact?: boolean;
+}
+
+const { compact = false } = Astro.props;
+const inputId = compact ? 'email-compact' : 'email-main';
+const hasEndpoint = Boolean(forms.newsletter);
+---
+
+<section
+  class={`not-prose no-print rounded-2xl border border-ink-700 bg-gradient-to-br from-ink-800 to-ink-900 ${
+    compact ? 'p-6' : 'p-8 md:p-10'
+  }`}
+>
+  <div class={compact ? '' : 'mx-auto max-w-2xl text-center'}>
+    <h2 class={`font-display font-bold text-white ${compact ? 'text-lg' : 'text-2xl md:text-3xl'}`}>
+      Una herramienta útil cada viernes
+    </h2>
+    <p class={`mt-3 text-slate-400 ${compact ? 'text-sm' : ''}`}>
+      Sin relleno ni hype: la herramienta que hemos probado esta semana, cuánto cuesta de verdad y
+      si merece la pena. Un correo, cinco minutos de lectura.
+    </p>
+
+    <form
+      class={`js-newsletter-form mt-6 flex flex-col gap-3 sm:flex-row ${compact ? '' : 'mx-auto max-w-md'}`}
+      method="post"
+      action={hasEndpoint ? forms.newsletter : undefined}
+      data-mailto={hasEndpoint ? undefined : site.email}
+    >
+      <label for={inputId} class="sr-only">Tu correo electrónico</label>
+      <input
+        id={inputId}
+        type="email"
+        name="email"
+        required
+        autocomplete="email"
+        placeholder="tu@correo.com"
+        class="flex-1 rounded-lg border border-ink-600 bg-ink-950 px-4 py-2.5 text-sm text-white placeholder:text-slate-600 focus:border-brand-400 focus:outline-none"
+      />
+      <button
+        type="submit"
+        class="rounded-lg bg-brand-400 px-5 py-2.5 text-sm font-semibold text-ink-950 transition hover:bg-brand-300"
+      >
+        Suscribirme
+      </button>
+    </form>
+
+    <p class="mt-3 text-xs text-slate-500">
+      Sin spam. Te das de baja en un clic. Consulta la
+      <a href="/legal/privacidad" class="underline hover:text-brand-300">política de privacidad</a>.
+    </p>
+  </div>
+</section>
+
+{
+  !hasEndpoint && (
+    <script is:inline>
+      document.querySelectorAll('.js-newsletter-form[data-mailto]').forEach((form) => {
+        if (form.dataset.bound) return;
+        form.dataset.bound = 'true';
+        form.addEventListener('submit', (event) => {
+          event.preventDefault();
+          const email = form.querySelector('input[name="email"]')?.value.trim();
+          const to = form.getAttribute('data-mailto');
+          if (!email || !to) return;
+          const subject = encodeURIComponent('Alta a la newsletter de Radar IA');
+          const body = encodeURIComponent(
+            `Quiero suscribirme a la newsletter.\n\nMi correo: ${email}`,
+          );
+          window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+        });
+      });
+    </script>
+  )
+}

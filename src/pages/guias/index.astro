@@ -1,0 +1,66 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import AdUnit from '../../components/AdUnit.astro';
+import Newsletter from '../../components/Newsletter.astro';
+import { formatDate } from '../../lib/format';
+
+const guides = (await getCollection('guides', ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+---
+
+<BaseLayout
+  title="Guías y tutoriales de inteligencia artificial"
+  description="Guías prácticas para sacar partido a la IA: ingeniería de prompts, comparativas de herramientas y flujos de trabajo que funcionan."
+>
+  <div class="container-page py-10">
+    <Breadcrumbs items={[{ label: 'Guías' }]} />
+
+    <h1 class="mt-5 font-display text-4xl font-bold text-white">Guías y tutoriales</h1>
+    <p class="mt-3 max-w-2xl text-slate-400">
+      Lo que hemos aprendido usando estas herramientas todos los días, explicado para que puedas
+      aplicarlo hoy mismo.
+    </p>
+
+    <AdUnit adSlot="header" minHeight={110} class="mt-8 mb-2" />
+
+    <div class="mt-8 grid gap-6 md:grid-cols-2">
+      {
+        guides.map((guide) => (
+          <article class="group relative flex flex-col rounded-2xl border border-ink-700 bg-ink-900/50 p-6 transition hover:-translate-y-0.5 hover:border-accent-400/50">
+            <div class="flex items-center gap-3">
+              <span class="text-xs font-semibold tracking-wide text-accent-400 uppercase">
+                {guide.data.category}
+              </span>
+              <span class="text-xs text-slate-500">{formatDate(guide.data.pubDate)}</span>
+            </div>
+
+            <h2 class="mt-3 font-display text-xl leading-snug font-semibold text-white">
+              <a href={`/guias/${guide.id}`} class="after:absolute after:inset-0">
+                {guide.data.title}
+              </a>
+            </h2>
+
+            <p class="mt-3 flex-1 leading-relaxed text-slate-400">{guide.data.description}</p>
+
+            {guide.data.tags.length > 0 && (
+              <ul class="mt-5 flex flex-wrap gap-2">
+                {guide.data.tags.map((tag) => (
+                  <li class="rounded-full border border-ink-700 px-2.5 py-1 text-xs text-slate-500">
+                    {tag}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </article>
+        ))
+      }
+    </div>
+
+    <div class="mt-14">
+      <Newsletter />
+    </div>
+  </div>
+</BaseLayout>
