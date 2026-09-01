@@ -5,6 +5,7 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
 import RatingBadge from '../components/RatingBadge.astro';
 import AdUnit from '../components/AdUnit.astro';
 import Newsletter from '../components/Newsletter.astro';
+import ToolLogo from '../components/ToolLogo.astro';
 import { formatPrice } from '../lib/format';
 import { site } from '../site.config';
 
@@ -85,7 +86,10 @@ const columns = ['facilidad', 'resultados', 'precio', 'integraciones'] as const;
                 data-integraciones={tool.data.scores.integraciones}
               >
                 <th scope="row" class="px-5 py-4 font-medium">
-                  <a href={`/herramientas/${tool.id}`} class="text-white hover:text-brand-300">
+                  <a href={`/herramientas/${tool.id}`} class="flex items-center gap-3 text-white hover:text-brand-300">
+                    <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-white p-1">
+                      <ToolLogo id={tool.id} name={tool.data.name} class="h-4 w-4" />
+                    </span>
                     {tool.data.name}
                   </a>
                 </th>

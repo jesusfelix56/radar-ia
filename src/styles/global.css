@@ -5,11 +5,11 @@
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-sora), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 
-  --color-ink-950: #05070f;
-  --color-ink-900: #0a0f1e;
-  --color-ink-800: #111827;
-  --color-ink-700: #1c2438;
-  --color-ink-600: #2a3450;
+  --color-ink-950: #0b1220;
+  --color-ink-900: #121a2e;
+  --color-ink-800: #1a2438;
+  --color-ink-700: #27324a;
+  --color-ink-600: #3a4663;
 
   --color-brand-300: #67e8f9;
   --color-brand-400: #22d3ee;
@@ -29,7 +29,10 @@
 
   body {
     background-color: var(--color-ink-950);
-    color: #dbe3f4;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -20%, color-mix(in srgb, var(--color-brand-500) 18%, transparent), transparent),
+      radial-gradient(ellipse 50% 40% at 100% 0%, color-mix(in srgb, var(--color-accent-500) 12%, transparent), transparent);
+    color: #e8eef8;
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
   }
@@ -63,8 +66,8 @@
 /* Degradado de fondo reutilizable para cabeceras de sección. */
 @utility aurora {
   background-image:
-    radial-gradient(60rem 30rem at 12% -10%, color-mix(in srgb, var(--color-brand-500) 22%, transparent), transparent),
-    radial-gradient(50rem 26rem at 88% 0%, color-mix(in srgb, var(--color-accent-500) 20%, transparent), transparent);
+    radial-gradient(60rem 30rem at 12% -10%, color-mix(in srgb, var(--color-brand-500) 32%, transparent), transparent),
+    radial-gradient(50rem 26rem at 88% 0%, color-mix(in srgb, var(--color-accent-500) 28%, transparent), transparent);
 }
 
 /* Ajustes del contenido Markdown renderizado. */

@@ -69,7 +69,8 @@ const jsonLd = {
     <link rel="canonical" href={canonical} />
     {noindex && <meta name="robots" content="noindex, nofollow" />}
     <meta name="generator" content={Astro.generator} />
-    <meta name="theme-color" content="#05070f" />
+    {ads.client && <meta name="google-adsense-account" content={ads.client} />}
+    <meta name="theme-color" content="#0b1220" />
 
     <Font cssVariable="--font-inter" preload />
     <Font cssVariable="--font-sora" />

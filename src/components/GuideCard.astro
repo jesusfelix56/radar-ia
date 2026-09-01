@@ -1,0 +1,78 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import CategoryIcon from './CategoryIcon.astro';
+import { formatDate } from '../lib/format';
+import { categoryVisual, type ToolCategory } from '../lib/visuals';
+
+interface Props {
+  guide: CollectionEntry<'guides'>;
+}
+
+const { guide } = Astro.props;
+const tag = guide.data.tags[0];
+const categoryFromTag: Record<string, ToolCategory> = {
+  claude: 'Escritura',
+  chatgpt: 'Productividad',
+  gemini: 'Productividad',
+  copilot: 'Código',
+  vscode: 'Código',
+  codigo: 'Código',
+  testing: 'Código',
+  elevenlabs: 'Audio',
+  podcast: 'Audio',
+  youtube: 'Audio',
+  midjourney: 'Imagen',
+  imagen: 'Imagen',
+  marca: 'Imagen',
+  ecommerce: 'Imagen',
+  runway: 'Vídeo',
+  video: 'Vídeo',
+  instagram: 'Vídeo',
+  perplexity: 'Investigación',
+  universidad: 'Investigación',
+  investigacion: 'Investigación',
+  impuestos: 'Investigación',
+  copyai: 'Escritura',
+  copywriting: 'Escritura',
+  anuncios: 'Escritura',
+};
+const visualKey = (categoryFromTag[tag ?? ''] ?? 'Productividad') as ToolCategory;
+const visual = categoryVisual[visualKey];
+---
+
+<article
+  class="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-ink-700 bg-ink-900/80 shadow-lg shadow-black/20 transition hover:-translate-y-1 hover:border-accent-400/40"
+>
+  <div class="relative h-32 overflow-hidden">
+    <img
+      src={visual.image}
+      alt=""
+      width="640"
+      height="360"
+      class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+      loading="lazy"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/30 to-transparent"></div>
+    <div class="absolute bottom-3 left-4 flex items-center gap-2">
+      <span
+        class="flex h-8 w-8 items-center justify-center rounded-lg text-ink-950"
+        style={`background:${visual.color}`}
+      >
+        <CategoryIcon category={visualKey} class="h-4 w-4" />
+      </span>
+      <span class="text-xs font-semibold tracking-wide text-white uppercase drop-shadow">
+        {guide.data.category}
+      </span>
+    </div>
+  </div>
+
+  <div class="flex flex-1 flex-col p-5">
+    <p class="text-xs text-slate-500">{formatDate(guide.data.pubDate)}</p>
+    <h2 class="mt-2 font-display text-lg leading-snug font-semibold text-white">
+      <a href={`/guias/${guide.id}`} class="after:absolute after:inset-0 hover:text-brand-300">
+        {guide.data.title}
+      </a>
+    </h2>
+    <p class="mt-2 flex-1 text-sm leading-relaxed text-slate-400">{guide.data.description}</p>
+  </div>
+</article>

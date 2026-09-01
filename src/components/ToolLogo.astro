@@ -1,0 +1,36 @@
+---
+interface Props {
+  id: string;
+  name: string;
+  class?: string;
+}
+
+const { id, name, class: className = 'h-7 w-7' } = Astro.props;
+
+const logos: Record<string, string> = {
+  chatgpt: '/images/logos/chatgpt.svg',
+  claude: '/images/logos/claude.svg',
+  gemini: '/images/logos/gemini.svg',
+  midjourney: '/images/logos/midjourney.svg',
+  'github-copilot': '/images/logos/github-copilot.svg',
+  perplexity: '/images/logos/perplexity.svg',
+  elevenlabs: '/images/logos/elevenlabs.svg',
+  runway: '/images/logos/runway.svg',
+  'copy-ai': '/images/logos/copy-ai.png',
+};
+
+const src = logos[id];
+---
+
+<span class:list={['inline-flex items-center justify-center', className]} title={name}>
+  {
+    src ? (
+      <img src={src} alt="" width="48" height="48" class="h-full w-full object-contain" />
+    ) : (
+      <svg viewBox="0 0 24 24" class="h-full w-full" fill="none" stroke="currentColor" stroke-width="1.8">
+        <circle cx="12" cy="12" r="9"></circle>
+        <path d="M12 8v8M8 12h8" stroke-linecap="round"></path>
+      </svg>
+    )
+  }
+</span>

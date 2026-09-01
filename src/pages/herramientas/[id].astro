@@ -14,6 +14,8 @@ import { site } from '../../site.config';
 import { formatDate, formatPrice } from '../../lib/format';
 import { resolveToolCta, affiliateLinkAttrs } from '../../lib/affiliates';
 import TryButton from '../../components/TryButton.astro';
+import ToolLogo from '../../components/ToolLogo.astro';
+import { visualForTool, type ToolCategory } from '../../lib/visuals';
 
 export async function getStaticPaths() {
   const tools = await getCollection('tools', ({ data }) => !data.draft);
@@ -42,6 +44,7 @@ const price = data.pricing.hasFreePlan
 const url = `${site.url}/herramientas/${tool.id}`;
 const cta = resolveToolCta(tool);
 const { href: ctaHref, isAffiliate } = cta;
+const visual = visualForTool(tool.id, data.category as ToolCategory);
 
 const schema = [
   {
@@ -98,27 +101,44 @@ const schema = [
       items={[{ label: 'Herramientas', href: '/herramientas' }, { label: data.name }]}
     />
 
-    <header class="mt-6 border-b border-ink-800 pb-8">
-      <div class="flex flex-wrap items-center gap-3">
-        <span
-          class="rounded-full border border-ink-600 px-3 py-1 text-xs font-medium tracking-wide text-slate-400 uppercase"
+    <header class="mt-6 overflow-hidden rounded-3xl border border-ink-700">
+      <div class="relative h-44 md:h-56">
+        <img src={visual.cover} alt="" class="h-full w-full object-cover" width="1400" height="400" />
+        <div
+          class="absolute inset-0"
+          style={`background: linear-gradient(90deg, #0b1220ee 10%, ${visual.color}55 100%)`}
         >
-          {data.category}
-        </span>
-        <RatingBadge value={data.rating} size="sm" />
-        <TryButton tool={tool} class="ml-auto" />
+        </div>
+        <div class="absolute inset-0 flex items-end p-6 md:p-8">
+          <div
+            class="flex h-16 w-16 items-center justify-center rounded-2xl bg-white p-2.5 shadow-xl md:h-20 md:w-20 md:p-3"
+          >
+            <ToolLogo id={tool.id} name={data.name} class="h-10 w-10 md:h-12 md:w-12" />
+          </div>
+        </div>
       </div>
+      <div class="bg-ink-900/80 p-6 md:p-8">
+        <div class="flex flex-wrap items-center gap-3">
+          <span
+            class="rounded-full border border-ink-600 px-3 py-1 text-xs font-medium tracking-wide text-slate-400 uppercase"
+          >
+            {data.category}
+          </span>
+          <RatingBadge value={data.rating} size="sm" />
+          <TryButton tool={tool} class="ml-auto" />
+        </div>
 
-      <h1 class="mt-4 font-display text-4xl font-bold text-white md:text-5xl">
-        {data.name}
-      </h1>
-      <p class="mt-4 max-w-3xl text-lg leading-relaxed text-slate-300">{data.tagline}</p>
+        <h1 class="mt-4 font-display text-4xl font-bold text-white md:text-5xl">
+          {data.name}
+        </h1>
+        <p class="mt-4 max-w-3xl text-lg leading-relaxed text-slate-300">{data.tagline}</p>
 
-      <p class="mt-5 text-xs text-slate-500">
-        Publicado el {formatDate(data.pubDate)}
-        {data.updatedDate && ` · Actualizado el ${formatDate(data.updatedDate)}`}
-        · Por {site.author}
-      </p>
+        <p class="mt-5 text-xs text-slate-500">
+          Publicado el {formatDate(data.pubDate)}
+          {data.updatedDate && ` · Actualizado el ${formatDate(data.updatedDate)}`}
+          · Por {site.author}
+        </p>
+      </div>
     </header>
 
     <div class="mt-10 grid gap-12 lg:grid-cols-[minmax(0,1fr)_20rem]">
@@ -162,7 +182,7 @@ const schema = [
           </div>
 
           <p class="mt-6 border-t border-ink-700 pt-5 text-sm text-slate-300">
-            <strong class="text-white">Ideal para:</strong>
+            <strong class="text-white">Ideal para:</strong>{' '}
             {data.bestFor}
           </p>
         </section>
