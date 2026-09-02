@@ -51,7 +51,7 @@ export const ads = {
 } as const;
 
 export const amazon = {
-  tag: env.PUBLIC_AMAZON_TAG || 'loprobamos-21',
+  tag: env.PUBLIC_AMAZON_TAG || 'loprobamos09-21',
   domain: env.PUBLIC_AMAZON_DOMAIN || 'amazon.es',
 } as const;
 
