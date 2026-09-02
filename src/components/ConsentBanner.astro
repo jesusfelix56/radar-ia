@@ -49,17 +49,26 @@ import { ads } from '../site.config';
     function loadAds() {
       if (!adsEnabled || !adsClient || window.__adsLoaded) return;
       window.__adsLoaded = true;
-      const script = document.createElement('script');
-      script.async = true;
-      script.crossOrigin = 'anonymous';
-      script.src =
-        'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + adsClient;
-      script.onload = () => {
+
+      const fillSlots = () => {
         document.querySelectorAll('ins.adsbygoogle:not([data-filled])').forEach((slot) => {
           slot.setAttribute('data-filled', 'true');
           (window.adsbygoogle = window.adsbygoogle || []).push({});
         });
       };
+
+      const existing = document.querySelector('script[src*="adsbygoogle.js"]');
+      if (existing) {
+        fillSlots();
+        return;
+      }
+
+      const script = document.createElement('script');
+      script.async = true;
+      script.crossOrigin = 'anonymous';
+      script.src =
+        'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + adsClient;
+      script.onload = fillSlots;
       document.head.appendChild(script);
     }
 

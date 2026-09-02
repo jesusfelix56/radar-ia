@@ -38,10 +38,10 @@ export const site = {
 
 export const ads = {
   /** Cliente de AdSense (ca-pub-...). */
-  client: env.PUBLIC_ADSENSE_CLIENT || '',
+  client: env.PUBLIC_ADSENSE_CLIENT || 'ca-pub-7494588122793199',
   /**
-   * Con `false` no se carga ningún script de Google: se muestran huecos simulados.
-   * Actívalo solo cuando AdSense apruebe el sitio, así evitas peticiones vacías durante la revisión.
+   * Con `false` el código de verificación va en la web, pero no se rellenan
+   * bloques de anuncio. Pásalo a true cuando Google apruebe el sitio.
    */
   enabled: env.PUBLIC_ADS_ENABLED === 'true',
   slots: {

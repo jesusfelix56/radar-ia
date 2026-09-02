@@ -95,6 +95,16 @@ const jsonLd = {
     <meta name="twitter:image" content={ogImage} />
 
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />
+    {
+      ads.client && (
+        <script
+          is:inline
+          async
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ads.client}`}
+          crossorigin="anonymous"
+        ></script>
+      )
+    }
   </head>
 
   <body class="min-h-screen">
