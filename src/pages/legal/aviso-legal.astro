@@ -8,25 +8,17 @@ import { site } from '../../site.config';
   description="Datos identificativos del titular, condiciones de uso del sitio y régimen de propiedad intelectual."
   heading="Aviso legal"
   breadcrumbs={[{ label: 'Legal' }, { label: 'Aviso legal' }]}
-  updated="2026-08-20"
+  updated="2026-09-02"
 >
-  <div class="rounded-xl border border-amber-500/30 bg-amber-500/[0.07] p-4 text-sm not-prose">
-    <strong class="text-amber-300">Antes de publicar:</strong>{' '}
-    <span class="text-slate-300">
-      rellena los campos entre corchetes. La LSSI-CE obliga a que estos datos identificativos sean
-      reales y accesibles.
-    </span>
-  </div>
-
   <h2>Datos identificativos</h2>
   <p>
     En cumplimiento del artículo 10 de la Ley 34/2002 de Servicios de la Sociedad de la Información y
     de Comercio Electrónico:
   </p>
   <ul>
-    <li><strong>Titular:</strong> [NOMBRE Y APELLIDOS O RAZÓN SOCIAL]</li>
-    <li><strong>NIF/CIF:</strong> [NÚMERO]</li>
-    <li><strong>Domicilio:</strong> [DIRECCIÓN COMPLETA]</li>
+    <li><strong>Titular:</strong> {site.legalName}</li>
+    <li><strong>NIF:</strong> {site.nif}</li>
+    <li><strong>Domicilio:</strong> {site.address}</li>
     <li><strong>Correo electrónico:</strong> <a href={`mailto:${site.email}`}>{site.email}</a></li>
     <li><strong>Dominio:</strong> {site.url}</li>
   </ul>

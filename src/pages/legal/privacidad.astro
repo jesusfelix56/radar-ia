@@ -8,21 +8,13 @@ import { site } from '../../site.config';
   description="Qué datos recogemos, con qué base legal, durante cuánto tiempo y cómo ejercer tus derechos."
   heading="Política de privacidad"
   breadcrumbs={[{ label: 'Legal' }, { label: 'Privacidad' }]}
-  updated="2026-08-20"
+  updated="2026-09-02"
 >
-  <div class="rounded-xl border border-amber-500/30 bg-amber-500/[0.07] p-4 text-sm not-prose">
-    <strong class="text-amber-300">Antes de publicar:</strong>{' '}
-    <span class="text-slate-300">
-      sustituye los campos entre corchetes por tus datos reales de responsable del tratamiento. Este
-      texto es una base sólida, pero conviene que lo revise un profesional si tratas datos sensibles.
-    </span>
-  </div>
-
   <h2>1. Responsable del tratamiento</h2>
   <ul>
-    <li><strong>Titular:</strong> [NOMBRE Y APELLIDOS O RAZÓN SOCIAL]</li>
-    <li><strong>NIF/CIF:</strong> [NÚMERO]</li>
-    <li><strong>Domicilio:</strong> [DIRECCIÓN COMPLETA]</li>
+    <li><strong>Titular:</strong> {site.legalName}</li>
+    <li><strong>NIF:</strong> {site.nif}</li>
+    <li><strong>Domicilio:</strong> {site.address}</li>
     <li><strong>Correo electrónico:</strong> <a href={`mailto:${site.email}`}>{site.email}</a></li>
     <li><strong>Sitio web:</strong> {site.url}</li>
   </ul>
@@ -83,9 +75,12 @@ import { site } from '../../site.config';
   <h2>5. Destinatarios y transferencias internacionales</h2>
   <p>Trabajamos con los siguientes encargados del tratamiento:</p>
   <ul>
-    <li><strong>Google Ireland Ltd.</strong> — publicidad (AdSense).</li>
-    <li><strong>[PROVEEDOR DE HOSTING]</strong> — alojamiento del sitio.</li>
-    <li><strong>[PROVEEDOR DE NEWSLETTER]</strong> — envío de correos.</li>
+    <li><strong>Google Ireland Ltd.</strong> — publicidad (AdSense), cuando esté activa.</li>
+    <li><strong>Vercel Inc.</strong> — alojamiento del sitio.</li>
+    <li>
+      No usamos un proveedor de newsletter: las solicitudes de alta se reciben en el correo del
+      titular.
+    </li>
   </ul>
   <p>
     Alguno de estos proveedores puede transferir datos fuera del Espacio Económico Europeo. En ese

@@ -29,9 +29,12 @@ export const site = {
   locale: 'es-ES',
   lang: 'es',
   author: 'Redacción de Lo Probamos',
-  email: 'hola@loprobamos.com',
+  email: 'jfballestero0412@gmail.com',
   twitter: '@loprobamos',
   defaultImage: '/og-default.svg',
+  legalName: 'Jesús Félix Oliva Ballestero',
+  nif: '34353770G',
+  address: 'Rúa Leopoldo Calvo Sotelo, 94, 27400 Monforte de Lemos (Lugo), España',
 } as const;
 
 export const ads = {
