@@ -16,21 +16,21 @@ function resolveSiteUrl() {
   if (env.NETLIFY && netlify) return netlify.replace(/\/$/, '');
   const pages = env.CF_PAGES_URL as string | undefined;
   if (pages) return pages.replace(/\/$/, '');
-  return 'https://www.radar-ia.com';
+  return 'https://www.loprobamos.com';
 }
 
 export const site = {
-  name: 'Radar IA',
-  shortName: 'RadarIA',
+  name: 'Lo Probamos',
+  shortName: 'LoProbamos',
   tagline: 'Reseñas honestas de herramientas de inteligencia artificial',
   description:
     'Analizamos y comparamos herramientas de inteligencia artificial con pruebas reales: precios, límites, alternativas y para quién merece la pena cada una.',
   url: resolveSiteUrl(),
   locale: 'es-ES',
   lang: 'es',
-  author: 'Redacción de Radar IA',
-  email: 'hola@radar-ia.com',
-  twitter: '@radar_ia',
+  author: 'Redacción de Lo Probamos',
+  email: 'hola@loprobamos.com',
+  twitter: '@loprobamos',
   defaultImage: '/og-default.svg',
 } as const;
 
@@ -51,7 +51,7 @@ export const ads = {
 } as const;
 
 export const amazon = {
-  tag: env.PUBLIC_AMAZON_TAG || 'radarIA-21',
+  tag: env.PUBLIC_AMAZON_TAG || 'loprobamos-21',
   domain: env.PUBLIC_AMAZON_DOMAIN || 'amazon.es',
 } as const;
 

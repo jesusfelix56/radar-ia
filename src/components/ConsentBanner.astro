@@ -43,12 +43,12 @@ import { ads } from '../site.config';
 
 <script is:inline define:vars={{ adsClient: ads.client, adsEnabled: ads.enabled }}>
   (() => {
-    const STORAGE_KEY = 'radar-ia:consent';
+    const STORAGE_KEY = 'loprobamos:consent';
     const banner = document.getElementById('consent-banner');
 
     function loadAds() {
-      if (!adsEnabled || !adsClient || window.__radarAdsLoaded) return;
-      window.__radarAdsLoaded = true;
+      if (!adsEnabled || !adsClient || window.__adsLoaded) return;
+      window.__adsLoaded = true;
       const script = document.createElement('script');
       script.async = true;
       script.crossOrigin = 'anonymous';

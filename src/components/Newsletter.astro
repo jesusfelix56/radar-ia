@@ -66,7 +66,7 @@ const hasEndpoint = Boolean(forms.newsletter);
           const email = form.querySelector('input[name="email"]')?.value.trim();
           const to = form.getAttribute('data-mailto');
           if (!email || !to) return;
-          const subject = encodeURIComponent('Alta a la newsletter de Radar IA');
+          const subject = encodeURIComponent('Alta a la newsletter de Lo Probamos');
           const body = encodeURIComponent(
             `Quiero suscribirme a la newsletter.\n\nMi correo: ${email}`,
           );

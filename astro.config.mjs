@@ -12,7 +12,7 @@ function resolveSite() {
   if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`;
   if (process.env.NETLIFY && process.env.URL) return process.env.URL.replace(/\/$/, '');
   if (process.env.CF_PAGES_URL) return process.env.CF_PAGES_URL.replace(/\/$/, '');
-  return 'https://www.radar-ia.com';
+  return 'https://www.loprobamos.com';
 }
 
 const site = resolveSite();

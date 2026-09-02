@@ -20,13 +20,11 @@
 
   <g transform="translate(80 78)">
     <rect width="56" height="56" rx="14" fill="url(#brand)" />
-    <circle cx="28" cy="28" r="17" fill="none" stroke="#05070f" stroke-width="3" stroke-opacity="0.5" />
-    <circle cx="28" cy="28" r="7.5" fill="none" stroke="#05070f" stroke-width="3.5" />
-    <path d="M28 28 41 15" stroke="#05070f" stroke-width="3.5" stroke-linecap="round" />
+    <path d="M16 29.5 24.5 38.5 42 19" fill="none" stroke="#05070f" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
   </g>
 
   <text x="152" y="118" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="34" font-weight="700" fill="#ffffff">
-    Radar IA
+    Lo Probamos
   </text>
 
   <text x="80" y="290" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="76" font-weight="700" fill="#ffffff">
@@ -42,6 +40,6 @@
 
   <rect x="80" y="520" width="1040" height="1" fill="#1c2438" />
   <text x="80" y="570" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="26" fill="#64748b">
-    Reseñas · Comparativas · Guías · Generador de prompts
+    Reseas  Comparativas  Guas  Generador de prompts
   </text>
 </svg>
