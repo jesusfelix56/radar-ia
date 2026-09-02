@@ -6,7 +6,17 @@ import { ads } from '../site.config';
  * El ID de vendedor autorizado `f08c47fec0942fa0` es el de Google; no lo cambies.
  */
 export function GET(_context: APIContext) {
-  const publisher = (ads.client || 'ca-pub-0000000000000000').replace(/^ca-/, '');
+  const raw = ads.client.trim();
+  if (!raw || raw.includes('0000000000000000')) {
+    return new Response('# Todavía no hay sistemas publicitarios autorizados.\n', {
+      headers: {
+        'Content-Type': 'text/plain; charset=utf-8',
+        'Cache-Control': 'public, max-age=86400',
+      },
+    });
+  }
+
+  const publisher = raw.replace(/^ca-/, '');
   const body = `google.com, ${publisher}, DIRECT, f08c47fec0942fa0
 `;
 

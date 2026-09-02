@@ -30,7 +30,6 @@ export const site = {
   lang: 'es',
   author: 'Redacción de Lo Probamos',
   email: 'jfballestero0412@gmail.com',
-  twitter: '@loprobamos',
   defaultImage: '/og-default.svg',
   legalName: 'Jesús Félix Oliva Ballestero',
   nif: '34353770G',
