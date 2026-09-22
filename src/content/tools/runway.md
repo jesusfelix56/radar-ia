@@ -14,7 +14,7 @@ pricing:
   from: 15
   currency: EUR
   period: mes
-  note: Funciona por créditos - el plan gratuito da para unos pocos clips de prueba.
+  note: Standard son 15 USD al mes (12 USD si pagas el año) y dan 625 créditos. El gratuito son 125 créditos una sola vez y no se renuevan.
 website: https://runwayml.com
 affiliateUrl: https://runwayml.com/signup
 pros:
@@ -39,6 +39,7 @@ amazonPicks:
 accent: accent
 featured: false
 pubDate: 2026-07-15
+updatedDate: 2026-09-22
 ---
 
 ## Qué puede hacer hoy de verdad
@@ -64,6 +65,8 @@ Las manos y el texto en pantalla siguen siendo el talón de Aquiles. Cualquier p
 ## El problema de los créditos
 
 Cada generación consume créditos y cada intento fallido también. En nuestra prueba, los 40 clips útiles costaron 137 generaciones. Si presupuestas por clips entregados y no por intentos, te quedarás corto siempre.
+
+A septiembre de 2026, el plan de entrada (Standard) son 15 USD al mes, o 12 USD si pagas el año, con 625 créditos mensuales. El gratuito deposita 125 créditos una sola vez y no se renuevan.
 
 Consejo práctico: calcula tres o cuatro intentos por plano aprovechado y verás el coste real.
 

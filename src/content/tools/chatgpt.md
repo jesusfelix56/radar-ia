@@ -14,7 +14,7 @@ pricing:
   from: 23
   currency: EUR
   period: mes
-  note: El plan gratuito limita el modelo avanzado a unos pocos mensajes cada cierto tiempo.
+  note: Plus sigue en 23 € al mes en España. Por debajo hay Go, más barato, para quien se queda corto en el gratuito. El gratuito limita el modelo avanzado.
 website: https://chat.openai.com
 pros:
   - Curva de aprendizaje casi nula, cualquiera lo usa el primer día
@@ -38,7 +38,7 @@ amazonPicks:
 accent: brand
 featured: true
 pubDate: 2026-02-14
-updatedDate: 2026-08-12
+updatedDate: 2026-09-22
 ---
 
 ## Qué es exactamente ChatGPT en 2026
@@ -73,7 +73,7 @@ El segundo problema es el estilo. En español genera estructuras muy reconocible
 
 ## Precio: cuándo compensa pagar
 
-El plan gratuito sirve para probar y para uso esporádico. La suscripción compensa si cumples al menos dos de estas condiciones:
+El plan gratuito sirve para probar y para uso esporádico. Entre el gratuito y Plus, OpenAI vende Go: más barato que Plus, para quien solo necesita un poco más de margen. Plus, a 23 € al mes en España, compensa si cumples al menos dos de estas condiciones:
 
 - Lo usas más de 30 minutos al día
 - Trabajas con archivos (PDF, Excel, imágenes) de forma habitual

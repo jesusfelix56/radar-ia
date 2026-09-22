@@ -1,7 +1,7 @@
 ---
 name: Gemini
 tagline: El asistente de Google, integrado de verdad en Gmail, Docs y Drive. Brilla si ya vives en ese ecosistema.
-description: Análisis de Gemini en 2026 - integración con Workspace, calidad frente a ChatGPT y Claude, y cuándo merece la pena pagar Google One AI Premium.
+description: Análisis de Gemini en 2026 - integración con Workspace, calidad frente a ChatGPT y Claude, y cuándo merece la pena pagar Google AI Plus o Pro.
 category: Productividad
 rating: 8.3
 scores:
@@ -11,10 +11,10 @@ scores:
   integraciones: 9.4
 pricing:
   hasFreePlan: true
-  from: 22
+  from: 4.99
   currency: EUR
   period: mes
-  note: El plan de pago va ligado a Google One. Si ya pagas almacenamiento extra, el salto de precio es menor.
+  note: En España, Google AI Plus sale a 4,99 € al mes (400 GB y el doble de uso). Google AI Pro, con Gemini en Gmail y Docs y 5 TB, son 21,99 € al mes.
 website: https://gemini.google.com
 pros:
   - Accede a tu Gmail, Drive y Docs sin copiar y pegar nada
@@ -38,7 +38,7 @@ amazonPicks:
 accent: brand
 featured: true
 pubDate: 2026-05-11
-updatedDate: 2026-08-19
+updatedDate: 2026-09-22
 ---
 
 ## Qué es Gemini hoy (y qué no)
@@ -73,13 +73,12 @@ Fuera de Google, la ventaja se desinfla. Si tu equipo vive en Notion, Microsoft 
 
 ## Precio: cuándo compensa pagar
 
-El plan gratuito cubre uso diario ligero. El de pago (Google One AI Premium) compensa si:
+El plan gratuito cubre uso diario ligero. El de pago ya no se llama Google One AI Premium. En España hay dos escalones públicos:
 
-- Ya pagas almacenamiento de Google One
-- Usas Gmail y Docs como herramientas principales
-- Necesitas el modelo avanzado para documentos largos
+- **Google AI Plus**, 4,99 € al mes: 400 GB y el doble de uso que el gratuito. Sirve si ya vives en Gmail y Drive y no necesitas el tope.
+- **Google AI Pro**, 21,99 € al mes: 5 TB, cuatro veces más uso y Gemini dentro de Gmail y Docs. Este es el que compensa si el trabajo vive en Workspace.
 
-Si solo quieres un chat, ChatGPT Plus o Claude Pro rinden más por el mismo dinero.
+Si solo quieres un chat suelto, ChatGPT Plus o Claude Pro siguen rindiendo más. El nombre y el almacenamiento cambian seguido: confirma el total en el checkout antes de contratar.
 
 ## Alternativas
 

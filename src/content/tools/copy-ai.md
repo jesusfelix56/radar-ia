@@ -11,10 +11,10 @@ scores:
   integraciones: 8.0
 pricing:
   hasFreePlan: true
-  from: 36
+  from: 29
   currency: EUR
   period: mes
-  note: El plan de pago cobra por asiento. Compensa a partir de dos personas generando copy cada día.
+  note: El plan Chat son 29 USD al mes e incluye hasta 5 personas, no se cobra por asiento. Los flujos automáticos empiezan en Growth, a 1.000 USD al mes.
 website: https://www.copy.ai
 affiliateUrl: https://www.copy.ai/?utm_source=affiliate
 pros:
@@ -39,7 +39,7 @@ amazonPicks:
 accent: amber
 featured: true
 pubDate: 2026-08-10
-updatedDate: 2026-08-27
+updatedDate: 2026-09-22
 ---
 
 ## Qué es Copy.ai (y qué no es)
@@ -62,7 +62,7 @@ Medimos cuánta edición humana hacía falta antes de poder publicar.
 
 Las plantillas de ficha de producto ahorran el trabajo más aburrido: beneficios, especificaciones y objeciones. En nuestras pruebas, **una ficha usable salía en 8 minutos** frente a 25 escribiendo desde cero. El texto no era brillante; era suficiente y consistente.
 
-El modo de infoworkflow (varios pasos encadenados) es lo que justifica el precio de equipo: un briefing entra, salen anuncio + email + descripción. Claude puede hacer lo mismo, pero tú montas el proceso a mano cada vez.
+El modo de infoworkflow (varios pasos encadenados) sigue siendo lo que lo diferencia de un chat: un briefing entra, salen anuncio + email + descripción. Ese modo ya no está en el plan barato. Claude puede hacer lo mismo, pero tú montas el proceso a mano cada vez.
 
 ## Dónde falla
 
@@ -72,13 +72,13 @@ En textos largos (landing de más de 600 palabras, artículos) Claude gana por g
 
 ## Precio: cuándo compensa
 
-El plan gratuito vale para decidir si el flujo te encaja. El de pago compensa si:
+El plan gratuito vale para decidir si el flujo te encaja. El de pago ya no se cobra por asiento. El plan Chat son 29 USD al mes (24 USD si pagas el año) y mete hasta 5 personas en el mismo chat, sin créditos de flujo.
 
-- Sois **al menos dos** generando copy cada semana
-- Publicáis anuncios o fichas con cadencia fija
-- Preferís un proceso repetible a pelearos con el chat
+Eso no es el producto que justifica esta ficha. Los flujos encadenados están mucho más arriba: Growth sale a 1.000 USD al mes, facturado al año, para equipos grandes.
 
-Si eres autónomo y escribes tú, **no lo contrates**. Claude Pro o ChatGPT Plus rinden más por menos.
+Chat puede compensar si sois varias personas y solo queréis un chat compartido. Si lo que buscas es la cadena de montaje, la factura ya no es de autónomo.
+
+Si eres autónomo y escribes tú, **no lo contrates**. Claude Pro o ChatGPT Plus te dejan mejor texto por menos dinero.
 
 ## Alternativas
 

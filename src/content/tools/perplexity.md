@@ -14,7 +14,7 @@ pricing:
   from: 20
   currency: EUR
   period: mes
-  note: El plan gratuito permite un número limitado de búsquedas avanzadas al día.
+  note: Pro son 20 USD al mes, o 200 USD si pagas el año. El gratuito incluye unas 3 búsquedas Pro al día.
 website: https://www.perplexity.ai
 affiliateUrl: https://www.perplexity.ai/pro
 pros:
@@ -39,7 +39,7 @@ amazonPicks:
 accent: brand
 featured: true
 pubDate: 2026-05-11
-updatedDate: 2026-08-20
+updatedDate: 2026-09-22
 ---
 
 ## En qué se diferencia de un buscador normal
@@ -71,4 +71,4 @@ Tampoco sustituye la lectura. Si vas a citar algo en un trabajo académico o en 
 
 ## Gratis frente a Pro
 
-El plan gratuito cubre bien un uso de varias consultas al día. El de pago tiene sentido si haces investigación de forma intensiva o necesitas subir documentos propios para consultarlos junto a las fuentes web.
+El plan gratuito cubre bien un uso de varias consultas al día: la tarifa pública deja unas 3 búsquedas Pro diarias. Pro, a 20 USD al mes (200 USD al año), tiene sentido si haces investigación de forma intensiva o necesitas subir documentos propios para consultarlos junto a las fuentes web.

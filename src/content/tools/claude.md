@@ -11,10 +11,10 @@ scores:
   integraciones: 8.0
 pricing:
   hasFreePlan: true
-  from: 22
+  from: 20
   currency: EUR
   period: mes
-  note: El plan gratuito corta el uso por franjas horarias, no por número fijo de mensajes.
+  note: Pro son 20 USD al mes, o 17 USD si pagas el año. En euros el total depende del país. El gratuito corta el uso por franjas horarias, no por un número fijo de mensajes.
 website: https://claude.ai
 pros:
   - La redacción en español suena a persona, no a plantilla
@@ -38,7 +38,7 @@ amazonPicks:
 accent: accent
 featured: true
 pubDate: 2026-03-02
-updatedDate: 2026-08-18
+updatedDate: 2026-09-22
 ---
 
 ## Por qué escribe mejor

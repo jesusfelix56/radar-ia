@@ -14,7 +14,7 @@ pricing:
   from: 10
   currency: EUR
   period: mes
-  note: Gratis para estudiantes verificados y mantenedores de proyectos open source populares.
+  note: Pro son 10 USD al mes e incluyen un cupo de créditos de IA. Hay plan gratuito con límites. Estudiantes, docentes verificados y mantenedores de open source popular pueden acceder sin pagar.
 website: https://github.com/features/copilot
 pros:
   - Se integra en VS Code, JetBrains y Neovim sin fricción
@@ -42,7 +42,7 @@ amazonPicks:
 accent: lime
 featured: false
 pubDate: 2026-04-08
-updatedDate: 2026-08-05
+updatedDate: 2026-09-22
 ---
 
 ## Qué hace bien
@@ -83,6 +83,6 @@ La calidad cae de forma perceptible en lenguajes con menos código público disp
 
 ## ¿Compensa el precio?
 
-Si programas de forma profesional, la cuenta es fácil: ahorrando media hora a la semana ya se paga. El plan gratuito para estudiantes y mantenedores de open source hace la decisión todavía más simple para ese perfil.
+Si programas de forma profesional, la cuenta es fácil: ahorrando media hora a la semana ya se paga. Pro sigue en 10 USD al mes e incluye un cupo de créditos para el chat y el agente; el autocompletado no los gasta. Estudiantes, docentes verificados y mantenedores de open source popular pueden tener acceso de pago sin coste.
 
 Para quien programa de forma esporádica, un asistente de chat generalista cubre la necesidad sin suscripción adicional.

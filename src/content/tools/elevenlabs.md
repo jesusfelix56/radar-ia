@@ -11,10 +11,10 @@ scores:
   integraciones: 8.0
 pricing:
   hasFreePlan: true
-  from: 5
+  from: 6
   currency: EUR
   period: mes
-  note: El plan gratuito incluye unos 10 minutos de audio al mes, suficiente solo para probar.
+  note: Starter son 6 USD al mes y trae 30.000 créditos. El gratuito da 10.000 créditos al mes, unos 10 minutos de audio.
 website: https://elevenlabs.io
 affiliateUrl: https://elevenlabs.io/app/sign-up
 pros:
@@ -43,7 +43,7 @@ amazonPicks:
 accent: amber
 featured: false
 pubDate: 2026-06-03
-updatedDate: 2026-08-08
+updatedDate: 2026-09-22
 ---
 
 ## La calidad en español, en concreto
@@ -64,7 +64,7 @@ Con un minuto de audio limpio consigue un clon reconocible; con diez minutos, un
 
 ## La factura: el punto que nadie te cuenta
 
-El precio se calcula por caracteres, no por minutos, y ahí es donde la gente se lleva sorpresas. Un vídeo de YouTube de 10 minutos ronda los 9.000 caracteres. Un curso de e-learning completo puede irse a 200.000 sin despeinarse.
+El precio se calcula por caracteres, no por minutos, y ahí es donde la gente se lleva sorpresas. A septiembre de 2026, el plan de pago más barato (Starter) son 6 USD al mes, con 30.000 créditos. El gratuito se queda en 10.000 créditos al mes. Un vídeo de YouTube de 10 minutos ronda los 9.000 caracteres. Un curso de e-learning completo puede irse a 200.000 sin despeinarse.
 
 Antes de contratar, cuenta los caracteres de un guion tipo tuyo y multiplícalo por el volumen mensual real. La diferencia entre planes puede ser de tres a cuatro veces el precio que habías calculado a ojo.
 

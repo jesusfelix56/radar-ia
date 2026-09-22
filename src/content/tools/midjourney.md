@@ -12,9 +12,9 @@ scores:
 pricing:
   hasFreePlan: false
   from: 10
-  currency: EUR
+  currency: USD
   period: mes
-  note: El plan básico limita las horas de generación rápida; el modo relajado es ilimitado en planes superiores.
+  note: Basic son 10 USD al mes (8 USD al mes si pagas el año) y dan unas 3,3 horas de generación rápida. No hay plan gratuito. El modo relajado ilimitado empieza en Standard, a 30 USD.
 website: https://www.midjourney.com
 pros:
   - La calidad estética por defecto sigue siendo la referencia del sector
@@ -42,7 +42,7 @@ amazonPicks:
 accent: rose
 featured: true
 pubDate: 2026-01-20
-updatedDate: 2026-07-30
+updatedDate: 2026-09-22
 ---
 
 ## El estándar de calidad visual
