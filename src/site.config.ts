@@ -16,7 +16,7 @@ function resolveSiteUrl() {
   if (env.NETLIFY && netlify) return netlify.replace(/\/$/, '');
   const pages = env.CF_PAGES_URL as string | undefined;
   if (pages) return pages.replace(/\/$/, '');
-  return 'https://www.loprobamos.com';
+  return 'https://loprobamosai.es';
 }
 
 export const site = {
