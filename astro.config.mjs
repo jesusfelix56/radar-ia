@@ -6,12 +6,6 @@ import tailwindcss from '@tailwindcss/vite';
 function resolveSite() {
   const explicit = process.env.PUBLIC_SITE_URL;
   if (explicit) return explicit.replace(/\/$/, '');
-  if (process.env.VERCEL_PROJECT_PRODUCTION_URL) {
-    return `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL.replace(/\/$/, '')}`;
-  }
-  if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`;
-  if (process.env.NETLIFY && process.env.URL) return process.env.URL.replace(/\/$/, '');
-  if (process.env.CF_PAGES_URL) return process.env.CF_PAGES_URL.replace(/\/$/, '');
   return 'https://loprobamosai.es';
 }
 

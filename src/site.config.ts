@@ -8,14 +8,6 @@ const env = import.meta.env;
 function resolveSiteUrl() {
   const explicit = env.PUBLIC_SITE_URL as string | undefined;
   if (explicit) return explicit.replace(/\/$/, '');
-  const vercelProd = env.VERCEL_PROJECT_PRODUCTION_URL as string | undefined;
-  if (vercelProd) return `https://${vercelProd.replace(/\/$/, '')}`;
-  const vercel = env.VERCEL_URL as string | undefined;
-  if (vercel) return `https://${vercel.replace(/\/$/, '')}`;
-  const netlify = env.URL as string | undefined;
-  if (env.NETLIFY && netlify) return netlify.replace(/\/$/, '');
-  const pages = env.CF_PAGES_URL as string | undefined;
-  if (pages) return pages.replace(/\/$/, '');
   return 'https://loprobamosai.es';
 }
 
