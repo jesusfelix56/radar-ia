@@ -26,6 +26,13 @@ export const site = {
   legalName: 'Jesús Félix Oliva Ballestero',
   nif: '34353770G',
   address: 'Rúa Leopoldo Calvo Sotelo, 94, 27400 Monforte de Lemos (Lugo), España',
+  postal: {
+    streetAddress: 'Rúa Leopoldo Calvo Sotelo, 94',
+    addressLocality: 'Monforte de Lemos',
+    addressRegion: 'Lugo',
+    postalCode: '27400',
+    addressCountry: 'ES',
+  },
 } as const;
 
 export const ads = {

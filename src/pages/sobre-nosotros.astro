@@ -45,6 +45,14 @@ import { site } from '../site.config';
     cómo se calculan las notas y cómo nos financiamos.
   </p>
 
+  <h2>Quién edita este sitio</h2>
+  <p>
+    {site.name} es un proyecto editorial de {site.legalName}, con NIF {site.nif} y domicilio en{' '}
+    {site.address}. El correo de contacto es{' '}
+    <a href={`mailto:${site.email}`}>{site.email}</a>. Los datos identificativos completos están
+    también en el <a href="/legal/aviso-legal">aviso legal</a> y en el pie de cada página.
+  </p>
+
   <h2>Escríbenos</h2>
   <p>
     Si has detectado un error, quieres proponer una herramienta para analizar o simplemente quieres

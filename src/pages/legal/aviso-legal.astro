@@ -8,20 +8,25 @@ import { site } from '../../site.config';
   description="Datos identificativos del titular, condiciones de uso del sitio y régimen de propiedad intelectual."
   heading="Aviso legal"
   breadcrumbs={[{ label: 'Legal' }, { label: 'Aviso legal' }]}
-  updated="2026-09-02"
+  updated="2026-09-22"
 >
   <h2>Datos identificativos</h2>
   <p>
     En cumplimiento del artículo 10 de la Ley 34/2002 de Servicios de la Sociedad de la Información y
-    de Comercio Electrónico:
+    de Comercio Electrónico, los siguientes datos están disponibles de forma permanente, fácil,
+    directa y gratuita (también en el pie de página de todas las páginas de este sitio):
   </p>
   <ul>
     <li><strong>Titular:</strong> {site.legalName}</li>
     <li><strong>NIF:</strong> {site.nif}</li>
     <li><strong>Domicilio:</strong> {site.address}</li>
     <li><strong>Correo electrónico:</strong> <a href={`mailto:${site.email}`}>{site.email}</a></li>
-    <li><strong>Dominio:</strong> {site.url}</li>
+    <li><strong>Sitio web:</strong> {site.url}</li>
   </ul>
+  <p>
+    El titular actúa como persona física. No consta inscripción en el Registro Mercantil por no ser
+    preceptiva para esta actividad.
+  </p>
 
   <h2>Objeto del sitio</h2>
   <p>

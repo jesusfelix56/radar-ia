@@ -6,6 +6,7 @@ import AdUnit from '../components/AdUnit.astro';
 import Newsletter from '../components/Newsletter.astro';
 import { extraGear } from '../data/gear';
 import { amazonProductUrl, amazonSearchUrl, affiliateLinkAttrs } from '../lib/amazon';
+import { AFFILIATE_LABEL } from '../lib/affiliates';
 import { formatPrice } from '../lib/format';
 import { site } from '../site.config';
 
@@ -152,9 +153,12 @@ const categories = [...new Set(catalog.map((item) => item.category))].sort();
                 href={item.asin ? amazonProductUrl(item.asin) : amazonSearchUrl(item.search ?? item.title)}
                 rel={affiliateLinkAttrs.rel}
                 target={affiliateLinkAttrs.target}
-                class="rounded-lg bg-amber-400 px-3.5 py-2 text-sm font-semibold text-ink-950 transition hover:bg-amber-300"
+                class="inline-flex flex-col items-center rounded-lg bg-amber-400 px-3.5 py-2 text-sm font-semibold text-ink-950 transition hover:bg-amber-300"
               >
                 Ver en Amazon
+                <span class="text-[0.65rem] font-medium tracking-wide uppercase opacity-80">
+                  {AFFILIATE_LABEL}
+                </span>
               </a>
             </div>
           </li>

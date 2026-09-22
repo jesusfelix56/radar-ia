@@ -2,6 +2,9 @@ import { softwareAffiliates } from '../site.config';
 
 export { affiliateLinkAttrs } from './amazon';
 
+/** Texto visible junto a cada enlace monetizado, antes del clic (UCPD / LCD). */
+export const AFFILIATE_LABEL = 'Enlace comisionado';
+
 type ToolLike = {
   id: string;
   data: {

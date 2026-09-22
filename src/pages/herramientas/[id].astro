@@ -12,7 +12,7 @@ import TableOfContents from '../../components/TableOfContents.astro';
 import Newsletter from '../../components/Newsletter.astro';
 import { site } from '../../site.config';
 import { formatDate, formatPrice } from '../../lib/format';
-import { resolveToolCta, affiliateLinkAttrs } from '../../lib/affiliates';
+import { resolveToolCta, affiliateLinkAttrs, AFFILIATE_LABEL } from '../../lib/affiliates';
 import TryButton from '../../components/TryButton.astro';
 import ToolLogo from '../../components/ToolLogo.astro';
 import { visualForTool, type ToolCategory } from '../../lib/visuals';
@@ -208,7 +208,9 @@ const schema = [
               class="rounded-lg bg-brand-400 px-5 py-3 text-sm font-semibold text-ink-950 transition hover:bg-brand-300"
             >
               Ir a la web de {data.name}
-              {isAffiliate && <span class="ml-1 opacity-70">(enlace de afiliado)</span>}
+              {isAffiliate && (
+                <span class="ml-1 opacity-80">({AFFILIATE_LABEL.toLowerCase()})</span>
+              )}
             </a>
           </div>
         </section>
@@ -245,7 +247,11 @@ const schema = [
             class="mt-5 block rounded-lg bg-brand-400 px-4 py-2.5 text-center text-sm font-semibold text-ink-950 transition hover:bg-brand-300"
           >
             Probar {data.name}
-            {isAffiliate && <span class="block text-[0.65rem] font-medium tracking-wide uppercase opacity-70">Enlace de afiliado</span>}
+            {isAffiliate && (
+              <span class="block text-[0.65rem] font-medium tracking-wide uppercase opacity-80">
+                {AFFILIATE_LABEL}
+              </span>
+            )}
           </a>
         </div>
 

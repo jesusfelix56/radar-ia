@@ -1,5 +1,6 @@
 ---
 import { amazonProductUrl, amazonSearchUrl, affiliateLinkAttrs } from '../lib/amazon';
+import { AFFILIATE_LABEL } from '../lib/affiliates';
 import { formatPrice } from '../lib/format';
 
 interface Pick {
@@ -39,7 +40,7 @@ const {
           <p class="mt-1 text-sm text-slate-300">{intro}</p>
         </div>
         <span class="shrink-0 rounded-full border border-amber-500/40 px-2.5 py-1 text-[0.65rem] font-semibold tracking-wide text-amber-300 uppercase">
-          Afiliado
+          {AFFILIATE_LABEL}
         </span>
       </div>
 
@@ -81,9 +82,12 @@ const {
                   href={pick.asin ? amazonProductUrl(pick.asin) : amazonSearchUrl(pick.search ?? pick.title)}
                   rel={affiliateLinkAttrs.rel}
                   target={affiliateLinkAttrs.target}
-                  class="rounded-lg bg-amber-400 px-3.5 py-2 text-sm font-semibold text-ink-950 transition hover:bg-amber-300"
+                  class="inline-flex flex-col items-center rounded-lg bg-amber-400 px-3.5 py-2 text-sm font-semibold text-ink-950 transition hover:bg-amber-300"
                 >
                   Ver en Amazon
+                  <span class="text-[0.65rem] font-medium tracking-wide uppercase opacity-80">
+                    {AFFILIATE_LABEL}
+                  </span>
                 </a>
               </div>
             </div>

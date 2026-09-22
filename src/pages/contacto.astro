@@ -88,11 +88,14 @@ const hasEndpoint = Boolean(forms.contact);
       <input
         type="checkbox"
         name="privacidad"
+        value="acepto"
         required
         class="mt-0.5 h-4 w-4 rounded border-ink-600 bg-ink-950 accent-brand-400"
       />
-      He leído y acepto la{' '}
-      <a href="/legal/privacidad" class="text-brand-300 underline">política de privacidad</a>.
+      <span>
+        He leído y acepto la{' '}
+        <a href="/legal/privacidad" class="text-brand-300 underline">política de privacidad</a>.
+      </span>
     </label>
 
     <button
@@ -101,6 +104,22 @@ const hasEndpoint = Boolean(forms.contact);
     >
       Enviar mensaje
     </button>
+
+    <div class="space-y-1 text-[0.7rem] leading-relaxed text-slate-500">
+      <p class="font-semibold tracking-wide text-slate-400 uppercase">
+        Información básica sobre protección de datos
+      </p>
+      <p><strong class="text-slate-400">Responsable:</strong> {site.legalName}.</p>
+      <p><strong class="text-slate-400">Finalidad:</strong> responder a tu consulta.</p>
+      <p>
+        <strong class="text-slate-400">Base jurídica:</strong> tu consentimiento (art. 6.1.a RGPD).
+      </p>
+      <p>
+        <strong class="text-slate-400">Derechos:</strong> acceso, rectificación, supresión, oposición,
+        limitación y portabilidad. Más información en la{' '}
+        <a href="/legal/privacidad" class="underline hover:text-brand-300">política de privacidad</a>.
+      </p>
+    </div>
   </form>
 
   {
@@ -116,6 +135,8 @@ const hasEndpoint = Boolean(forms.contact);
             const nombre = String(data.get('nombre') || '').trim();
             const email = String(data.get('email') || '').trim();
             const mensaje = String(data.get('mensaje') || '').trim();
+            const consent = data.get('privacidad');
+            if (!consent) return;
             const subject = encodeURIComponent(`Contacto web: ${nombre}`);
             const body = encodeURIComponent(`Nombre: ${nombre}\nCorreo: ${email}\n\n${mensaje}`);
             window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;

@@ -7,6 +7,7 @@ interface Props {
 
 const { compact = false } = Astro.props;
 const inputId = compact ? 'email-compact' : 'email-main';
+const consentId = compact ? 'newsletter-consent-compact' : 'newsletter-consent-main';
 const hasEndpoint = Boolean(forms.newsletter);
 ---
 
@@ -25,33 +26,72 @@ const hasEndpoint = Boolean(forms.newsletter);
     </p>
 
     <form
-      class={`js-newsletter-form mt-6 flex flex-col gap-3 sm:flex-row ${compact ? '' : 'mx-auto max-w-md'}`}
+      class={`js-newsletter-form mt-6 flex flex-col gap-3 ${compact ? '' : 'mx-auto max-w-md'}`}
       method="post"
       action={hasEndpoint ? forms.newsletter : undefined}
       data-mailto={hasEndpoint ? undefined : site.email}
     >
-      <label for={inputId} class="sr-only">Tu correo electrónico</label>
-      <input
-        id={inputId}
-        type="email"
-        name="email"
-        required
-        autocomplete="email"
-        placeholder="tu@correo.com"
-        class="flex-1 rounded-lg border border-ink-600 bg-ink-950 px-4 py-2.5 text-sm text-white placeholder:text-slate-600 focus:border-brand-400 focus:outline-none"
-      />
-      <button
-        type="submit"
-        class="rounded-lg bg-brand-400 px-5 py-2.5 text-sm font-semibold text-ink-950 transition hover:bg-brand-300"
+      <div class="flex flex-col gap-3 sm:flex-row">
+        <label for={inputId} class="sr-only">Tu correo electrónico</label>
+        <input
+          id={inputId}
+          type="email"
+          name="email"
+          required
+          autocomplete="email"
+          placeholder="tu@correo.com"
+          class="flex-1 rounded-lg border border-ink-600 bg-ink-950 px-4 py-2.5 text-sm text-white placeholder:text-slate-600 focus:border-brand-400 focus:outline-none"
+        />
+        <button
+          type="submit"
+          class="rounded-lg bg-brand-400 px-5 py-2.5 text-sm font-semibold text-ink-950 transition hover:bg-brand-300"
+        >
+          Suscribirme
+        </button>
+      </div>
+
+      <label
+        for={consentId}
+        class={`flex items-start gap-2.5 text-xs leading-relaxed text-slate-400 ${compact ? 'text-left' : 'sm:text-left'}`}
       >
-        Suscribirme
-      </button>
+        <input
+          id={consentId}
+          type="checkbox"
+          name="privacidad"
+          value="acepto"
+          required
+          class="mt-0.5 h-4 w-4 shrink-0 rounded border-ink-600 bg-ink-950 accent-brand-400"
+        />
+        <span>
+          He leído y acepto la{' '}
+          <a href="/legal/privacidad" class="underline hover:text-brand-300">política de privacidad</a>
+          {' '}y consiento el tratamiento de mi correo para recibir la newsletter.
+        </span>
+      </label>
     </form>
 
-    <p class="mt-3 text-xs text-slate-500">
-      Sin spam. Para darte de baja, escribe a {site.email}. Consulta la{' '}
-      <a href="/legal/privacidad" class="underline hover:text-brand-300">política de privacidad</a>.
-    </p>
+    <div
+      class={`mt-4 space-y-1 text-[0.7rem] leading-relaxed text-slate-500 ${compact ? 'text-left' : 'text-left sm:text-center'}`}
+    >
+      <p class="font-semibold tracking-wide text-slate-400 uppercase">
+        Información básica sobre protección de datos
+      </p>
+      <p>
+        <strong class="text-slate-400">Responsable:</strong> {site.legalName}.
+      </p>
+      <p>
+        <strong class="text-slate-400">Finalidad:</strong> enviarte la newsletter semanal.
+      </p>
+      <p>
+        <strong class="text-slate-400">Base jurídica:</strong> tu consentimiento (art. 6.1.a RGPD).
+      </p>
+      <p>
+        <strong class="text-slate-400">Derechos:</strong> acceso, rectificación, supresión, oposición,
+        limitación y portabilidad. Puedes retirar el consentimiento cuando quieras escribiendo a{' '}
+        {site.email}. Más información en la{' '}
+        <a href="/legal/privacidad" class="underline hover:text-brand-300">política de privacidad</a>.
+      </p>
+    </div>
   </div>
 </section>
 
@@ -64,11 +104,13 @@ const hasEndpoint = Boolean(forms.newsletter);
         form.addEventListener('submit', (event) => {
           event.preventDefault();
           const email = form.querySelector('input[name="email"]')?.value.trim();
+          const consent = form.querySelector('input[name="privacidad"]');
           const to = form.getAttribute('data-mailto');
           if (!email || !to) return;
+          if (!consent?.checked) return;
           const subject = encodeURIComponent('Alta a la newsletter de Lo Probamos');
           const body = encodeURIComponent(
-            `Quiero suscribirme a la newsletter.\n\nMi correo: ${email}`,
+            `Quiero suscribirme a la newsletter.\n\nMi correo: ${email}\nHe leído y acepto la política de privacidad y consiento el tratamiento de mi correo para recibir la newsletter.`,
           );
           window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
         });

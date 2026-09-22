@@ -47,9 +47,23 @@ const baseSchema = [
     '@type': 'Organization',
     '@id': `${site.url}/#organization`,
     name: site.name,
+    legalName: site.legalName,
     url: site.url,
     email: site.email,
+    taxID: site.nif,
     slogan: site.tagline,
+    founder: {
+      '@type': 'Person',
+      name: site.legalName,
+    },
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: site.postal.streetAddress,
+      addressLocality: site.postal.addressLocality,
+      addressRegion: site.postal.addressRegion,
+      postalCode: site.postal.postalCode,
+      addressCountry: site.postal.addressCountry,
+    },
   },
 ];
 
