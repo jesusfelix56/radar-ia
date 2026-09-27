@@ -1,15 +1,18 @@
 ---
 import TextPage from '../../layouts/TextPage.astro';
+import { toolLinks } from '../../data/outbound-links';
 import { site } from '../../site.config';
+
+const elevenLabsHref = toolLinks.elevenlabs.href;
 ---
 
 <TextPage
   title="Aviso de afiliados y publicidad"
-  description="Cómo se financia este sitio: enlaces de afiliado de Amazon, publicidad de Google AdSense y qué implica para ti como lector."
+  description="Cómo se financia este sitio: enlaces de afiliado de Amazon y de ElevenLabs, publicidad de Google AdSense y qué implica para ti como lector."
   heading="Aviso de afiliados y publicidad"
   intro="Transparencia total sobre de dónde sale el dinero que mantiene este proyecto."
   breadcrumbs={[{ label: 'Legal' }, { label: 'Afiliados' }]}
-  updated="2026-09-22"
+  updated="2026-09-27"
 >
   <h2>Programa de Afiliados de Amazon</h2>
   <p>
@@ -31,14 +34,12 @@ import { site } from '../../site.config';
     </li>
     <li>
       <strong>Los enlaces están identificados antes del clic.</strong> Cada enlace de afiliado de
-      Amazon o de software lleva la etiqueta visible «Enlace comisionado» y los atributos{' '}
+      Amazon lleva la etiqueta visible «Enlace comisionado» y los atributos{' '}
       <code>rel="sponsored nofollow"</code>. No se oculta la relación comercial en el pie de página.
     </li>
     <li>
-      <strong>Recomendamos, no vendemos.</strong> Amazon cubre hardware y libros. Además, algunas
-      herramientas de software tienen programa de afiliados propio (Perplexity, ElevenLabs, Copy.ai,
-      Runway): si te das de alta a través de nuestros botones "Probar", podemos recibir una comisión
-      recurrente. La nota de cada análisis se decide antes y por separado.
+      <strong>Recomendamos, no vendemos.</strong> Amazon cubre hardware y libros. La nota de cada
+      análisis se decide antes y por separado.
     </li>
   </ul>
 
@@ -57,24 +58,42 @@ import { site } from '../../site.config';
     <a href="https://www.google.com/settings/ads" rel="noopener nofollow" target="_blank">
       configuración de anuncios de Google
     </a>{' '}
-    o revocar tu consentimiento desde el enlace del pie de página.
+    o volver a abrir el mensaje de consentimiento de Google desde el enlace del pie de página.
   </p>
 
-  <h2>Programas de afiliación de software</h2>
+  <h2>Enlace de afiliado de ElevenLabs</h2>
   <p>
-    Perplexity, ElevenLabs, Copy.ai y Runway tienen programa de afiliados. Los botones{' '}
-    <strong>Probar</strong> de esas fichas apuntan a nuestro enlace de referido y van marcados con
-    la etiqueta «Enlace comisionado» y con <code>rel="sponsored nofollow"</code>.
+    El botón <strong>Probar</strong> de ElevenLabs es un enlace de afiliado del ElevenLabs Creator
+    Affiliate Program. Lleva a{' '}
+    <a href={elevenLabsHref} rel="sponsored noopener" target="_blank">{elevenLabsHref}</a>, se
+    identifica como «Enlace comisionado» y, junto al enlace y visible antes del clic, indica que si
+    te suscribes a través de él recibo una comisión sin coste extra para ti. Soy afiliado
+    independiente de ElevenLabs.
   </p>
   <p>
-    Si te suscribes a un plan de pago a través de esos enlaces, solemos recibir una comisión mientras
-    la suscripción esté activa. Tú pagas el mismo precio. ChatGPT, Claude, Gemini, Copilot y
-    Midjourney no tienen programa público: esos botones van a la web oficial, sin comisión.
+    Enlace de afiliado: si te suscribes a través de él, recibo una comisión sin coste extra para ti.
+    Soy afiliado independiente de ElevenLabs.
+  </p>
+
+  <h2>Marcas de ElevenLabs</h2>
+  <p>
+    ElevenLabs and the ElevenLabs logo are registered trademarks or trademarks of ElevenLabs, Inc.
+    Used with permission. LoProbamosAI is not sponsored by, endorsed by, or affiliated with
+    ElevenLabs except as an independent participant in the ElevenLabs Creator Affiliate Program.
   </p>
   <p>
-    Las notas no se negocian. Copy.ai, por ejemplo, tiene un 7,6 a pesar de ser una de las
-    herramientas que sí nos puede dejar ingresos recurrentes.
+    ElevenLabs y el logotipo de ElevenLabs son marcas registradas o marcas de ElevenLabs, Inc. Se
+    usan con permiso. LoProbamosAI no está patrocinado, respaldado ni asociado con ElevenLabs,
+    salvo como participante independiente del ElevenLabs Creator Affiliate Program.
   </p>
+
+  <h2>Enlaces a otras herramientas de software</h2>
+  <p>
+    Los botones <strong>Probar</strong> de Perplexity, Copy.ai y Runway, igual que los de ChatGPT,
+    Claude, Gemini, Copilot y Midjourney, llevan a la web oficial de cada herramienta. No son
+    enlaces de afiliado ni de referido: no cobramos comisión si te registras desde ahí.
+  </p>
+  <p>Las notas no se negocian con quien fabrica la herramienta.</p>
 
   <h2>Lo que no hacemos</h2>
   <ul>

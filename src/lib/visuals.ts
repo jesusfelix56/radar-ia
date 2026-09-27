@@ -1,3 +1,13 @@
+import type { ImageMetadata } from 'astro';
+import catAudio from '../assets/images/cat-audio.png';
+import catCodigo from '../assets/images/cat-codigo.png';
+import catEscritura from '../assets/images/cat-escritura.png';
+import catImagen from '../assets/images/cat-imagen.png';
+import catInvestigacion from '../assets/images/cat-investigacion.png';
+import catProductividad from '../assets/images/cat-productividad.png';
+import catVideo from '../assets/images/cat-video.png';
+import heroRadar from '../assets/images/hero-radar.png';
+
 export type ToolCategory =
   | 'Escritura'
   | 'Imagen'
@@ -7,17 +17,19 @@ export type ToolCategory =
   | 'Productividad'
   | 'Investigación';
 
+export const heroImage = heroRadar;
+
 export const categoryVisual: Record<
   ToolCategory,
-  { image: string; color: string; label: string }
+  { image: ImageMetadata; color: string; label: string }
 > = {
-  Escritura: { image: '/images/cat-escritura.png', color: '#f59e0b', label: 'Escribir' },
-  Imagen: { image: '/images/cat-imagen.png', color: '#e879f9', label: 'Imagen' },
-  Vídeo: { image: '/images/cat-video.png', color: '#fb7185', label: 'Vídeo' },
-  Código: { image: '/images/cat-codigo.png', color: '#34d399', label: 'Código' },
-  Audio: { image: '/images/cat-audio.png', color: '#22d3ee', label: 'Audio' },
-  Productividad: { image: '/images/cat-productividad.png', color: '#60a5fa', label: 'Trabajo' },
-  Investigación: { image: '/images/cat-investigacion.png', color: '#a78bfa', label: 'Investigar' },
+  Escritura: { image: catEscritura, color: '#f59e0b', label: 'Escribir' },
+  Imagen: { image: catImagen, color: '#e879f9', label: 'Imagen' },
+  Vídeo: { image: catVideo, color: '#fb7185', label: 'Vídeo' },
+  Código: { image: catCodigo, color: '#34d399', label: 'Código' },
+  Audio: { image: catAudio, color: '#22d3ee', label: 'Audio' },
+  Productividad: { image: catProductividad, color: '#60a5fa', label: 'Trabajo' },
+  Investigación: { image: catInvestigacion, color: '#a78bfa', label: 'Investigar' },
 };
 
 export const toolVisual: Record<string, { color: string; color2: string }> = {

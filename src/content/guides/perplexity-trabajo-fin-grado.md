@@ -50,4 +50,4 @@ Zotero o similar. Perplexity puede darte APA mal (mayúsculas, "et al."). El man
 
 Si el tema es jurídico, cruza BOE con la [guía de autónomos](/guias/perplexity-autonomos-impuestos) en espíritu: fuente primaria primero.
 
-[Análisis de Perplexity](/herramientas/perplexity). Botón Probar = afiliado.
+[Análisis de Perplexity](/herramientas/perplexity).

@@ -15,7 +15,7 @@ pricing:
   currency: EUR
   period: mes
   note: Plus sigue en 23 € al mes en España. Por debajo hay Go, más barato, para quien se queda corto en el gratuito. El gratuito limita el modelo avanzado.
-website: https://chat.openai.com
+website: https://chatgpt.com
 pros:
   - Curva de aprendizaje casi nula, cualquiera lo usa el primer día
   - Ecosistema enorme - archivos, imágenes, voz, análisis de datos y GPTs personalizados en un solo sitio

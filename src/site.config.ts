@@ -22,7 +22,7 @@ export const site = {
   lang: 'es',
   author: 'Redacción de Lo Probamos',
   email: 'jfballestero0412@gmail.com',
-  defaultImage: '/og-default.svg',
+  defaultImage: '/og-default.png',
   legalName: 'Jesús Félix Oliva Ballestero',
   nif: '34353770G',
   address: 'Rúa Leopoldo Calvo Sotelo, 94, 27400 Monforte de Lemos (Lugo), España',
@@ -39,8 +39,10 @@ export const ads = {
   /** Cliente de AdSense (ca-pub-...). */
   client: env.PUBLIC_ADSENSE_CLIENT || 'ca-pub-7494588122793199',
   /**
-   * Con `false` el código de verificación va en la web, pero no se rellenan
-   * bloques de anuncio. Pásalo a true cuando Google apruebe el sitio.
+   * Con `false` se reservan los huecos, pero no se insertan unidades de anuncio.
+   * adsbygoogle.js se carga siempre que hay cliente: es el que muestra el mensaje
+   * de consentimiento certificado de Google. Este sitio no lo retrasa.
+   * Pásalo a true cuando tengas IDs de bloque reales.
    */
   enabled: env.PUBLIC_ADS_ENABLED === 'true',
   slots: {
@@ -57,24 +59,17 @@ export const amazon = {
 } as const;
 
 /**
- * Enlaces de afiliado de software (comisión recurrente si el usuario se suscribe).
- * Pega aquí la URL que te da cada programa (PartnerStack, Rewardful, Impact…).
- * Si está vacío, se usa el `affiliateUrl` del markdown de cada herramienta.
+ * Sustituye el `href` de `src/data/outbound-links.ts` si la variable tiene valor.
+ * Vacío = se usa la URL por defecto de ese fichero (ElevenLabs ya es el enlace de PartnerStack).
  */
-function affiliate(value: string | undefined) {
+function overrideUrl(value: string | undefined) {
   const trimmed = value?.trim();
   return trimmed ? trimmed : undefined;
 }
 
-export const softwareAffiliates: Record<string, string> = {};
-for (const [id, url] of [
-  ['perplexity', affiliate(env.PUBLIC_AFFILIATE_PERPLEXITY)],
-  ['elevenlabs', affiliate(env.PUBLIC_AFFILIATE_ELEVENLABS)],
-  ['copy-ai', affiliate(env.PUBLIC_AFFILIATE_COPYAI)],
-  ['runway', affiliate(env.PUBLIC_AFFILIATE_RUNWAY)],
-] as [string, string | undefined][]) {
-  if (url) softwareAffiliates[id] = url;
-}
+export const softwareAffiliateOverrides: Record<string, string> = {};
+const elevenLabsOverride = overrideUrl(env.PUBLIC_AFFILIATE_ELEVENLABS);
+if (elevenLabsOverride) softwareAffiliateOverrides.elevenlabs = elevenLabsOverride;
 
 /** Endpoints de formularios. Vacío = se usa mailto como respaldo. */
 export const forms = {

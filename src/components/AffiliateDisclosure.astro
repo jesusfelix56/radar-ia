@@ -1,0 +1,13 @@
+---
+import { affiliateDisclosure } from '../lib/affiliates';
+
+interface Props {
+  name: string;
+}
+
+const { name } = Astro.props;
+---
+
+<p class="max-w-xs text-left text-[0.7rem] leading-snug font-normal tracking-normal text-slate-400 normal-case">
+  {affiliateDisclosure(name)}
+</p>

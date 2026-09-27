@@ -7,40 +7,23 @@ import TextPage from '../../layouts/TextPage.astro';
   description="Qué cookies usamos, para qué sirven y cómo cambiar tus preferencias en cualquier momento."
   heading="Política de cookies"
   breadcrumbs={[{ label: 'Legal' }, { label: 'Cookies' }]}
-  updated="2026-08-20"
+  updated="2026-09-27"
 >
   <h2>Qué es una cookie</h2>
   <p>
     Un pequeño archivo que un sitio web guarda en tu dispositivo para recordar información entre
-    visitas. Algunas son imprescindibles para que la web funcione; otras sirven para medir audiencia
-    o mostrar publicidad.
+    visitas. Algunas son imprescindibles para que la web funcione; otras sirven para mostrar
+    publicidad.
   </p>
 
   <h2>Cookies que usamos</h2>
-
-  <h3>Técnicas y de preferencias (no requieren consentimiento)</h3>
-  <table>
-    <thead>
-      <tr>
-        <th>Nombre</th>
-        <th>Finalidad</th>
-        <th>Duración</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><code>loprobamos:consent</code></td>
-        <td>Recordar si has aceptado o rechazado las cookies publicitarias</td>
-        <td>Almacenamiento local, hasta que lo borres</td>
-      </tr>
-    </tbody>
-  </table>
   <p>
-    Técnicamente no es una cookie sino una entrada de <code>localStorage</code>, pero se rige por las
-    mismas normas y te lo contamos igual.
+    Este sitio no instala cookies propias ni scripts de analítica. El consentimiento de la
+    publicidad lo recoge el mensaje de consentimiento de Google (su plataforma certificada para el
+    EEE), no un aviso nuestro.
   </p>
 
-  <h3>Publicitarias (solo si las aceptas)</h3>
+  <h3>Publicitarias (según el mensaje de Google)</h3>
   <table>
     <thead>
       <tr>
@@ -78,18 +61,23 @@ import TextPage from '../../layouts/TextPage.astro';
     Las cookies de Amazon se instalan en el dominio de Amazon cuando haces clic en un enlace de
     afiliado y sales de este sitio, no antes.
   </p>
+  <p>
+    El consentimiento de los anuncios lo gestiona el mensaje de consentimiento de Google, que aparece
+    al cargar <code>adsbygoogle.js</code>. Google guarda tu elección y decide qué cookies
+    publicitarias se instalan. Este sitio no guarda esa elección ni la sustituye.
+  </p>
 
   <h2>Cómo cambiar tus preferencias</h2>
   <p>
-    Puedes revocar o modificar tu decisión cuando quieras desde el enlace{' '}
+    Puedes volver a abrir el mensaje de Google desde el enlace{' '}
     <button type="button" data-open-consent class="text-brand-300 underline">
       "Cambiar preferencias de cookies"
     </button>{' '}
-    del pie de página. Al hacerlo volverá a aparecer el aviso inicial.
+    del pie de página.
   </p>
   <p>
-    Si rechazas las cookies publicitarias, el sitio funciona con total normalidad: verás huecos sin
-    anuncios y podrás leer todo el contenido igual.
+    Si rechazas la publicidad en ese mensaje, el sitio sigue siendo legible. Los anuncios, si
+    aparecen, respetan la elección que hayas dado a Google.
   </p>
 
   <h2>Desde tu navegador</h2>

@@ -49,4 +49,4 @@ Elige 3 ganchos de familias distintas. No lances 5 del mismo ángulo. Claude: "q
 
 Públicos lookalike, exclusiones, creatividades (usa [Runway](/guias/runway-reel-instagram) o foto real). Presupuesto de aprendizaje: no bajes de lo que Meta te pide o el texto da igual.
 
-[Análisis de Copy.ai](/herramientas/copy-ai). Probar = afiliado.
+[Análisis de Copy.ai](/herramientas/copy-ai).

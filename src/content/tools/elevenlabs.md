@@ -16,7 +16,6 @@ pricing:
   period: mes
   note: Starter son 6 USD al mes y trae 30.000 créditos. El gratuito da 10.000 créditos al mes, unos 10 minutos de audio.
 website: https://elevenlabs.io
-affiliateUrl: https://elevenlabs.io/app/sign-up
 pros:
   - Las voces en castellano tienen entonación y pausas convincentes
   - La clonación de voz funciona con muestras cortas y resultados muy fieles

@@ -16,7 +16,6 @@ pricing:
   period: mes
   note: El plan Chat son 29 USD al mes e incluye hasta 5 personas, no se cobra por asiento. Los flujos automáticos empiezan en Growth, a 1.000 USD al mes.
 website: https://www.copy.ai
-affiliateUrl: https://www.copy.ai/?utm_source=affiliate
 pros:
   - Flujos ya montados para anuncios, fichas de Amazon y secuencias de email
   - Varias personas pueden trabajar sobre la misma marca sin copiar prompts a mano

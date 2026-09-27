@@ -1,5 +1,6 @@
 ---
-import { resolveToolCta, affiliateLinkAttrs, AFFILIATE_LABEL } from '../lib/affiliates';
+import AffiliateDisclosure from './AffiliateDisclosure.astro';
+import { resolveToolCta, AFFILIATE_LABEL, softwareAffiliateRel } from '../lib/affiliates';
 
 interface Props {
   tool: {
@@ -14,26 +15,29 @@ const { tool, label, class: className = '' } = Astro.props;
 const cta = resolveToolCta(tool);
 ---
 
-<a
-  href={cta.href}
-  rel={cta.isAffiliate ? affiliateLinkAttrs.rel : 'noopener'}
-  target="_blank"
-  aria-label={
-    cta.isAffiliate
-      ? `${label ?? `Probar ${cta.name}`} (${AFFILIATE_LABEL})`
-      : undefined
-  }
-  class:list={[
-    'inline-flex flex-col items-center justify-center rounded-lg bg-brand-400 px-4 py-2.5 text-sm font-semibold text-ink-950 transition hover:bg-brand-300',
-    className,
-  ]}
->
-  <span>{label ?? `Probar ${cta.name}`}</span>
-  {
-    cta.isAffiliate && (
-      <span class="text-[0.65rem] font-medium tracking-wide uppercase opacity-80">
-        {AFFILIATE_LABEL}
-      </span>
-    )
-  }
-</a>
+<span class="inline-flex max-w-xs flex-col items-stretch gap-1.5">
+  <a
+    href={cta.href}
+    rel={cta.isAffiliate ? softwareAffiliateRel : 'noopener'}
+    target="_blank"
+    aria-label={
+      cta.isAffiliate
+        ? `${label ?? `Probar ${cta.name}`} (${AFFILIATE_LABEL})`
+        : undefined
+    }
+    class:list={[
+      'inline-flex flex-col items-center justify-center rounded-lg bg-brand-400 px-4 py-2.5 text-sm font-semibold text-ink-950 transition hover:bg-brand-300',
+      className,
+    ]}
+  >
+    <span>{label ?? `Probar ${cta.name}`}</span>
+    {
+      cta.isAffiliate && (
+        <span class="text-[0.65rem] font-medium tracking-wide uppercase opacity-80">
+          {AFFILIATE_LABEL}
+        </span>
+      )
+    }
+  </a>
+  {cta.isAffiliate && <AffiliateDisclosure name={cta.name} />}
+</span>

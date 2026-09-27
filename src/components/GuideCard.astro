@@ -3,6 +3,7 @@ import type { CollectionEntry } from 'astro:content';
 import CategoryIcon from './CategoryIcon.astro';
 import { formatDate } from '../lib/format';
 import { categoryVisual, type ToolCategory } from '../lib/visuals';
+import MediaPicture from './MediaPicture.astro';
 
 interface Props {
   guide: CollectionEntry<'guides'>;
@@ -44,13 +45,13 @@ const visual = categoryVisual[visualKey];
   class="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-ink-700 bg-ink-900/80 shadow-lg shadow-black/20 transition hover:-translate-y-1 hover:border-accent-400/40"
 >
   <div class="relative h-32 overflow-hidden">
-    <img
+    <MediaPicture
       src={visual.image}
       alt=""
-      width="640"
-      height="360"
+      widths={[480, 768]}
+      sizes="(min-width: 768px) 28rem, calc(100vw - 2.5rem)"
+      pictureClass="block h-full w-full"
       class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-      loading="lazy"
     />
     <div class="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/30 to-transparent"></div>
     <div class="absolute bottom-3 left-4 flex items-center gap-2">

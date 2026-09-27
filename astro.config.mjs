@@ -3,6 +3,8 @@ import { defineConfig, fontProviders } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 
+import { lastmodForPath } from './src/lib/content-dates.mjs';
+
 function resolveSite() {
   const explicit = process.env.PUBLIC_SITE_URL;
   if (explicit) return explicit.replace(/\/$/, '');
@@ -17,8 +19,13 @@ export default defineConfig({
   build: { format: 'directory' },
   integrations: [
     sitemap({
-      filter: (page) => !page.includes('/legal/'),
+      filter: (page) => !page.includes('/404'),
       i18n: { defaultLocale: 'es', locales: { es: 'es-ES' } },
+      serialize(item) {
+        const lastmod = lastmodForPath(new URL(item.url).pathname);
+        if (lastmod) item.lastmod = `${lastmod}T00:00:00.000Z`;
+        return item;
+      },
     }),
   ],
   // Las fuentes se descargan en el build y se sirven desde tu propio dominio:

@@ -61,4 +61,4 @@ Ese correo de 8 líneas ahorra una reunión. Claude te lo redacta con el [métod
 
 Una respuesta de Perplexity con fuente de 2022 sobre el sistema de módulos o sobre la cuota de autónomos **está mal**. Exige fecha en cada afirmación.
 
-[Análisis de Perplexity](/herramientas/perplexity) — el botón Probar es afiliado.
+[Análisis de Perplexity](/herramientas/perplexity).
