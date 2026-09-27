@@ -69,4 +69,4 @@ Aquí Perplexity se viene abajo a menudo. Cruza con Keepa o con la gráfica de p
 
 Te quedas con una tabla de tres filas y una decisión tuya. Si Perplexity te declara un ganador, ignóralo. El producto es el mapa de fuentes.
 
-Cómo puntuamos la herramienta está en el [análisis de Perplexity](/herramientas/perplexity). El botón Probar de esa ficha es enlace de afiliado.
+Cómo puntuamos la herramienta está en el [análisis de Perplexity](/herramientas/perplexity).

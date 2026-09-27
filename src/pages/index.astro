@@ -11,7 +11,8 @@ import Newsletter from '../components/Newsletter.astro';
 import RatingBadge from '../components/RatingBadge.astro';
 import { site } from '../site.config';
 import { formatDate } from '../lib/format';
-import { categoryVisual, type ToolCategory } from '../lib/visuals';
+import { categoryVisual, heroImage, type ToolCategory } from '../lib/visuals';
+import MediaPicture from '../components/MediaPicture.astro';
 
 const tools = (await getCollection('tools', ({ data }) => !data.draft)).sort(
   (a, b) => b.data.rating - a.data.rating,
@@ -46,7 +47,7 @@ const homePicks = [
 ---
 
 <BaseLayout
-  title={`${site.name} · ${site.tagline}`}
+  title="Reseñas honestas de herramientas de IA"
   description={site.description}
   schema={[
     {
@@ -114,12 +115,14 @@ const homePicks = [
       <div class="relative">
         <div class="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-brand-400/30 to-accent-500/30 blur-2xl">
         </div>
-        <img
-          src="/images/hero-radar.png"
+        <MediaPicture
+          src={heroImage}
           alt="Mesa de trabajo con varias pantallas de herramientas de inteligencia artificial"
-          width="1280"
-          height="720"
-          class="relative w-full rounded-[1.5rem] border border-white/10 shadow-2xl shadow-black/50"
+          widths={[640, 960, 1280]}
+          sizes="(min-width: 768px) 36rem, calc(100vw - 2.5rem)"
+          priority
+          pictureClass="relative z-10 block w-full"
+          class="w-full rounded-[1.5rem] border border-white/10 shadow-2xl shadow-black/50"
         />
       </div>
     </div>
@@ -177,11 +180,11 @@ const homePicks = [
                 href={`/herramientas?categoria=${encodeURIComponent(category)}`}
                 class="group relative overflow-hidden rounded-2xl border border-ink-700"
               >
-                <img
+                <MediaPicture
                   src={visual.image}
                   alt=""
-                  width="480"
-                  height="360"
+                  widths={[480, 768]}
+                  sizes="(min-width: 1024px) 18rem, (min-width: 640px) 46vw, calc(100vw - 2.5rem)"
                   class="h-36 w-full object-cover transition duration-500 group-hover:scale-105"
                 />
                 <div class="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/50 to-transparent"></div>

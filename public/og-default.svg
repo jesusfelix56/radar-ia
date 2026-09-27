@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
   <defs>
     <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
@@ -23,23 +24,23 @@
     <path d="M14 30 24 40.5 44 18" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
   </g>
 
-  <text x="152" y="118" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="34" font-weight="700" fill="#ffffff">
+  <text x="152" y="118" font-family="Inter, Liberation Sans, Arial, sans-serif" font-size="34" font-weight="700" fill="#ffffff">
     Lo Probamos
   </text>
 
-  <text x="80" y="290" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="76" font-weight="700" fill="#ffffff">
+  <text x="80" y="290" font-family="Inter, Liberation Sans, Arial, sans-serif" font-size="76" font-weight="700" fill="#ffffff">
     Herramientas de IA
   </text>
-  <text x="80" y="378" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="76" font-weight="700" fill="url(#brand)">
+  <text x="80" y="378" font-family="Inter, Liberation Sans, Arial, sans-serif" font-size="76" font-weight="700" fill="url(#brand)">
     analizadas con pruebas reales
   </text>
 
-  <text x="80" y="452" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="30" fill="#94a3b8">
+  <text x="80" y="452" font-family="Inter, Liberation Sans, Arial, sans-serif" font-size="30" fill="#94a3b8">
     Pagamos las suscripciones, medimos los resultados y publicamos las cifras.
   </text>
 
   <rect x="80" y="520" width="1040" height="1" fill="#1c2438" />
-  <text x="80" y="570" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="26" fill="#64748b">
-    Reseñas · Comparativas · Guías · Generador de prompts
+  <text x="80" y="570" font-family="Inter, Liberation Sans, Arial, sans-serif" font-size="26" fill="#64748b">
+    ReseÃ±as Â· Comparativas Â· GuÃ­as Â· Generador de prompts
   </text>
 </svg>

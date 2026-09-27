@@ -5,6 +5,7 @@ import TryButton from './TryButton.astro';
 import ToolLogo from './ToolLogo.astro';
 import { formatPrice } from '../lib/format';
 import { visualForTool, type ToolCategory } from '../lib/visuals';
+import MediaPicture from './MediaPicture.astro';
 
 interface Props {
   tool: CollectionEntry<'tools'>;
@@ -34,13 +35,13 @@ const price = pricing.hasFreePlan
   }
 
   <div class="relative h-36 overflow-hidden">
-    <img
+    <MediaPicture
       src={visual.cover}
       alt=""
-      width="640"
-      height="360"
+      widths={[480, 768]}
+      sizes="(min-width: 1024px) 24rem, (min-width: 640px) 46vw, calc(100vw - 2.5rem)"
+      pictureClass="block h-full w-full"
       class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-      loading="lazy"
     />
     <div
       class="absolute inset-0"

@@ -63,4 +63,4 @@ Baja el MP3. En Audacity o similar:
 - Normaliza a -16 LUFS para pódcast
 - Añade sintonía **después**. Si la mezclas en ElevenLabs, cada regeneración la destroza
 
-El plan gratuito da para probar. Un episodio semanal de 12 minutos se come el plan de pago pequeño; vigila caracteres. La ficha de [ElevenLabs](/herramientas/elevenlabs) detalla el coste real. El botón Probar es enlace de afiliado.
+El plan gratuito da para probar. Un episodio semanal de 12 minutos se come el plan de pago pequeño; vigila caracteres. La ficha de [ElevenLabs](/herramientas/elevenlabs) detalla el coste real.

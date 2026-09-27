@@ -41,13 +41,23 @@ import { ads } from '../site.config';
   </a>
 </div>
 
-<script is:inline define:vars={{ adsClient: ads.client, adsEnabled: ads.enabled }}>
+<script is:inline define:vars={{ adsClient: ads.client }}>
   (() => {
     const STORAGE_KEY = 'loprobamos:consent';
     const banner = document.getElementById('consent-banner');
 
+    function updateConsent(granted) {
+      if (typeof gtag !== 'function') return;
+      gtag('consent', 'update', {
+        ad_storage: granted ? 'granted' : 'denied',
+        ad_user_data: granted ? 'granted' : 'denied',
+        ad_personalization: granted ? 'granted' : 'denied',
+        analytics_storage: granted ? 'granted' : 'denied',
+      });
+    }
+
     function loadAds() {
-      if (!adsEnabled || !adsClient || window.__adsLoaded) return;
+      if (!adsClient || window.__adsLoaded) return;
       window.__adsLoaded = true;
 
       const fillSlots = () => {
@@ -85,15 +95,26 @@ import { ads } from '../site.config';
     }
 
     const stored = localStorage.getItem(STORAGE_KEY);
-    if (stored === 'granted') loadAds();
-    else if (stored !== 'denied') show();
+    if (stored === 'granted') {
+      updateConsent(true);
+      loadAds();
+    } else if (stored === 'denied') {
+      updateConsent(false);
+    } else {
+      show();
+    }
 
     banner?.querySelectorAll('[data-consent]').forEach((button) => {
       button.addEventListener('click', () => {
         const choice = button.getAttribute('data-consent');
-        localStorage.setItem(STORAGE_KEY, choice);
+        localStorage.setItem(STORAGE_KEY, choice || 'denied');
         hide();
-        if (choice === 'granted') loadAds();
+        if (choice === 'granted') {
+          updateConsent(true);
+          loadAds();
+        } else {
+          updateConsent(false);
+        }
       });
     });
 

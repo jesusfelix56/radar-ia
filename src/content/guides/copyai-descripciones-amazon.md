@@ -62,4 +62,4 @@ Pide 5 variantes del título y 5 del primer bullet. Copy.ai rinde en volumen. Lu
 - Lee en voz alta. Si te da vergüenza, está mal
 - Pasa el texto por Claude con: "Quita calcos del inglés. No añadas claims. Conserva datos."
 
-Ese último paso es el que justifica no usar solo Copy.ai. El [análisis de Copy.ai](/herramientas/copy-ai) explica para qué equipos sí compensa el asiento de pago. El botón Probar es enlace de afiliado.
+Ese último paso es el que justifica no usar solo Copy.ai. El [análisis de Copy.ai](/herramientas/copy-ai) explica para qué equipos sí compensa el asiento de pago.

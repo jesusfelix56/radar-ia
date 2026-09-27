@@ -51,4 +51,4 @@ Runway no te deja una locución buena en castellano. [ElevenLabs](/guias/elevenl
 
 ## 5. Créditos
 
-Un reel de prueba (9 generaciones de 5 s) se come un plan bajo en una tarde. Antes de "explorar", ten el briefing cerrado. El [análisis de Runway](/herramientas/runway) detalla el modelo de créditos. El botón Probar es enlace de afiliado.
+Un reel de prueba (9 generaciones de 5 s) se come un plan bajo en una tarde. Antes de "explorar", ten el briefing cerrado. El [análisis de Runway](/herramientas/runway) detalla el modelo de créditos.

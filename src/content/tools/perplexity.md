@@ -16,7 +16,6 @@ pricing:
   period: mes
   note: Pro son 20 USD al mes, o 200 USD si pagas el año. El gratuito incluye unas 3 búsquedas Pro al día.
 website: https://www.perplexity.ai
-affiliateUrl: https://www.perplexity.ai/pro
 pros:
   - Cada afirmación viene con su fuente enlazada y numerada
   - Ahorra muchísimo tiempo en investigación preliminar de cualquier tema

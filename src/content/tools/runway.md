@@ -15,8 +15,7 @@ pricing:
   currency: EUR
   period: mes
   note: Standard son 15 USD al mes (12 USD si pagas el año) y dan 625 créditos. El gratuito son 125 créditos una sola vez y no se renuevan.
-website: https://runwayml.com
-affiliateUrl: https://runwayml.com/signup
+website: https://runway.com
 pros:
   - Las herramientas de edición asistida (borrar objetos, separar fondo) ahorran horas de rotoscopia
   - Los clips cortos con movimiento de cámara tienen calidad de uso profesional

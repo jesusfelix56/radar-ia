@@ -3,6 +3,8 @@
  * Todo lo editable sin tocar componentes vive aquí o en el archivo `.env`.
  */
 
+import { pendingSoftwareAffiliates } from './data/outbound-links';
+
 const env = import.meta.env;
 
 function resolveSiteUrl() {
@@ -22,7 +24,7 @@ export const site = {
   lang: 'es',
   author: 'Redacción de Lo Probamos',
   email: 'jfballestero0412@gmail.com',
-  defaultImage: '/og-default.svg',
+  defaultImage: '/og-default.png',
   legalName: 'Jesús Félix Oliva Ballestero',
   nif: '34353770G',
   address: 'Rúa Leopoldo Calvo Sotelo, 94, 27400 Monforte de Lemos (Lugo), España',
@@ -39,8 +41,9 @@ export const ads = {
   /** Cliente de AdSense (ca-pub-...). */
   client: env.PUBLIC_ADSENSE_CLIENT || 'ca-pub-7494588122793199',
   /**
-   * Con `false` el código de verificación va en la web, pero no se rellenan
-   * bloques de anuncio. Pásalo a true cuando Google apruebe el sitio.
+   * Con `false` se reservan los huecos, pero no se insertan unidades de anuncio.
+   * El script de AdSense, en cualquier caso, solo se descarga tras el consentimiento.
+   * Pásalo a true cuando Google apruebe el sitio y tengas IDs de bloque reales.
    */
   enabled: env.PUBLIC_ADS_ENABLED === 'true',
   slots: {
@@ -58,22 +61,26 @@ export const amazon = {
 
 /**
  * Enlaces de afiliado de software (comisión recurrente si el usuario se suscribe).
- * Pega aquí la URL que te da cada programa (PartnerStack, Rewardful, Impact…).
- * Si está vacío, se usa el `affiliateUrl` del markdown de cada herramienta.
+ * Solo entran aquí las URLs reales pegadas en el entorno. Si faltan, el botón
+ * «Probar» usa la web oficial de `src/data/outbound-links.ts` y no se marca
+ * como enlace comisionado.
  */
 function affiliate(value: string | undefined) {
   const trimmed = value?.trim();
   return trimmed ? trimmed : undefined;
 }
 
+const affiliateByEnv = {
+  PUBLIC_AFFILIATE_PERPLEXITY: affiliate(env.PUBLIC_AFFILIATE_PERPLEXITY),
+  PUBLIC_AFFILIATE_ELEVENLABS: affiliate(env.PUBLIC_AFFILIATE_ELEVENLABS),
+  PUBLIC_AFFILIATE_COPYAI: affiliate(env.PUBLIC_AFFILIATE_COPYAI),
+  PUBLIC_AFFILIATE_RUNWAY: affiliate(env.PUBLIC_AFFILIATE_RUNWAY),
+} as const;
+
 export const softwareAffiliates: Record<string, string> = {};
-for (const [id, url] of [
-  ['perplexity', affiliate(env.PUBLIC_AFFILIATE_PERPLEXITY)],
-  ['elevenlabs', affiliate(env.PUBLIC_AFFILIATE_ELEVENLABS)],
-  ['copy-ai', affiliate(env.PUBLIC_AFFILIATE_COPYAI)],
-  ['runway', affiliate(env.PUBLIC_AFFILIATE_RUNWAY)],
-] as [string, string | undefined][]) {
-  if (url) softwareAffiliates[id] = url;
+for (const program of pendingSoftwareAffiliates) {
+  const url = affiliateByEnv[program.env];
+  if (url) softwareAffiliates[program.id] = url;
 }
 
 /** Endpoints de formularios. Vacío = se usa mailto como respaldo. */

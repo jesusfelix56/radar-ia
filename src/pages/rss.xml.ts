@@ -31,6 +31,7 @@ export async function GET(context: APIContext) {
     description: site.description,
     site: context.site ?? site.url,
     items,
+    trailingSlash: false,
     customData: `<language>${site.lang}</language>`,
   });
 }
