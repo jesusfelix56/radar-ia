@@ -1,5 +1,4 @@
-import { officialToolUrls, type ToolId } from '../data/outbound-links';
-import { softwareAffiliates } from '../site.config';
+import { toolLinks, type ToolId } from '../data/outbound-links';
 
 export { affiliateLinkAttrs } from './amazon';
 
@@ -16,14 +15,12 @@ type ToolLike = {
 };
 
 /**
- * URL del botón "Probar". Prioridad: enlace de referido del entorno → web
- * oficial centralizada → `website` del markdown. Solo es enlace comisionado
- * cuando hay una URL real de afiliado; no se usa `affiliateUrl` del markdown.
+ * URL del botón "Probar". Sale de `toolLinks`. La etiqueta de afiliado y
+ * `rel="sponsored"` solo se aplican si ese enlace tiene `affiliate: true`.
  */
 export function resolveToolCta(tool: ToolLike) {
-  const fromProgram = softwareAffiliates[tool.id];
-  const official = officialToolUrls[tool.id as ToolId] ?? tool.data.website;
-  const href = fromProgram || official;
-  const isAffiliate = Boolean(fromProgram);
+  const link = toolLinks[tool.id as ToolId];
+  const href = link?.href ?? tool.data.website;
+  const isAffiliate = Boolean(link?.affiliate);
   return { href, isAffiliate, name: tool.data.name };
 }

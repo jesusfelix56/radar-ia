@@ -48,7 +48,10 @@ const tools = defineCollection({
       note: z.string().optional(),
     }),
     website: z.string(),
-    /** Enlace de afiliado del propio software, si existe programa. */
+    /**
+     * Sin uso en el botón «Probar». La URL y `affiliate: true/false` viven en
+     * `src/data/outbound-links.ts`.
+     */
     affiliateUrl: z.string().optional(),
     pros: z.array(z.string()).min(2),
     cons: z.array(z.string()).min(1),
