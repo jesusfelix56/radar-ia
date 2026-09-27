@@ -12,7 +12,8 @@ import TableOfContents from '../../components/TableOfContents.astro';
 import Newsletter from '../../components/Newsletter.astro';
 import { site } from '../../site.config';
 import { formatDate, formatPrice } from '../../lib/format';
-import { resolveToolCta, affiliateLinkAttrs, AFFILIATE_LABEL } from '../../lib/affiliates';
+import { resolveToolCta, AFFILIATE_LABEL, softwareAffiliateRel } from '../../lib/affiliates';
+import AffiliateDisclosure from '../../components/AffiliateDisclosure.astro';
 import TryButton from '../../components/TryButton.astro';
 import ToolLogo from '../../components/ToolLogo.astro';
 import { visualForTool, type ToolCategory } from '../../lib/visuals';
@@ -134,7 +135,9 @@ const schema = [
             {data.category}
           </span>
           <RatingBadge value={data.rating} size="sm" />
-          <TryButton tool={tool} class="ml-auto" />
+          <span class="ml-auto">
+            <TryButton tool={tool} />
+          </span>
         </div>
 
         <h1 class="mt-4 font-display text-4xl font-bold text-white md:text-5xl">
@@ -210,17 +213,20 @@ const schema = [
           <p class="mt-3 leading-relaxed text-slate-200">{data.verdict}</p>
           <div class="mt-5 flex flex-wrap items-center gap-4">
             <RatingBadge value={data.rating} size="lg" />
-            <a
-              href={ctaHref}
-              rel={isAffiliate ? affiliateLinkAttrs.rel : 'noopener'}
-              target="_blank"
-              class="rounded-lg bg-brand-400 px-5 py-3 text-sm font-semibold text-ink-950 transition hover:bg-brand-300"
-            >
-              Ir a la web de {data.name}
-              {isAffiliate && (
-                <span class="ml-1 opacity-80">({AFFILIATE_LABEL.toLowerCase()})</span>
-              )}
-            </a>
+            <span class="inline-flex max-w-xs flex-col items-stretch gap-1.5">
+              <a
+                href={ctaHref}
+                rel={isAffiliate ? softwareAffiliateRel : 'noopener'}
+                target="_blank"
+                class="rounded-lg bg-brand-400 px-5 py-3 text-sm font-semibold text-ink-950 transition hover:bg-brand-300"
+              >
+                Ir a la web de {data.name}
+                {isAffiliate && (
+                  <span class="ml-1 opacity-80">({AFFILIATE_LABEL.toLowerCase()})</span>
+                )}
+              </a>
+              {isAffiliate && <AffiliateDisclosure name={data.name} />}
+            </span>
           </div>
         </section>
 
@@ -249,19 +255,22 @@ const schema = [
             <p class="mt-1 font-semibold text-white">{price}</p>
             {data.pricing.note && <p class="mt-2 text-xs leading-relaxed text-slate-500">{data.pricing.note}</p>}
           </div>
-          <a
-            href={ctaHref}
-            rel={isAffiliate ? affiliateLinkAttrs.rel : 'noopener'}
-            target="_blank"
-            class="mt-5 block rounded-lg bg-brand-400 px-4 py-2.5 text-center text-sm font-semibold text-ink-950 transition hover:bg-brand-300"
-          >
-            Probar {data.name}
-            {isAffiliate && (
-              <span class="block text-[0.65rem] font-medium tracking-wide uppercase opacity-80">
-                {AFFILIATE_LABEL}
-              </span>
-            )}
-          </a>
+          <div class="mt-5 flex flex-col gap-1.5">
+            <a
+              href={ctaHref}
+              rel={isAffiliate ? softwareAffiliateRel : 'noopener'}
+              target="_blank"
+              class="block rounded-lg bg-brand-400 px-4 py-2.5 text-center text-sm font-semibold text-ink-950 transition hover:bg-brand-300"
+            >
+              Probar {data.name}
+              {isAffiliate && (
+                <span class="block text-[0.65rem] font-medium tracking-wide uppercase opacity-80">
+                  {AFFILIATE_LABEL}
+                </span>
+              )}
+            </a>
+            {isAffiliate && <AffiliateDisclosure name={data.name} />}
+          </div>
         </div>
 
         <TableOfContents headings={headings} />

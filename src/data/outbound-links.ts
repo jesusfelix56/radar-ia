@@ -18,7 +18,7 @@ export const toolLinks = {
   midjourney: { href: 'https://www.midjourney.com', affiliate: false },
   'github-copilot': { href: 'https://github.com/features/copilot', affiliate: false },
   perplexity: { href: 'https://www.perplexity.ai', affiliate: false },
-  elevenlabs: { href: 'https://elevenlabs.io', affiliate: false },
+  elevenlabs: { href: 'https://try.elevenlabs.io/sqcridu8j1cj', affiliate: true },
   runway: { href: 'https://runway.com', affiliate: false },
   'copy-ai': { href: 'https://www.copy.ai', affiliate: false },
 } satisfies Record<string, ToolLink>;

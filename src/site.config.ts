@@ -57,6 +57,19 @@ export const amazon = {
   domain: env.PUBLIC_AMAZON_DOMAIN || 'amazon.es',
 } as const;
 
+/**
+ * Sustituye el `href` de `src/data/outbound-links.ts` si la variable tiene valor.
+ * Vacío = se usa la URL por defecto de ese fichero (ElevenLabs ya es el enlace de PartnerStack).
+ */
+function overrideUrl(value: string | undefined) {
+  const trimmed = value?.trim();
+  return trimmed ? trimmed : undefined;
+}
+
+export const softwareAffiliateOverrides: Record<string, string> = {};
+const elevenLabsOverride = overrideUrl(env.PUBLIC_AFFILIATE_ELEVENLABS);
+if (elevenLabsOverride) softwareAffiliateOverrides.elevenlabs = elevenLabsOverride;
+
 /** Endpoints de formularios. Vacío = se usa mailto como respaldo. */
 export const forms = {
   contact: env.PUBLIC_FORM_URL || '',
