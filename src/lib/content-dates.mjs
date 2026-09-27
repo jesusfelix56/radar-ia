@@ -32,7 +32,7 @@ const guides = readDates(join(contentRoot, 'guides'));
 
 /** Fechas de páginas estáticas que declaran «Última actualización» en el contenido. */
 const staticLastmod = {
-  '/legal/cookies': '2026-08-20',
+  '/legal/cookies': '2026-09-27',
   '/legal/aviso-legal': '2026-09-22',
   '/legal/privacidad': '2026-09-22',
   '/legal/afiliados': '2026-09-27',

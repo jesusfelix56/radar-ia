@@ -34,15 +34,20 @@ const live = ads.enabled && Boolean(ads.client) && Boolean(slotId);
 
   {
     live ? (
-      <ins
-        class="adsbygoogle block"
-        style={`display:block;min-height:${minHeight}px`}
-        data-ad-client={ads.client}
-        data-ad-slot={slotId}
-        data-ad-format={format}
-        data-ad-layout={layout}
-        data-full-width-responsive="true"
-      />
+      <>
+        <ins
+          class="adsbygoogle block"
+          style={`display:block;min-height:${minHeight}px`}
+          data-ad-client={ads.client}
+          data-ad-slot={slotId}
+          data-ad-format={format}
+          data-ad-layout={layout}
+          data-full-width-responsive="true"
+        />
+        <script is:inline>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </>
     ) : (
       <div
         class="flex items-center justify-center rounded-xl border border-dashed border-ink-600 bg-ink-900/40 px-4 text-center text-xs text-slate-500"

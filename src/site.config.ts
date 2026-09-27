@@ -40,8 +40,9 @@ export const ads = {
   client: env.PUBLIC_ADSENSE_CLIENT || 'ca-pub-7494588122793199',
   /**
    * Con `false` se reservan los huecos, pero no se insertan unidades de anuncio.
-   * El script de AdSense, en cualquier caso, solo se descarga tras el consentimiento.
-   * Pásalo a true cuando Google apruebe el sitio y tengas IDs de bloque reales.
+   * adsbygoogle.js se carga siempre que hay cliente: es el que muestra el mensaje
+   * de consentimiento certificado de Google. Este sitio no lo retrasa.
+   * Pásalo a true cuando tengas IDs de bloque reales.
    */
   enabled: env.PUBLIC_ADS_ENABLED === 'true',
   slots: {
