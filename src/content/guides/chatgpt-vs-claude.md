@@ -17,7 +17,7 @@ amazonPicks:
     price: 35
 featured: true
 pubDate: 2026-06-18
-updatedDate: 2026-08-21
+updatedDate: 2026-09-30
 ---
 
 Las comparativas de asistentes de IA suelen ser listas de características copiadas de las webs oficiales. Nosotros pagamos ambas suscripciones durante seis semanas y las usamos en el mismo trabajo real.
@@ -61,9 +61,11 @@ Le dimos a ambos un contrato de 94 páginas y 10 preguntas cuya respuesta estaba
 
 ## Precio: prácticamente empatan
 
-Las suscripciones individuales cuestan casi lo mismo. Ambas tienen plan gratuito utilizable, aunque con límites distintos: ChatGPT restringe el acceso al modelo avanzado, Claude corta el uso por franjas.
+Las suscripciones individuales cuestan casi lo mismo. Ambas tienen plan gratuito utilizable, aunque con límites distintos: ChatGPT no abre el mismo modelo en el plan gratuito que en Plus, Claude corta el uso por franjas.
 
 Si vas a pagar solo una, el precio no debería ser el criterio. Lo que decide es en qué gastas tú las horas.
+
+El mapa de modelos de ChatGPT cambió con los anuncios de septiembre de 2026, y esta comparativa no añade una prueba propia de esa familia. OpenAI sitúa GPT-6 Astra en Plus, Pro, Business y Enterprise (dentro de la cuota, con créditos extra si hace falta) y Astra Pro en Pro, Business y Enterprise. Sol, Luna y GPT-6.1 Sol van a ChatGPT Work y Codex para Plus y planes de pago superiores; Luna, también a la app de escritorio en los planes gratuito y Go. En esos anuncios, Sol, Luna y 6.1 Sol aún no están en el chat estándar. El detalle, con fuentes, está en el [análisis de ChatGPT](/herramientas/chatgpt).
 
 ## Nuestra recomendación por perfil
 
