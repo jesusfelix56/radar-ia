@@ -14,7 +14,7 @@ pricing:
   from: 10
   currency: USD
   period: mes
-  note: Basic son 10 USD al mes (8 USD al mes si pagas el año) y dan unas 3,3 horas de generación rápida. No hay plan gratuito. El modo relajado ilimitado empieza en Standard, a 30 USD.
+  note: Tabla oficial leída el 1 de octubre de 2026. Basic 10 USD al mes (8 USD al mes en el anual) y 3,3 horas Fast. No hay plan gratuito en la web. Relax ilimitado en imágenes empieza en Standard, a 30 USD.
 website: https://www.midjourney.com
 pros:
   - La calidad estética por defecto sigue siendo la referencia del sector
@@ -42,7 +42,7 @@ amazonPicks:
 accent: rose
 featured: true
 pubDate: 2026-01-20
-updatedDate: 2026-09-22
+updatedDate: 2026-10-01
 ---
 
 ## El estándar de calidad visual
@@ -84,3 +84,25 @@ Dedicar una tarde a entender esos parámetros multiplica el rendimiento de la su
 Depende de una cuenta muy simple: si sustituye al menos una imagen de banco de stock al mes, ya se ha pagado. Para un blog que publica dos veces por semana, la respuesta suele ser sí.
 
 Para uso ocasional, existen generadores gratuitos con calidad más que suficiente. Pagar aquí solo tiene sentido si lo visual es parte de tu trabajo.
+
+## La tabla de planes, leída el 1 de octubre de 2026
+
+Las generaciones de la prueba no se han vuelto a contar. Precios, horas y condiciones salen de [Comparing Midjourney Plans](https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans). Dólares de lista. El año se paga entero por adelantado, con un 20 % menos, y la suscripción se renueva sola hasta que la canceles.
+
+| Plan | Al mes | Al año, prorrateado | Tiempo Fast | Relax |
+| --- | --- | --- | --- | --- |
+| Basic | 10 USD | 8 USD (96 USD al año) | 3,3 horas | La tabla no lo marca como ilimitado |
+| Standard | 30 USD | 24 USD (288 USD) | 15 horas | Imágenes ilimitadas |
+| Pro | 60 USD | 48 USD (576 USD) | 30 horas | Imágenes y vídeo SD ilimitados |
+| Mega | 120 USD | 96 USD (1.152 USD) | 60 horas | Imágenes y vídeo SD ilimitados |
+
+El vídeo en Basic es SD. Standard, Pro y Mega añaden HD. La hora Fast extra sale a 4 USD en los cuatro planes. Stealth, el modo que la propia página describe como el que mantiene imágenes y vídeos en privado, solo está en Pro y Mega. Si el encargo no puede aparecer en un explorador público, ese dato decide el plan antes que la calidad estética.
+
+La nota de derechos de la misma tabla dice que, si te has suscrito en algún momento, puedes usar tus imágenes y vídeos con mucha amplitud, y que una empresa con más de 1.000.000 USD de ingresos brutos al año necesita Pro o Mega. El detalle está en las condiciones del servicio, que no copiamos aquí. Cómo avisar al lector cuando publicas está en [publicar una imagen generada](/guias/publicar-una-imagen-generada).
+
+## Cómo elegir plan sin repetir la prueba
+
+1. Basic cubre unas 3,3 horas Fast al mes. Sirve para ver si el estilo te encaja en encargos abiertos, que en la prueba antigua eran los que menos generaciones pedían.
+2. Standard es el primer plan con imágenes Relax ilimitadas. Tiene sentido si generas a menudo y puedes esperar cuando se acaba el Fast.
+3. Pro o Mega entran cuando necesitas Stealth, vídeo Relax o el umbral de facturación de la nota comercial.
+4. El tiempo Fast que no uses no pasa al mes siguiente. Lo dice la propia ayuda: [Subscription Fast Time Expiration](https://docs.midjourney.com/hc/en-us/articles/27870521824653-Subscription-Fast-Time-Expiration). La hora extra, a 4 USD, es el colchón publicado.

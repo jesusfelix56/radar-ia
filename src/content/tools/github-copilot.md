@@ -14,7 +14,7 @@ pricing:
   from: 10
   currency: EUR
   period: mes
-  note: Pro son 10 USD al mes e incluyen un cupo de créditos de IA. Hay plan gratuito con límites. Estudiantes, docentes verificados y mantenedores de open source popular pueden acceder sin pagar.
+  note: Docs de GitHub leídas el 1 de octubre de 2026. Pro son 10 USD al mes y 1.500 créditos de IA (1.000 base y 500 flex). El gratuito limita el autocompletado a 2.000 completados al mes. Copilot Student es gratis para estudiantes verificados.
 website: https://github.com/features/copilot
 pros:
   - Se integra en VS Code, JetBrains y Neovim sin fricción
@@ -42,7 +42,7 @@ amazonPicks:
 accent: lime
 featured: false
 pubDate: 2026-04-08
-updatedDate: 2026-09-22
+updatedDate: 2026-10-01
 ---
 
 ## Qué hace bien
@@ -83,6 +83,31 @@ La calidad cae de forma perceptible en lenguajes con menos código público disp
 
 ## ¿Compensa el precio?
 
-Si programas de forma profesional, la cuenta es fácil: ahorrando media hora a la semana ya se paga. Pro sigue en 10 USD al mes e incluye un cupo de créditos para el chat y el agente; el autocompletado no los gasta. Estudiantes, docentes verificados y mantenedores de open source popular pueden tener acceso de pago sin coste.
+Si programas de forma profesional, la cuenta es fácil: ahorrando media hora a la semana ya se paga. El ahorro de la tabla de arriba es de aquella medición. No lo hemos vuelto a cronometrar con el sistema de créditos de 2026.
 
-Para quien programa de forma esporádica, un asistente de chat generalista cubre la necesidad sin suscripción adicional.
+## Planes publicados en la documentación
+
+Cifras de [Plans for GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans), leídas el 1 de octubre de 2026. Dólares al mes.
+
+| Plan | Precio | Créditos de IA al mes | Autocompletado |
+| --- | --- | --- | --- |
+| Free | 0 USD | Un cupo. La tabla no publica la cifra. | 2.000 completados al mes. El modelo se elige en automático. |
+| Student | 0 USD, estudiantes verificados | Un cupo, sin cifra en la tabla | La página de planes no le pone el tope de 2.000. |
+| Pro | 10 USD | 1.500 en total: 1.000 base y 500 flex | El tope de 2.000 está escrito para el plan Free. |
+| Pro+ | 39 USD | 7.000 (3.900 base y 3.100 flex) | Igual que la fila anterior: el tope explícito es el del gratuito. |
+| Max | 100 USD | 20.000 (10.000 base y 10.000 flex) | El mismo matiz. |
+
+Los créditos base se gastan antes. El tramo flex se aplica solo, en el IDE, en GitHub.com y en la CLI, según la [página de facturación por uso](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals). Free y Student eligen modelo en automático. Docentes verificados y mantenedores de proyectos de código abierto populares pueden optar a Pro sin pagar: la documentación lo dice como posibilidad, no como un alta automática.
+
+En los planes de organización, la misma documentación sí escribe que el autocompletado y las sugerencias de siguiente edición no se cobran en créditos y siguen ilimitados. Business sale a 19 USD por asiento al mes (1.900 créditos por usuario) y Enterprise a 39 USD (3.900). Ese párrafo es de los planes de empresa. No lo copies tal cual al Pro individual.
+
+La frase antigua de esta ficha, «el autocompletado no gasta créditos», encaja con lo que GitHub escribe para los planes de pago de organización. En el individual, lo que la página deja cerrado es el tope de 2.000 completados en Free y el cupo de créditos del chat y del agente. Si tu panel muestra otro contador, manda el panel.
+
+## Cómo decidir esta semana
+
+1. Empieza por Free si tu cuenta no tiene un asiento de empresa. Gasta los 2.000 completados en el lenguaje en el que trabajas de verdad.
+2. Pro, a 10 USD, cuando el corte del gratuito te para y quieres elegir modelo. Mira los 1.500 créditos en el panel, no en un resumen de terceros.
+3. Pro+ o Max cuando ese cupo se acaba en la primera quincena. Subir de precio no revisa el código por ti: la regla de no aceptar lo que no entiendes sigue en la sección de más arriba.
+4. Si estudias con verificación, mira Copilot Student antes de pagar. Si das clase o mantienes un proyecto popular, mira la elegibilidad de Pro gratuito en la misma documentación.
+
+Las guías de [VS Code desde cero](/guias/copilot-vscode-desde-cero) y de [tests](/guias/copilot-tests-desde-cero) siguen siendo el cómo. Esta sección es solo la tarifa.
