@@ -105,6 +105,22 @@ const hasEndpoint = Boolean(forms.contact);
       Enviar mensaje
     </button>
 
+    <script is:inline>
+      (() => {
+        const params = new URLSearchParams(window.location.search);
+        const email = params.get('email');
+        const mensaje = params.get('mensaje');
+        const emailInput = document.getElementById('correo');
+        const mensajeInput = document.getElementById('mensaje');
+        if (email && emailInput instanceof HTMLInputElement && !emailInput.value) {
+          emailInput.value = email;
+        }
+        if (mensaje && mensajeInput instanceof HTMLTextAreaElement && !mensajeInput.value) {
+          mensajeInput.value = mensaje;
+        }
+      })();
+    </script>
+
     <div class="space-y-1 text-[0.7rem] leading-relaxed text-slate-500">
       <p class="font-semibold tracking-wide text-slate-400 uppercase">
         Información básica sobre protección de datos
