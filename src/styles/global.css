@@ -14,11 +14,9 @@
   --color-brand-300: #67e8f9;
   --color-brand-400: #22d3ee;
   --color-brand-500: #06b6d4;
-  --color-brand-600: #0891b2;
 
   --color-accent-400: #c084fc;
   --color-accent-500: #a855f7;
-  --color-accent-600: #9333ea;
 }
 
 @layer base {
@@ -70,7 +68,6 @@
     radial-gradient(50rem 26rem at 88% 0%, color-mix(in srgb, var(--color-accent-500) 28%, transparent), transparent);
 }
 
-/* Ajustes del contenido Markdown renderizado. */
 .prose-article {
   --tw-prose-invert-links: var(--color-brand-300);
 }

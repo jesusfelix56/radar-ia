@@ -29,6 +29,17 @@ const {
   moreHref,
   moreLabel = 'Ver todas las recomendaciones',
 } = Astro.props;
+
+function iconForTitle(label: string) {
+  const name = label.toLowerCase();
+  if (name.includes('micro') || name.includes('auri')) return '🎙️';
+  if (name.includes('monitor')) return '🖥️';
+  if (name.includes('libro') || name.includes('manual')) return '📚';
+  if (name.includes('teclado')) return '⌨️';
+  if (name.includes('tableta')) return '🎨';
+  if (name.includes('maleta')) return '🧳';
+  return '📦';
+}
 ---
 
 {
@@ -44,26 +55,14 @@ const {
         </span>
       </div>
 
-      <ul class={`mt-5 grid gap-4 ${compact ? '' : 'sm:grid-cols-2'}`}>
+      <ul class:list={['mt-5 grid gap-4', !compact && 'sm:grid-cols-2']}>
         {picks.map((pick) => (
           <li class="flex gap-4 rounded-xl border border-ink-600 bg-ink-900/60 p-4">
             <div
               class="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-amber-400/20 text-2xl"
               aria-hidden="true"
             >
-              {pick.title.toLowerCase().includes('micro') || pick.title.toLowerCase().includes('auri')
-                ? '🎙️'
-                : pick.title.toLowerCase().includes('monitor')
-                  ? '🖥️'
-                  : pick.title.toLowerCase().includes('libro') || pick.title.toLowerCase().includes('manual')
-                    ? '📚'
-                    : pick.title.toLowerCase().includes('teclado')
-                      ? '⌨️'
-                      : pick.title.toLowerCase().includes('tableta')
-                        ? '🎨'
-                        : pick.title.toLowerCase().includes('maleta')
-                          ? '🧳'
-                          : '📦'}
+              {iconForTitle(pick.title)}
             </div>
             <div class="flex min-w-0 flex-1 flex-col justify-between">
               <div>
