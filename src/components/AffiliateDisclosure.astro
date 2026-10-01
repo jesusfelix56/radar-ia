@@ -3,11 +3,18 @@ import { affiliateDisclosure } from '../lib/affiliates';
 
 interface Props {
   name: string;
+  /** En la ficha ancha de una tarjeta, el texto usa todo el ancho disponible. */
+  wide?: boolean;
 }
 
-const { name } = Astro.props;
+const { name, wide = false } = Astro.props;
 ---
 
-<p class="max-w-xs text-left text-[0.7rem] leading-snug font-normal tracking-normal text-slate-400 normal-case">
+<p
+  class:list={[
+    'min-w-0 text-left text-[0.7rem] leading-snug font-normal tracking-normal text-slate-400 normal-case',
+    wide ? 'max-w-none' : 'max-w-xs',
+  ]}
+>
   {affiliateDisclosure(name)}
 </p>

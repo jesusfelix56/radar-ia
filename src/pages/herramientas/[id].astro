@@ -214,18 +214,25 @@ const schema = [
           <div class="mt-5 flex flex-wrap items-center gap-4">
             <RatingBadge value={data.rating} size="lg" />
             <span class="inline-flex max-w-xs flex-col items-stretch gap-1.5">
-              <a
-                href={ctaHref}
-                rel={isAffiliate ? softwareAffiliateRel : 'noopener'}
-                target="_blank"
-                class="rounded-lg bg-brand-400 px-5 py-3 text-sm font-semibold text-ink-950 transition hover:bg-brand-300"
-              >
-                Ir a la web de {data.name}
-                {isAffiliate && (
-                  <span class="ml-1 opacity-80">({AFFILIATE_LABEL.toLowerCase()})</span>
-                )}
-              </a>
-              {isAffiliate && <AffiliateDisclosure name={data.name} />}
+            <a
+              href={ctaHref}
+              rel={isAffiliate ? softwareAffiliateRel : 'noopener'}
+              target="_blank"
+              aria-label={
+                isAffiliate ? `Ir a la web de ${data.name} (${AFFILIATE_LABEL})` : undefined
+              }
+              class="inline-flex w-fit items-center justify-center whitespace-nowrap rounded-lg bg-brand-400 px-5 py-3 text-sm font-semibold text-ink-950 transition hover:bg-brand-300"
+            >
+              Ir a la web de {data.name}
+            </a>
+            {
+              isAffiliate && (
+                <span class="text-[0.65rem] font-medium tracking-wide text-slate-400 uppercase">
+                  {AFFILIATE_LABEL}
+                </span>
+              )
+            }
+            {isAffiliate && <AffiliateDisclosure name={data.name} />}
             </span>
           </div>
         </section>
@@ -260,15 +267,18 @@ const schema = [
               href={ctaHref}
               rel={isAffiliate ? softwareAffiliateRel : 'noopener'}
               target="_blank"
-              class="block rounded-lg bg-brand-400 px-4 py-2.5 text-center text-sm font-semibold text-ink-950 transition hover:bg-brand-300"
+              aria-label={isAffiliate ? `Probar ${data.name} (${AFFILIATE_LABEL})` : undefined}
+              class="block w-full rounded-lg bg-brand-400 px-4 py-2.5 text-center text-sm font-semibold whitespace-nowrap text-ink-950 transition hover:bg-brand-300"
             >
               Probar {data.name}
-              {isAffiliate && (
-                <span class="block text-[0.65rem] font-medium tracking-wide uppercase opacity-80">
+            </a>
+            {
+              isAffiliate && (
+                <span class="text-[0.65rem] font-medium tracking-wide text-slate-400 uppercase">
                   {AFFILIATE_LABEL}
                 </span>
-              )}
-            </a>
+              )
+            }
             {isAffiliate && <AffiliateDisclosure name={data.name} />}
           </div>
         </div>
