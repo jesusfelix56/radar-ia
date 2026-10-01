@@ -54,13 +54,8 @@ const baseSchema = [
     '@type': 'Organization',
     '@id': `${site.url}/#organization`,
     name: site.name,
-    legalName: site.legalName,
     url: site.url,
     slogan: site.tagline,
-    founder: {
-      '@type': 'Person',
-      name: site.legalName,
-    },
   },
 ];
 

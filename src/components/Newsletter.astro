@@ -1,5 +1,5 @@
 ---
-import { forms, site } from '../site.config';
+import { forms } from '../site.config';
 
 interface Props {
   compact?: boolean;
@@ -30,9 +30,9 @@ const hasEndpoint = Boolean(forms.newsletter);
 
     <form
       class={`js-newsletter-form mt-6 flex flex-col gap-3 ${compact ? '' : 'mx-auto max-w-md'}`}
-      method="post"
-      action={hasEndpoint ? forms.newsletter : undefined}
-      data-mailto={hasEndpoint ? undefined : site.email}
+      method={hasEndpoint ? 'post' : 'get'}
+      action={hasEndpoint ? forms.newsletter : '/contacto'}
+      data-fallback-contact={hasEndpoint ? undefined : true}
     >
       <div class="flex flex-col gap-3 sm:flex-row">
         <label for={inputId} class="sr-only">Tu correo electrónico</label>
@@ -80,7 +80,8 @@ const hasEndpoint = Boolean(forms.newsletter);
         Información básica sobre protección de datos
       </p>
       <p>
-        <strong class="text-slate-400">Responsable:</strong> {site.legalName}.
+        <strong class="text-slate-400">Responsable:</strong> el titular identificado en el{' '}
+        <a href="/legal/aviso-legal" class="underline hover:text-brand-300">aviso legal</a>.
       </p>
       <p>
         <strong class="text-slate-400">Finalidad:</strong> enviarte la newsletter semanal.
@@ -90,8 +91,8 @@ const hasEndpoint = Boolean(forms.newsletter);
       </p>
       <p>
         <strong class="text-slate-400">Derechos:</strong> acceso, rectificación, supresión, oposición,
-        limitación y portabilidad. Puedes retirar el consentimiento cuando quieras escribiendo a{' '}
-        {site.email}. Más información en la{' '}
+        limitación y portabilidad. Puedes retirar el consentimiento cuando quieras. Más información
+        en la{' '}
         <a href="/legal/privacidad" class="underline hover:text-brand-300">política de privacidad</a>.
       </p>
     </div>
@@ -101,21 +102,22 @@ const hasEndpoint = Boolean(forms.newsletter);
 {
   !hasEndpoint && (
     <script is:inline>
-      document.querySelectorAll('.js-newsletter-form[data-mailto]').forEach((form) => {
+      document.querySelectorAll('.js-newsletter-form[data-fallback-contact]').forEach((form) => {
         if (form.dataset.bound) return;
         form.dataset.bound = 'true';
         form.addEventListener('submit', (event) => {
           event.preventDefault();
           const email = form.querySelector('input[name="email"]')?.value.trim();
           const consent = form.querySelector('input[name="privacidad"]');
-          const to = form.getAttribute('data-mailto');
-          if (!email || !to) return;
-          if (!consent?.checked) return;
-          const subject = encodeURIComponent('Alta a la newsletter de Lo Probamos');
-          const body = encodeURIComponent(
-            `Quiero suscribirme a la newsletter.\n\nMi correo: ${email}\nHe leído y acepto la política de privacidad y consiento el tratamiento de mi correo para recibir la newsletter.`,
-          );
-          window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+          if (!email || !consent?.checked) return;
+          const params = new URLSearchParams({
+            email,
+            mensaje:
+              'Quiero suscribirme a la newsletter.\n\nMi correo: ' +
+              email +
+              '\nHe leído y acepto la política de privacidad y consiento el tratamiento de mi correo para recibir la newsletter.',
+          });
+          window.location.href = `/contacto?${params}`;
         });
       });
     </script>
