@@ -1,6 +1,6 @@
 ---
 title: Cómo usar Copilot para entender un repositorio que no has escrito tú
-description: 'El orden correcto: mapa del repo, flujo de una petición, y solo después preguntar "qué hace esta función".'
+description: 'Primero el árbol y el comando que arranca. Después una sola acción de usuario, archivo por archivo. Si no está abierto, que lo diga.'
 category: Tutorial
 tags:
   - copilot
@@ -16,54 +16,55 @@ amazonPicks:
     price: 24
 featured: false
 pubDate: 2026-08-20
+updatedDate: 2026-10-01
 ---
 
-El error clásico es abrir `index.ts`, seleccionar 400 líneas y preguntar "explícame esto". Copilot te cuenta un cuento coherente y equivocado. En un repo ajeno, el contexto es el directorio, no el archivo.
+Abrir `index.ts`, seleccionar cuatrocientas líneas y preguntar «explícame esto» produce un cuento coherente. A veces coincide con el repo. A veces describe capas que no existen, con la misma seguridad. En un código que no has escrito, el contexto es lo que está abierto y lo que acabas de ejecutar. Esta guía es ese orden. No es una medición de aciertos.
 
-## 0. Lo que Copilot no ve
+## Diez minutos sin el chat
 
-No indexa toda la organización si el archivo no está abierto o referido. Tampoco ve secretos (bien). Si el README miente —y muchos mienten— Copilot repetirá la mentira.
+Mira el árbol antes de pedir un mapa:
 
-## 1. Mapa en 10 minutos, sin IA
+- `package.json`, `pyproject.toml` o `go.mod`: cómo se instala y cómo se arranca.
+- El README, solo si el comando de desarrollo funciona. Si no arranca, el README está desfasado y el chat lo va a repetir.
+- Dónde está el negocio y dónde está el pegamento: `src`, `app`, `cmd`.
+- `tests`. A menudo dicen qué se consideró importante, mejor que un comentario viejo.
 
-Abre el árbol:
+Anota el comando y ejecútalo. Si no levanta, la primera pregunta no es «cómo lo mejoro». Es «qué falta para que este comando termine», con el error de la terminal pegado. Un arreglo de arquitectura sobre un proyecto que no arranca es ficción.
 
-- `package.json` / `pyproject.toml` / `go.mod`: cómo se arranca
-- `README`: si el comando de dev funciona, el README vale; si no, ignóralo
-- carpeta `src` o `app`: dónde está el negocio
-- `tests`: a veces documentan más que el código
+Dibuja en un papel, en cuatro cajas, lo que crees que pasa desde que alguien hace clic hasta que se guarda algo. Aunque esté mal. Así tienes con qué discutir la respuesta.
 
-Anota el comando que levanta el proyecto. Ejecútalo. Si no arranca, no preguntes a Copilot cómo "mejorarlo": pregunta cómo arranca.
+## La primera pregunta, con los archivos a la vista
 
-## 2. Primera pregunta útil al chat
-
-Con el README y el `package.json` abiertos:
+Abre el README, si has decidido que vale, y el manifiesto. En VS Code, el chat en línea es Ctrl+I (Comando+I en Mac), según la [documentación de GitHub](https://docs.github.com/en/copilot/how-tos/chat-with-copilot/chat-in-ide) leída el 1 de octubre de 2026. Si el archivo ya está en una sesión de chat, la [ayuda de VS Code](https://code.visualstudio.com/docs/copilot/chat/inline-chat) dice que ese atajo puede irse al panel. Para un mapa, el panel viene mejor: cabe más que una línea.
 
 ```
-Este repo: [nombre]. No me expliques programación.
-1. ¿Cuál es el comando para desarrollarlo en local según los archivos abiertos?
-2. ¿Dónde se define la ruta HTTP o el entrypoint?
-3. ¿Qué carpeta parece dominio y cuál infraestructura?
-Si no puedes verlo en los archivos, di "no está en contexto" y dime qué archivo abrir.
+Repo: [nombre]. No me expliques el lenguaje.
+Con los archivos que tienes abiertos:
+1. Comando para desarrollarlo en local.
+2. Dónde se define la ruta HTTP o el punto de entrada.
+3. Qué carpeta parece de dominio y cuál de infraestructura.
+Si no está en los archivos abiertos, escribe «no está en contexto» y dime qué archivo abrir. No lo supongas.
 ```
 
-Esa última frase evita alucinaciones de arquitectura hexagonal que no existen.
+Esa última frase es la útil. Una arquitectura hexagonal inventada se reconoce porque no cita un archivo que puedas abrir.
 
-## 3. Sigue un request, no una clase
+## Una acción, no una clase
 
-Elige una acción de usuario: "login", "crear factura", "subir foto".
+Elige algo que haga una persona: entrar, crear una factura, subir una foto.
 
 ```
-Sigue el flujo de [acción] desde la ruta hasta la base de datos.
-Lista archivos por orden. No inventes capas que no veas.
+Sigue [acción] desde la ruta hasta donde se guarda.
+Lista los archivos en orden. No añadas capas que no veas.
+En cada archivo, la función o el símbolo, no un resumen del framework.
 ```
 
-Abre esos archivos. Segunda pasada, ya con ellos en contexto: "¿qué pasa si [caso borde]? Cita la línea."
+Abre esa lista. Segunda vuelta, ya con ellos abiertos: «qué pasa si [caso] falla. Cita archivo y símbolo. Si no está, dilo.»
 
-## 4. Tests como oráculo
+Si hay tests de esa acción, ábrelos y pregunta qué comportamiento fijan y cuál está a medias. Un test que no falla nunca no documenta nada; el método para escribirlos está en [tests desde cero](/guias/copilot-tests-desde-cero).
 
-Si hay tests, ábrelos y pregunta: "estos tests, ¿qué comportamiento congelan? ¿Cuál está incompleto?" Copilot es mejor leyendo tests que leyendo comentarios.
+## Cuándo el chat del editor se queda corto
 
-## 5. Cuándo cambiar a ChatGPT
+Un mono-repo con doce servicios, o un YAML de orquestación que no cabe en lo que tienes abierto, no se entiende con una pregunta. Recorta un zip sin secretos —sin `.env`, sin claves— y pide el mismo mapa en otro chat, o sigue servicio por servicio. No subas credenciales para «que tenga contexto». Qué no pegar, también fuera del código, está en [qué no subir a un chat](/guias/que-no-subir-a-un-chat).
 
-Repos sin tests, con 12 microservicios o con YAML de Kubernetes: el chat de Copilot se queda corto de contexto. Ahí sube un zip recortado a ChatGPT o Claude y pide el mismo mapa. El [análisis de Copilot](/herramientas/github-copilot) entra en el precio frente a no tener nada.
+Los planes y el tope de completados del gratuito están en la [ficha de Copilot](/herramientas/github-copilot), documentación leída el 1 de octubre de 2026. Entender un repo gasta chat, no solo tabulador. Si el panel se corta a mitad de un flujo, no completes tú el final «porque se veía venir».

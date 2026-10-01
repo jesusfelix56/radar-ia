@@ -1,6 +1,6 @@
 ---
 title: Cómo estudiar oposiciones con Claude sin convertir el temario en un resumen inútil
-description: 'Esquemas activos, preguntas a ciegas y detección de lagunas. Lo que no hay que pedirle: que "me estudie el tema 4".'
+description: Mapa, preguntas a ciegas y vuelta al PDF. El chat no es el temario. Si una ley ha cambiado, se mira en el BOE.
 category: Tutorial
 tags:
   - claude
@@ -16,54 +16,56 @@ amazonPicks:
     price: 35
 featured: true
 pubDate: 2026-08-21
+updatedDate: 2026-10-01
 ---
 
-Claude es bueno con textos largos. Los opositores lo usan mal: pegan el tema y piden "resúmeme". El resumen se siente productivo y no aguanta un tipo test. Esta guía es el método que no te expulsa del temario.
+Claude aguanta textos largos. El uso que no estudia es pegar el tema y pedir «resúmeme». El resumen se siente como una tarde de trabajo y no aguanta un tipo test, porque has leído una prosa nueva en vez de recuperar la del temario. Esta página es el ciclo contrario. No es un método medido con opositores ni una promesa de plaza.
 
-## Material que sí puedes pegar
+## Qué puedes pegar
 
-- El tema **oficial** o el de tu academia, en PDF
-- El boletín o ley concreta, no un blog
-- Un simulacro que hayas fallado
+El tema oficial o el de tu academia, en PDF. Una ley o un boletín, no la entrada de un blog que la comenta. Un simulacro que hayas fallado, con tus respuestas. No pegues apuntes de un canal donde no sabes quién escribe: el modelo los tratará como si fueran la norma.
 
-No pegues apuntes de un desconocido de Telegram. Claude los dará por buenos.
+Si el PDF es un escaneo torcido, dilo en el prompt y desconfía de los plazos. Un número mal leído en una tabla es el fallo más caro. La forma de contrastar una cifra está en [comprobar una cifra](/guias/comprobar-una-cifra-de-ia).
 
-## Ciclo de 50 minutos (un tema)
+## Una hora corta, un tema
 
-### 1. Mapa (10 min)
+No hace falta que sean cincuenta minutos exactos. Hace falta el orden.
 
-```
-Este es el tema [n] de [oposición]. No resumas.
-Devuelve: árbol de epígrafes (máximo 3 niveles), 10 términos que tienen que salir de memoria, y 5 confusiones típicas (A vs B).
-Si el PDF está incompleto, dilo.
-```
-
-### 2. Recuperación activa (25 min)
-
-Cierra el PDF. Pide:
+**Primero el esqueleto, con el PDF abierto.**
 
 ```
-Hazme 15 preguntas tipo test de 4 opciones, una correcta, estilo [tribunal si lo conoces].
-No me des las respuestas todavía.
-Incluye 5 preguntas capciosas de plazos o excepciones.
+Este es el tema [n] de [oposición]. No lo resumas en prosa.
+Devuelve: árbol de epígrafes, tres niveles como máximo; 10 términos que tendría que poder definir sin mirar; 5 pares que se confunden (A frente a B), con el epígrafe donde está cada uno.
+Si el PDF está cortado o no se lee una página, dilo. No rellenes el hueco.
 ```
 
-Responde en un bloc. Luego: "ahora corrige, explica cada fallo en 3 líneas citando el epígrafe, no la vibra".
-
-### 3. Huecos (15 min)
+**Después, cierra el PDF.** Si lo dejas abierto, estás reconociendo, no recordando.
 
 ```
-Con mis fallos, ¿qué 3 párrafos del temario debo releer ahora? Indica el encabezado. No me los reescribas.
+Hazme 12 preguntas de cuatro opciones, una correcta, sobre este tema.
+No me des la solución todavía.
+Al menos cuatro tienen que girar sobre un plazo, una excepción o un «salvo que».
+No inventes un artículo que no esté en el texto que te pasé.
 ```
 
-Vuelves al papel. Ese es el estudio. Claude es el examinador, no el temario.
+Contesta en un papel. Luego: «corrige. Cada fallo, en tres líneas, citando el epígrafe del temario. No reescribas el tema.»
 
-## Lo que Perplexity aporta
+**Vuelves al papel, no al resumen.**
 
-Jurisprudencia y cambios de última hora. "¿Ha cambiado el artículo X en 2026? Fuente BOE". Claude se queda en el PDF que le diste.
+```
+Con estos fallos, ¿qué epígrafes tengo que releer ahora? Solo el encabezado. No me los reescribas.
+```
 
-## Lo que no hagas
+Esa relectura es el estudio. Si Claude te deja un tema «redactado para un 10», memorizas su prosa. En un oral se nota, y además puede haber alisado una excepción. El legislador no escribe como un chat.
 
-Pedir "redacta el tema 4 como si fuera un 10". Memorizar esa prosa es memorizar a Claude, no al legislador. En el oral se nota.
+## Cuando el temario y el BOE no dicen lo mismo
 
-Ficha de [Claude](/herramientas/claude) para el límite de uso con PDFs gordos.
+Un temario de academia envejece. La pregunta útil no es «explícame el artículo». Es «¿el texto que tengo coincide con el publicado?». Ábrelo tú en el [BOE](https://www.boe.es/). Perplexity puede acercarte la ficha y la fecha; el segundo clic, el del PDF oficial, es tuyo. Si el chat dice que un artículo «cambió en 2026» y no puedes abrir la disposición, no lo estudies. El método está en la guía de comprobar cifras. Claude, si no le has activado una búsqueda y no le has pegado el texto nuevo, se queda en el PDF de la academia.
+
+No le pidas jurisprudencia «a favor de mi caso» para un tema que es de ley. Si el tribunal pregunta la norma, la sentencia no tapa el artículo.
+
+## Lo que esta página no hace
+
+No dice cuántas horas al día, ni qué academia, ni cómo es el tipo test de tu tribunal. Eso está en la convocatoria, que también se publica en el BOE o en la web del organismo. Pégala si quieres que las preguntas se parezcan al formato, y revisa que el modelo no haya cambiado el número de opciones.
+
+El cupo con PDF grandes está en la [ficha de Claude](/herramientas/claude), lectura del 1 de octubre de 2026. Un tema entero puede gastar el plan gratuito en una sentada. Partir el PDF por epígrafes no es solo por el límite: es para no perder el glosario del tema a mitad.

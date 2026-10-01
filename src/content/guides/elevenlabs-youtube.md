@@ -1,6 +1,6 @@
 ---
 title: Cómo locutar un vídeo de YouTube en castellano con ElevenLabs
-description: Guion hablado, clips de 30-40 segundos y mezcla con la imagen. Por qué no debes generar el vídeo entero de un tirón.
+description: Guion para ser oído, bloques cortos y caracteres, no minutos. La sonoridad se mide en el editor; esta página no fija un LUFS oficial.
 category: Tutorial
 tags:
   - elevenlabs
@@ -16,43 +16,49 @@ amazonPicks:
     price: 55
 featured: false
 pubDate: 2026-08-23
+updatedDate: 2026-10-01
 ---
 
-YouTube perdona peor que un pódcast una voz plana. ElevenLabs aguanta 8–12 minutos si cortas por bloques. Un monólogo de 20 minutos generado de una pieza se "deshincha" y come caracteres.
+YouTube perdona mal una voz que se aplana a los diez minutos. ElevenLabs no locuta «un vídeo»: locuta el texto que le pegas, y lo cobra por caracteres. Esta guía corta el guion para que puedas repetir un trozo sin regenerar el resto. No es una prueba de oyentes. El 65 % de la [ficha](/herramientas/elevenlabs) es de una escucha antigua, y la ficha dice que no se ha repetido.
 
-## 1. Guion para ser oído
+## El guion se escribe para la boca
 
-Claude:
+Pídele a Claude, o reescríbelo tú:
 
 ```
-Convierte este artículo en un guion hablado de [X] minutos.
-Frases cortas. Tú. Señala [CLIP: ...] cuando haya que mostrar una captura.
-Nada de "quédate hasta el final" ni de "like y suscríbete" en el minuto 1.
-Gancho: 15 segundos con el problema, no con mi nombre.
+Convierte este texto en un guion hablado.
+Frases cortas. Tú. Marca [CLIP: ...] cuando haya que enseñar una captura.
+No abras con mi nombre ni con «quédate hasta el final».
+Las primeras frases: el problema, en concreto.
+Números cortos, en letras: «doce minutos», no «12 min».
 ```
 
-Lee el gancho en voz alta. Si no lo dirías en un bar, cámbialo.
+Lee el principio en voz alta. Si no lo dirías así, cámbialo antes de gastar caracteres. Donde te quedas sin aire, la frase es larga.
 
-## 2. Corta el audio en bloques
+## Un archivo por bloque
 
-Cada sección H2 del guion = una generación. Así, si fallan los apellidos en el bloque 3, no regeneras el vídeo entero.
+Cada parte del guion, una generación. Si el apellido sale mal en el tercer bloque, regeneras ese archivo. Un monólogo de veinte minutos en una sola pieza te obliga a repetirlo entero.
 
-Exporta WAV si puedes; MP3 a 192 kbps si no. Nombra `01-gancho.wav`, `02-paso1.wav`.
+Nombra `01-apertura.wav`, `02-paso.wav`. WAV si el editor te lo ofrece; si solo puedes exportar MP3, quédate con la calidad más alta que te deje el plan y no vuelvas a comprimir al exportar el vídeo.
 
-## 3. Pronunciación YouTube
+## Caracteres, no minutos
 
-Añade al lexicon: `SEO` ("ese-e-o" o "seo" según tu canal), nombres de herramientas, tu propio apellido. Inconsistencia entre bloques se nota.
+La ficha, con [elevenlabs.io/pricing](https://elevenlabs.io/pricing) leída el 1 de octubre de 2026, no convierte créditos en minutos. En la ayuda de modelos que enlaza, Multilingual v2 cuenta un carácter como un crédito e incluye el español. Diez mil créditos del plan gratuito son unos diez mil caracteres de ese modelo, no «unos diez minutos». El minuto depende de cómo esté escrito el guion y de la velocidad.
 
-## 4. Mezcla
+Pega el guion en un editor, mira el recuento y compáralo con el cupo de tu plan. Un vídeo a la semana puede no caber en el gratuito; eso se ve en el contador, no en una regla de «diez minutos piden el plan de pago». La [documentación de texto a voz](https://elevenlabs.io/docs/overview/capabilities/text-to-speech) que cita la ficha dice que el uso comercial pide un plan de pago. Si el vídeo es el negocio, léelo allí antes de publicar.
 
-En CapCut / Premiere / DaVinci:
+## Nombres que se tuercen entre bloques
 
-- Audio a -14 LUFS para YouTube
-- No pongas música a más de -25 LUFS debajo de la voz
-- Silencio de 200 ms entre bloques; si pegas a hueso, parece un error de corte
+SEO, el nombre de una herramienta, tu apellido. Si cada archivo los dice de una forma, se nota al pegarlos. La [documentación de diccionarios de pronunciación](https://elevenlabs.io/docs/eleven-api/guides/how-to/text-to-speech/pronunciation-dictionaries), leída el 1 de octubre de 2026, es una guía de la API, no una captura del editor web. Ahí las etiquetas de fonema solo valen en los modelos eleven_v4, eleven_flash_v2 y eleven_v3. En los demás, el diccionario se las salta y toca un alias: otra grafía que suene bien. Para usar IPA o el alfabeto CMU en un idioma que no sea el inglés, la misma página dice que hay que pasar a eleven_v4. Prueba el nombre en un bloque corto. Si en tu pantalla hay otra caja de pronunciación, no des por hecho que un IPA se va a aplicar.
 
-## 5. Miniatura y título
+## La mezcla, sin una cifra que YouTube no nos haya confirmado
 
-Eso no es ElevenLabs. No le pidas "un título viral". Una línea honesta gana más a largo plazo que "NO VAS A CREER".
+Esta guía decía antes de llevar la voz a −14 LUFS y la música a −25. No es una medición nuestra. El 1 de octubre de 2026 no hemos dejado esa cifra como norma de YouTube: no la hemos confirmado en una página de ayuda que se abriera del todo. En CapCut, Premiere o DaVinci:
 
-Coste: un vídeo semanal de 10 minutos en castellano suele pedir el plan de pago. Detalle en la [ficha de ElevenLabs](/herramientas/elevenlabs).
+- Deja que la voz se entienda en auriculares, no en el altavoz del portátil.
+- Baja la música hasta que deje de competir con las consonantes. Si tienes un medidor, úsalo y anota el valor que te haya funcionado. No lo publiques como si fuera el estándar de YouTube.
+- Deja un silencio breve entre bloques. Pegados a hueso, suenan a corte roto.
+
+La miniatura y el título no salen de ElevenLabs. «No vas a creer» no es un título. Una frase que diga el problema, sí.
+
+Si la voz no es la tuya ni una del catálogo con licencia, para. El límite está en la ficha, con la nota de la AEPD del 27 de enero de 2026. Esta página no añade otro artículo.
