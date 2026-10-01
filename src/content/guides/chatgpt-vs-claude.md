@@ -1,6 +1,6 @@
 ---
-title: ChatGPT o Claude en 2026 - comparativa honesta tras seis semanas usando ambos
-description: Comparamos ChatGPT y Claude en escritura, análisis de datos, documentos largos y precio, con pruebas medidas en vez de impresiones.
+title: ChatGPT o Claude en 2026, según el trabajo que tengas delante
+description: Escritura, hojas de cálculo, documentos largos y precio. Para decidir entre los dos sin copiar la tabla de la web oficial.
 category: Comparativa
 tags:
   - comparativa
@@ -20,9 +20,9 @@ pubDate: 2026-06-18
 updatedDate: 2026-09-30
 ---
 
-Las comparativas de asistentes de IA suelen ser listas de características copiadas de las webs oficiales. Nosotros pagamos ambas suscripciones durante seis semanas y las usamos en el mismo trabajo real.
+Las comparativas de asistentes suelen ser la lista de características de cada web, traducida. Aquí va lo que cambia el trabajo: el texto que vas a publicar, la hoja, el documento largo y la factura.
 
-## Resumen para quien tiene prisa
+## Si tu prioridad es...
 
 | Si tu prioridad es... | Elige |
 | --- | --- |
@@ -33,47 +33,35 @@ Las comparativas de asistentes de IA suelen ser listas de características copia
 | Una sola herramienta para todo | ChatGPT |
 | Que siga tus instrucciones de estilo al pie de la letra | Claude |
 
-## Escritura: gana Claude, y no por poco
+## El texto largo se le da mejor a Claude
 
-Encargamos 30 textos idénticos a ambos: artículos de blog, correos comerciales, descripciones de producto y notas de prensa. Tres editores profesionales los puntuaron a ciegas del 1 al 10 en naturalidad, sin saber qué herramienta había escrito cada uno.
+En un artículo, una nota de prensa o una descripción que tiene que aguantar, Claude pide menos reescritura. Varía las frases y no cae tan pronto en el molde de «tres ideas y un cierre que las resume». En un correo corto la diferencia se estrecha: cualquiera de los dos deja algo enviable si le das el contexto (importe, relación con el cliente, qué no quieres decir).
 
-- **Claude**: 7,8 de media
-- **ChatGPT**: 6,4 de media
+ChatGPT sirve muy bien como editor de un borrador tuyo. Como autor del texto final en español, se le nota más.
 
-La brecha se abre sobre todo en textos largos. En correos cortos, la diferencia es mínima.
+## La hoja de cálculo se le da mejor a ChatGPT
 
-Más revelador que la nota: contamos cuántos textos necesitaban reescritura completa. Fueron 4 de 30 con Claude y 11 de 30 con ChatGPT.
+Aquí se invierte. Subes un archivo sucio y ChatGPT ejecuta código, te devuelve el fichero y el gráfico. Claude puede razonar sobre los números, pero el camino es más incómodo: menos «aquí tienes el Excel» y más ida y vuelta.
 
-## Datos: gana ChatGPT con claridad
+Si vives en hojas, esa sola diferencia puede decidir la suscripción.
 
-Aquí se invierte la tortilla. Subimos 15 hojas de cálculo con datos sucios y pedimos limpieza, análisis y visualización.
+## El documento largo, otra vez Claude
 
-ChatGPT ejecuta código real sobre el archivo, te devuelve el fichero procesado y el gráfico generado. Claude puede razonar sobre los datos pero la experiencia es menos directa para este flujo concreto.
+Un contrato o un informe de muchas páginas es terreno de Claude. Aguanta el hilo y, cuando la respuesta está en el texto, suele citar el sitio. ChatGPT se despista más con la referencia: a veces el dato es vecino del bueno y la sección no lo es.
 
-Para cualquiera que trabaje con Excel a diario, esta única diferencia puede decidir la suscripción.
+Ninguno de los dos es fiable cuando suelta una cifra que no está en el documento ni en una fuente que puedas abrir. Si vas a publicarla, compruébala. Los dos la dicen con la misma seguridad.
 
-## Documentos largos: gana Claude
+## El precio casi no desempata
 
-Le dimos a ambos un contrato de 94 páginas y 10 preguntas cuya respuesta estaba en distintos puntos del documento.
+Las suscripciones individuales cuestan casi lo mismo. Las dos tienen plan gratuito usable, con límites distintos: ChatGPT no abre el mismo modelo en el gratuito que en Plus, y Claude corta el uso por franjas.
 
-- **Claude**: 9 respuestas correctas, todas con la cláusula exacta citada
-- **ChatGPT**: 7 correctas, con dos referencias a secciones equivocadas
-
-## Precio: prácticamente empatan
-
-Las suscripciones individuales cuestan casi lo mismo. Ambas tienen plan gratuito utilizable, aunque con límites distintos: ChatGPT no abre el mismo modelo en el plan gratuito que en Plus, Claude corta el uso por franjas.
-
-Si vas a pagar solo una, el precio no debería ser el criterio. Lo que decide es en qué gastas tú las horas.
+Si solo vas a pagar una, el precio no debería ser el criterio. Lo que decide es en qué se te van las horas.
 
 El mapa de modelos de ChatGPT cambió con los anuncios de septiembre de 2026, y esta comparativa no añade una prueba propia de esa familia. OpenAI sitúa GPT-6 Astra en Plus, Pro, Business y Enterprise (dentro de la cuota, con créditos extra si hace falta) y Astra Pro en Pro, Business y Enterprise. Sol, Luna y GPT-6.1 Sol van a ChatGPT Work y Codex para Plus y planes de pago superiores; Luna, también a la app de escritorio en los planes gratuito y Go. En esos anuncios, Sol, Luna y 6.1 Sol aún no están en el chat estándar. El detalle, con fuentes, está en el [análisis de ChatGPT](/herramientas/chatgpt).
 
-## Nuestra recomendación por perfil
+## Según a qué te dediques
 
-- **Redactor, traductor, comunicación**: Claude.
-- **Analista, financiero, marketing con datos**: ChatGPT.
-- **Estudiante**: empieza por los planes gratuitos de ambos y añade [Perplexity](/herramientas/perplexity) para la parte de fuentes.
-- **Emprendedor con un solo presupuesto**: ChatGPT, porque cubre más terreno aunque no gane en todo.
-
-## Lo que ninguna de las dos hace bien
-
-Merece la pena decirlo: ninguna es fiable citando datos concretos sin acceso a fuentes. En nuestras pruebas ambas inventaron cifras con seguridad absoluta. Para cualquier dato que vayas a publicar, la verificación manual sigue siendo obligatoria.
+- **Redacción, traducción, comunicación**: Claude.
+- **Análisis, finanzas, marketing con datos**: ChatGPT.
+- **Estudio**: empieza por los planes gratuitos de ambos y añade [Perplexity](/herramientas/perplexity) cuando necesites fuentes que se puedan abrir.
+- **Un solo presupuesto y tareas mezcladas**: ChatGPT, porque cubre más terreno aunque no gane en todo.

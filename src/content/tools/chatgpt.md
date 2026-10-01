@@ -1,7 +1,7 @@
 ---
 name: ChatGPT
-tagline: 'El asistente generalista más completo: escribe, programa, analiza archivos y navega por internet sin cambiar de pestaña.'
-description: Análisis de ChatGPT en 2026 - plan gratuito, Go y Plus en España, y qué anuncia OpenAI de la familia GPT-6.
+tagline: 'Un solo sitio para escribir, mirar un Excel, subir un PDF y, si hace falta, salir a internet.'
+description: Plan gratuito, Go y Plus en España, y qué ha anunciado OpenAI de la familia GPT-6.
 category: Productividad
 rating: 9.1
 scores:
@@ -17,16 +17,16 @@ pricing:
   note: Plus sigue en 23 € al mes en España (22,99 € en la App Store). Go, 7,99 € al mes en esa tienda; el pago en la web puede diferir. La ayuda de OpenAI cita Plus a 20 USD al mes.
 website: https://chatgpt.com
 pros:
-  - Curva de aprendizaje casi nula, cualquiera lo usa el primer día
-  - Ecosistema enorme - archivos, imágenes, voz, análisis de datos y GPTs personalizados en un solo sitio
-  - El modo de análisis de datos ejecuta código real sobre tus hojas de cálculo
+  - Se entiende el primer día, sin tutorial de por medio
+  - Archivos, imágenes, voz, datos y GPTs caben en la misma conversación
+  - El análisis de datos ejecuta código sobre la hoja y deja ver qué ha hecho
 cons:
-  - Sigue inventando datos concretos (fechas, cifras, referencias) con total aplomo
-  - Los límites de uso del plan de pago no son transparentes
-  - En textos largos en español arrastra un tono reconocible que hay que corregir a mano
-  - Astra, Sol y Luna no llegan al mismo sitio - el plan, el chat estándar, Work, Codex y la app de escritorio no ofrecen lo mismo
-bestFor: Quien quiere una sola herramienta que sirva para casi todo y no le apetece montar un stack de cinco suscripciones.
-verdict: Sigue siendo la opción por defecto. Si solo vas a pagar una suscripción de IA este año, que sea esta.
+  - Sigue inventando fechas, cifras y referencias con mucha seguridad
+  - Los límites de uso del plan de pago no se explican con claridad
+  - En textos largos en español el tono se repite y hay que corregirlo a mano
+  - 'Astra, Sol y Luna no llegan al mismo sitio: el plan, el chat estándar, Work, Codex y la app de escritorio no ofrecen lo mismo'
+bestFor: Quien quiere una sola herramienta para casi todo y no le apetece pagar cinco suscripciones.
+verdict: Si este año solo vas a pagar una suscripción de IA, esta sigue siendo la más difícil de sustituir.
 amazonPicks:
   - search: libro prompt engineering español
     title: Manuales de ingeniería de prompts
@@ -42,39 +42,29 @@ pubDate: 2026-02-14
 updatedDate: 2026-09-30
 ---
 
-## Qué es exactamente ChatGPT en 2026
+## El PDF, el Excel y el correo
 
-ChatGPT dejó de ser "un chat que escribe textos" hace tiempo. Hoy es una capa de trabajo donde subes un PDF de 200 páginas, le pides un resumen ejecutivo, le dices que cruce esos datos con un Excel y que te devuelva un gráfico. Todo eso ocurre en la misma conversación.
+ChatGPT dejó de ser «un chat que escribe textos» hace tiempo. Hoy puedes subir un PDF largo, pedir un resumen, cruzarlo con una hoja y que te devuelva un gráfico, todo en la misma conversación.
 
-Esa amplitud es su mayor virtud y también la razón por la que mucha gente lo usa mal: se queda en pedirle correos y nunca descubre el 80% restante.
+Esa amplitud es lo que justifica tenerlo abierto. También es lo que mucha gente no toca: se queda en el correo y da por hecho que el resto es lo mismo.
 
-## Cómo lo hemos probado
+## El dato suelto y la hoja de cálculo
 
-Durante seis semanas lo usamos como única herramienta de IA en tres flujos de trabajo reales:
+Sigue inventando fechas, cifras y referencias, y lo hace con un tono tranquilo. Si la respuesta no está mirando una fuente, no la publiques tal cual.
 
-1. **Redacción**: 40 artículos de entre 800 y 2.000 palabras, midiendo cuánta edición manual necesitaba cada uno.
-2. **Datos**: 15 hojas de cálculo de facturación, pidiendo limpieza, detección de anomalías y gráficos.
-3. **Código**: refactorización de un proyecto pequeño en TypeScript, sin usar un editor con IA integrada.
+Con un archivo pasa otra cosa. Le das un CSV sucio, fechas en tres formatos y columnas duplicadas, y en un par de vueltas devuelve el archivo limpio y el código que ha usado para limpiarlo. Ese código importa: puedes mirar qué ha hecho, no solo fiarte del resultado.
 
-Anotamos cada error factual y cada vez que hubo que reformular la petición más de dos veces.
+En redacción funciona como primer borrador y como editor de un texto que ya has escrito. Pedirle que critique lo tuyo sale más usable que pedirle el artículo desde cero.
 
-## Dónde brilla de verdad
+Una petición que ahorra idas y vueltas: en lugar de «escribe un artículo sobre X», «hazme cinco preguntas antes de escribir el artículo sobre X». El contexto lo pones tú, y se nota.
 
-El análisis de datos es la función más infravalorada. Le das un CSV sucio, con fechas en tres formatos distintos y columnas duplicadas, y en un par de vueltas te devuelve el archivo limpio y el código que usó para limpiarlo. Eso último es clave: puedes auditar lo que ha hecho.
+## El español se delata
 
-En redacción funciona muy bien como **primer borrador y como editor**, no como autor final. Pedirle que critique un texto que ya has escrito da mejores resultados que pedirle que lo escriba desde cero.
-
-> Truco que nos ahorró más tiempo: en lugar de pedir "escribe un artículo sobre X", pedir "hazme cinco preguntas antes de escribir el artículo sobre X". La calidad sube de forma notable porque el contexto lo pones tú.
-
-## Dónde falla
-
-Las alucinaciones no han desaparecido. En nuestras pruebas, **el 18% de los datos numéricos concretos que citó sin acceso a internet eran incorrectos**, y siempre con un tono de absoluta seguridad. Para cualquier cosa publicable, verificar es obligatorio.
-
-El segundo problema es el estilo. En español genera estructuras muy reconocibles: abuso de "en el mundo actual", frases de tres elementos, conclusiones que resumen lo ya dicho. Si publicas sin editar, se nota.
+En textos largos cae en el mismo molde: frases de tres partes, un arranque de contexto y un cierre que repite lo ya dicho. Si publicas sin pasar el texto, se ve. Conviene tener a mano dos o tres frases que no quieres ver («en el mundo actual», «no solo… sino…») y pedirle que las quite.
 
 ## La familia GPT-6, según OpenAI
 
-Lo de arriba es la prueba de uso de esta ficha. No hemos vuelto a medir porcentajes con la familia GPT-6. Lo que sigue sale de anuncios públicos de OpenAI y de la cobertura del Dev Day, para quien elige entre gratuito, Go, Plus y Pro.
+Esto no sale de una medición propia. No hemos medido porcentajes con la familia GPT-6. Lo que sigue sale de anuncios públicos de OpenAI y de la cobertura del Dev Day, para quien elige entre gratuito, Go, Plus y Pro.
 
 No es un solo modelo. **GPT-6 Astra** es el de más capacidad. En su anuncio, el despliegue llega a Plus, Pro, Business y Enterprise, y a la API como `gpt-6-astra`. El uso entra en la cuota de la suscripción; si no basta, se pueden comprar créditos. Pro, Business y Enterprise incluyen además **GPT-6 Astra Pro**. En Enterprise, OpenAI indica que el acceso puede llegar apagado hasta que un administrador lo active.
 
@@ -95,9 +85,9 @@ Si el selector de tu cuenta no coincide con esta tabla, manda el selector. Los a
 
 Fuentes: [GPT-6 Astra](https://openai.com/index/gpt-6-astra/), [GPT-6 Sol y Luna](https://openai.com/index/introducing-gpt-6-sol-and-luna/), [GPT-6.1 Sol](https://openai.com/index/introducing-gpt-6-1-sol) y la pieza de TechCrunch sobre Dots, enlazada arriba.
 
-## Precio: cuándo compensa pagar
+## Gratis, Go o Plus
 
-El plan gratuito sirve para probar y para uso esporádico. Entre el gratuito y Plus, OpenAI vende Go. En la App Store de España, [App Price Atlas](https://apppriceatlas.com/subscriptions/chatgpt-plus-monthly/countries/es/) anota Plus a 22,99 € al mes y [Go a 7,99 € al mes](https://apppriceatlas.com/subscriptions/chatgpt-go-monthly/countries/es/) (observación del 25 de septiembre de 2026). Aquí seguimos redondeando Plus a 23 €. El cobro en la web puede no coincidir con el de Apple, y la [ayuda de OpenAI](https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus) sigue citando Plus a 20 USD al mes. Mira el total en la pantalla de pago.
+El plan gratuito sirve para probar y para un uso de vez en cuando. Entre el gratuito y Plus, OpenAI vende Go. En la App Store de España, [App Price Atlas](https://apppriceatlas.com/subscriptions/chatgpt-plus-monthly/countries/es/) anota Plus a 22,99 € al mes y [Go a 7,99 € al mes](https://apppriceatlas.com/subscriptions/chatgpt-go-monthly/countries/es/) (observación del 25 de septiembre de 2026). Aquí seguimos redondeando Plus a 23 €. El cobro en la web puede no coincidir con el de Apple, y la [ayuda de OpenAI](https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus) sigue citando Plus a 20 USD al mes. Mira el total en la pantalla de pago.
 
 Plus, a esos 23 €, compensa si cumples al menos dos de estas condiciones:
 
@@ -107,6 +97,6 @@ Plus, a esos 23 €, compensa si cumples al menos dos de estas condiciones:
 
 Si solo redactas correos sueltos, el plan gratuito te sobra. Go encaja si el gratuito se te queda corto y no vas a usar Astra, Work ni Codex.
 
-## Alternativas que deberías considerar
+## Cuando conviene otro
 
-Si tu uso principal es **escribir textos largos en español**, Claude devuelve una prosa más natural. Si lo que necesitas es **buscar información con fuentes verificables**, Perplexity está diseñado para eso y ChatGPT no. Y si programas todo el día, un asistente integrado en el editor como Copilot te dará más productividad por euro.
+Si lo que publicas son textos largos en español, Claude devuelve una prosa más natural. Si necesitas buscar con fuentes que puedas abrir, Perplexity está montado para eso. Y si programas todo el día, un asistente dentro del editor, como Copilot, te ahorra más por euro que este chat.

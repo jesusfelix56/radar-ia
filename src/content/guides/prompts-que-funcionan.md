@@ -1,6 +1,6 @@
 ---
 title: Cómo escribir prompts que funcionan (y por qué los tuyos fallan)
-description: Guía práctica de ingeniería de prompts en español, con la estructura de cinco bloques que usamos a diario y ejemplos antes y después.
+description: Qué le falta a un prompt de tres palabras, una forma de ordenar el encargo y cuatro manías que estropean el resultado.
 category: Guía
 tags:
   - prompts
@@ -19,60 +19,48 @@ pubDate: 2026-04-22
 updatedDate: 2026-08-14
 ---
 
-La mayoría de la gente escribe prompts como si buscara en Google: tres palabras sueltas y a esperar. Luego concluye que la IA "no sirve para lo suyo". El problema casi nunca es el modelo.
+Mucha gente escribe un prompt como si buscara en Google: tres palabras y a esperar. Luego concluye que la IA no sirve para lo suyo. Casi nunca es el modelo. Es que el encargo no decía para quién era, qué no podía hacer ni cómo tenía que salir.
 
-## La diferencia entre un prompt malo y uno bueno
+## El mismo día, el mismo chat, dos encargos
 
-Un ejemplo real, con la misma herramienta y el mismo día:
-
-**Prompt pobre:**
+**Pobre:**
 
 > Escríbeme un email para un cliente que no ha pagado.
 
-**Prompt trabajado:**
+**Trabajado:**
 
 > Eres el responsable de administración de un estudio de diseño pequeño. Escribe un email a un cliente habitual que lleva 12 días de retraso en una factura de 1.400 €. Es la primera vez que se retrasa y queremos conservar la relación. Tono cordial pero inequívoco, máximo 120 palabras, sin disculparte por reclamar, y termina proponiendo dos fechas concretas de pago.
 
-El primero devuelve una plantilla genérica que hay que reescribir entera. El segundo devuelve algo que se envía casi tal cual. La diferencia no es magia: es información.
+El primero devuelve una plantilla que hay que reescribir. El segundo devuelve algo que se envía casi tal cual, porque ya trae el importe, la relación y el límite.
 
-## La estructura de cinco bloques
+## Cinco cosas que puedes mirar cuando salga mal
 
-Es la plantilla que usamos para cualquier tarea seria. No hace falta usar los cinco siempre, pero cuando un resultado sale mal, casi siempre falta uno de estos:
+No hace falta usarlas siempre. Cuando el resultado es flojo, casi siempre falta una:
 
-1. **Rol y contexto**: quién eres tú, para quién es esto, qué situación hay detrás.
-2. **Tarea concreta**: un solo objetivo, expresado con un verbo claro.
-3. **Restricciones**: longitud, tono, formato, qué evitar explícitamente.
-4. **Ejemplo o referencia**: un texto tuyo anterior que sirva de modelo de estilo.
-5. **Formato de salida**: tabla, lista, JSON, párrafos... dilo, no lo dejes al azar.
+1. **Rol y contexto**: quién eres, para quién es, qué ha pasado.
+2. **Tarea**: un solo objetivo, con un verbo claro.
+3. **Límites**: longitud, tono, formato y qué no quieres ver.
+4. **Un ejemplo**: un texto tuyo anterior, no un adjetivo.
+5. **Cómo tiene que salir**: tabla, párrafos, lista. Si no lo dices, elige él.
 
-## Los cuatro errores que más vemos
+## Cuatro manías que estropean la respuesta
 
-### Pedir varias cosas a la vez
+Pedir cuatro trabajos en la misma frase («analiza, corrige, traduce y resume») deja cuatro resultados mediocres. Cuatro mensajes seguidos dejan cuatro mejores, y el tiempo es casi el mismo.
 
-"Analiza este texto, corrígelo, tradúcelo y hazme un resumen" produce cuatro trabajos mediocres. Encadenar cuatro peticiones separadas produce cuatro buenos. El coste en tiempo es prácticamente el mismo.
+Describir el tono es difícil. Pegar dos párrafos tuyos y decir «escribe con este estilo» no lo es.
 
-### No dar ejemplos de lo que quieres
+La primera respuesta es un borrador. «Esto es demasiado genérico: concreta el punto 2 con un ejemplo de hostelería» es donde se gana.
 
-Describir un tono es difícil; enseñarlo es trivial. Pegar dos párrafos tuyos y decir "escribe con este estilo" funciona mejor que cualquier adjetivo.
+Y decir qué no quieres funciona mejor de lo que parece: «sin introducción de contexto», «sin la palabra innovador», «sin un cierre que repita lo ya dicho».
 
-### Aceptar el primer resultado
-
-La primera respuesta es un borrador. Decir "esto es demasiado genérico, concreta el punto 2 con un ejemplo del sector de la hostelería" es donde se gana la calidad.
-
-### No decir qué NO quieres
-
-Las restricciones negativas son sorprendentemente eficaces: "sin introducciones de contexto general", "sin la palabra 'innovador'", "sin conclusión que resuma lo ya dicho".
-
-## Una técnica que cambia los resultados
-
-Antes de pedir el trabajo, pide preguntas:
+## Pide las preguntas antes del texto
 
 > Antes de escribir nada, hazme las cinco preguntas cuya respuesta más mejoraría el resultado.
 
-Obliga al modelo a exponer qué contexto le falta, y te obliga a ti a darlo. Es el truco con mejor relación esfuerzo/resultado de todos los que hemos probado.
+El modelo enseña qué contexto le falta. Tú tienes que dárselo. Es el paso con mejor relación entre el esfuerzo y lo que cambia en la respuesta.
 
-## Cómo guardar lo que funciona
+## Guarda los que ya te han servido
 
-Cuando un prompt te dé un buen resultado, guárdalo. Un documento con diez plantillas propias, probadas y ajustadas a tu trabajo, vale más que cualquier lista de "500 prompts virales" de internet.
+Cuando un prompt te deje algo usable, no lo dejes en el historial del chat. Un documento con diez plantillas tuyas, ajustadas a tu trabajo, vale más que una lista de «500 prompts» encontrada en internet.
 
-Si quieres un punto de partida, en nuestro [generador de prompts](/recursos/generador-de-prompts) puedes construir uno con esta misma estructura y copiarlo directamente.
+Si quieres un punto de partida, en el [generador de prompts](/recursos/generador-de-prompts) puedes armar uno con esta misma estructura y copiarlo.
