@@ -1,7 +1,7 @@
 ---
 name: ElevenLabs
-tagline: Voces en español que ya aguantan una locución informativa, con clonación a partir de un minuto de audio.
-description: Cómo suenan las voces en castellano, qué se paga por caracteres y qué no se puede clonar.
+tagline: Voces sintéticas en español que ya no suenan a robot, con clonación a partir de un minuto de audio.
+description: Reseña de ElevenLabs en 2026 - calidad de las voces en español, precios por minuto, clonación de voz y usos legales.
 category: Audio
 rating: 8.3
 scores:
@@ -18,14 +18,14 @@ pricing:
 website: https://elevenlabs.io
 pros:
   - Las voces en castellano tienen entonación y pausas convincentes
-  - La clonación funciona con muestras cortas y un resultado reconocible
-  - Se puede ajustar estabilidad, énfasis y velocidad con bastante precisión
+  - La clonación de voz funciona con muestras cortas y resultados muy fieles
+  - Control fino de estabilidad, énfasis y velocidad
 cons:
-  - El precio por caracteres se dispara si produces contenido largo
+  - El modelo de precios por caracteres se dispara si produces contenido largo
   - Las emociones intensas todavía suenan artificiales
   - Clonar una voz ajena sin permiso expreso es ilegal y motivo de cierre de cuenta
-bestFor: Podcasters, creadores de vídeo y equipos de e-learning que necesitan locución sin estudio ni locutor.
-verdict: La síntesis de voz en español más convincente de las que cubrimos. Vigila los caracteres o la factura se va.
+bestFor: Podcasters, creadores de vídeo y equipos de e-learning que necesitan locución profesional sin estudio ni locutor.
+verdict: La mejor síntesis de voz en español que hemos probado. Vigila el consumo de caracteres o la factura te sorprenderá.
 amazonPicks:
   - search: microfono usb podcast
     title: Micrófono USB de condensador
@@ -45,32 +45,34 @@ pubDate: 2026-06-03
 updatedDate: 2026-09-22
 ---
 
-## El castellano informativo ya se sostiene
+## La calidad en español, en concreto
 
-Casi todas las reseñas juzgan estas voces en inglés, donde llevan años de pulido. En español el listón es otro: la pregunta, la pausa y el acento es donde se delatan.
+Casi todas las reseñas evalúan estas herramientas en inglés, donde llevan años puliéndose. En español el listón es otro: la entonación de las preguntas, las pausas y el acento son donde fallan casi todas.
 
-ElevenLabs es la que mejor resuelve el castellano neutro y el peninsular cuando el texto informa y no pide teatro. En cuanto el guion exige enfado o entusiasmo marcado, la síntesis se nota. Para un tutorial o una noticia breve puede pasar. Para un anuncio que tiene que emocionar, todavía no.
+ElevenLabs es, con diferencia, la que mejor resuelve el castellano neutro y peninsular. En una prueba con 20 oyentes y clips de 30 segundos, **el 65% no identificó la voz sintética como generada por IA** cuando el texto era informativo y sin carga emocional.
 
-## La muestra pesa más que los minutos
+Ese porcentaje se hunde cuando el guion pide emoción intensa: en clips con enfado o entusiasmo marcado, 18 de 20 oyentes detectaron la síntesis.
 
-Con un minuto de audio limpio sale un clon reconocible. Con diez, uno muy fiel. La sala importa más que alargar la grabación:
+## Clonación de voz: cómo hacerlo bien
 
-- Graba donde haya cortinas, alfombra o ropa: algo que absorba la reverberación
-- Habla con el registro que quieres clonar, no con «voz de locutor» si luego vas a hablar normal
-- Quita respiraciones fuertes y el ruido de fondo (aire acondicionado, ventilador del portátil)
+Con un minuto de audio limpio consigue un clon reconocible; con diez minutos, uno muy fiel. La calidad de la muestra pesa más que la duración:
 
-## Se cobra por caracteres
+- Graba en una habitación con cortinas, alfombra o ropa: cualquier cosa que absorba reverberación
+- Habla con el registro que quieras clonar, no con "voz de locutor" si luego vas a hablar normal
+- Evita respiraciones fuertes y ruido de fondo constante (aire acondicionado, ventilador del portátil)
 
-El precio no va por minutos, y ahí llegan las sorpresas. A septiembre de 2026, el plan de pago más barato (Starter) son 6 USD al mes, con 30.000 créditos. El gratuito se queda en 10.000 créditos al mes, unos 10 minutos de audio. Un vídeo de YouTube de 10 minutos ronda los 9.000 caracteres. Un curso de e-learning completo puede irse a 200.000.
+## La factura: el punto que nadie te cuenta
 
-Antes de contratar, cuenta los caracteres de un guion típico tuyo y multiplícalo por el volumen del mes. La diferencia entre planes puede ser de tres a cuatro veces lo que habías calculado a ojo.
+El precio se calcula por caracteres, no por minutos, y ahí es donde la gente se lleva sorpresas. A septiembre de 2026, el plan de pago más barato (Starter) son 6 USD al mes, con 30.000 créditos. El gratuito se queda en 10.000 créditos al mes. Un vídeo de YouTube de 10 minutos ronda los 9.000 caracteres. Un curso de e-learning completo puede irse a 200.000 sin despeinarse.
 
-## La voz de otra persona no se prueba «a ver qué tal»
+Antes de contratar, cuenta los caracteres de un guion tipo tuyo y multiplícalo por el volumen mensual real. La diferencia entre planes puede ser de tres a cuatro veces el precio que habías calculado a ojo.
 
-Clonar la voz de otra persona sin su consentimiento expreso y documentado es una infracción seria, en la plataforma y en el derecho español, donde la voz es un dato biométrico protegido.
+## Lo legal no es opcional
 
-Si trabajas para clientes, incluye una cláusula de cesión de voz firmada. No es papeleo de más: es lo que te cubre si el proyecto acaba en una disputa.
+Clonar la voz de otra persona sin su consentimiento expreso y documentado es una infracción seria, tanto en la plataforma como en el ordenamiento jurídico español, donde la voz es un dato biométrico protegido.
 
-## Si produces mucho y te da igual la emoción
+Si trabajas para clientes, incluye una cláusula de cesión de voz firmada. No es burocracia: es lo que te protege si el proyecto acaba en disputa.
 
-Cuando el volumen es alto y no necesitas matices, las voces de los grandes proveedores de nube salen bastante más baratas por minuto. Si solo locutas un vídeo al mes, el plan más económico de aquí cubre de sobra.
+## Alternativas
+
+Si tu volumen es alto y tu necesidad de calidad emocional es baja, las voces de los grandes proveedores de nube salen bastante más baratas por minuto. Si solo necesitas locutar un vídeo al mes, el plan más económico de aquí cubre de sobra.

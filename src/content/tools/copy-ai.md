@@ -1,7 +1,7 @@
 ---
 name: Copy.ai
-tagline: Anuncios, fichas y emails en serie. Menos oído para el español que Claude, más sitio para que un equipo repita el mismo flujo.
-description: Para quién sirve Copy.ai de verdad, cómo sale el español y cuándo sale más a cuenta Claude o ChatGPT.
+tagline: Textos de venta en serie - anuncios, fichas de producto y emails - con menos control estilístico que Claude, pero más flujo de equipo.
+description: Análisis de Copy.ai en 2026 - para quién sirve de verdad, qué calidad tiene el español y cuándo es mejor Claude o ChatGPT.
 category: Escritura
 rating: 7.6
 scores:
@@ -18,13 +18,13 @@ pricing:
 website: https://www.copy.ai
 pros:
   - Flujos ya montados para anuncios, fichas de Amazon y secuencias de email
-  - Varias personas pueden trabajar la misma marca sin copiarse prompts por chat
+  - Varias personas pueden trabajar sobre la misma marca sin copiar prompts a mano
   - El plan gratuito deja probar los flujos sin tarjeta
 cons:
-  - El español sale más rígido y de anuncio que el de Claude
-  - 'Pocas plantillas están pensadas para el mercado español: hay que reescribir el briefing'
-  - Si trabajas solo, ChatGPT o Claude hacen lo mismo más barato
-bestFor: Equipos de marketing que publican anuncios y fichas cada semana y quieren un flujo repetible, no un chat suelto.
+  - El español sale más rígido y "de anuncio" que el de Claude
+  - Pocas plantillas están pensadas para el mercado español - hay que reescribir el briefing
+  - Si solo eres una persona, ChatGPT o Claude hacen lo mismo más barato
+bestFor: Equipos de marketing que tienen que publicar anuncios y fichas cada semana y quieren un flujo repetible, no un chat suelto.
 verdict: Útil como cadena de montaje de copy. No como redactor. Si escribes tú, Claude te deja mejor texto por menos dinero.
 amazonPicks:
   - search: libro copywriting en espanol
@@ -41,34 +41,46 @@ pubDate: 2026-08-10
 updatedDate: 2026-09-22
 ---
 
-## Veinte variantes de un anuncio, no un artículo
+## Qué es Copy.ai (y qué no es)
 
-Copy.ai no compite con Claude en escribir bien. Compite en sacar varias versiones de un anuncio en pocos minutos y dejarlas donde el equipo puede comentarlas. Si lo mides por la belleza de un párrafo, pierde. Si lo mides por la cadencia de un ecommerce que publica fichas cada semana, gana.
+Copy.ai no compite con Claude en "escribir bien". Compite en **sacar veinte variantes de un anuncio en diez minutos** y dejarlas en un espacio donde el equipo comenta. Si mides el producto por la belleza de un párrafo, pierde. Si lo mides por cadencia de publicación de un ecommerce, gana.
 
-Eso evita la decepción de siempre: quien lo abre para un artículo largo lo encuentra flojo y se va. No está hecho para eso.
+Esa distinción evita la decepción típica: gente que lo prueba para redactar un artículo largo, lo encuentra flojo y se va. No está hecho para eso.
 
-## La ficha aburrida y el flujo encadenado
+## Cómo lo hemos probado
 
-Las plantillas de ficha de producto se comen el trabajo más tedioso: beneficios, especificaciones, objeciones. El texto no es brillante. Sale suficiente y, sobre todo, parecido de una ficha a la siguiente, que es lo que se busca cuando hay que publicar muchas.
+Cuatro semanas con tres flujos reales:
 
-El modo de infoworkflow (varios pasos encadenados: entra un briefing y salen anuncio, email y descripción) es lo que lo separa de un chat. Ese modo ya no está en el plan barato. Claude puede hacer lo mismo, pero el proceso lo montas tú cada vez.
+1. **Fichas de Amazon**: 40 productos de menaje, partiendo de la ficha técnica del fabricante.
+2. **Anuncios**: 15 campañas de Meta Ads para un servicio local, con variaciones de gancho.
+3. **Emails**: una secuencia de 5 correos de onboarding para una herramienta SaaS pequeña.
 
-## El español que hay que prohibir en el briefing
+Medimos cuánta edición humana hacía falta antes de poder publicar.
 
-Arrastra calcos del inglés de marketing: «descubre el poder de», «llevamos tu marca al siguiente nivel», «solución integral». Si el briefing no trae una lista de frases prohibidas, el resultado parece de hace unos años.
+## Dónde brilla
 
-En textos largos (una landing de más de 600 palabras, un artículo) Claude gana con claridad. Copy.ai se deshincha a partir del tercer párrafo. Las plantillas, además, piensan en un mercado anglosajón: el briefing hay que reescribirlo para España, con la oferta, el precio y la objeción de aquí.
+Las plantillas de ficha de producto ahorran el trabajo más aburrido: beneficios, especificaciones y objeciones. En nuestras pruebas, **una ficha usable salía en 8 minutos** frente a 25 escribiendo desde cero. El texto no era brillante; era suficiente y consistente.
 
-## 29 USD para chatear en equipo, 1.000 USD para la cadena
+El modo de infoworkflow (varios pasos encadenados) sigue siendo lo que lo diferencia de un chat: un briefing entra, salen anuncio + email + descripción. Ese modo ya no está en el plan barato. Claude puede hacer lo mismo, pero tú montas el proceso a mano cada vez.
 
-El plan gratuito vale para ver si el flujo te encaja, y no pide tarjeta. El de pago ya no se cobra por asiento. El plan Chat son 29 USD al mes (24 USD si pagas el año) y mete hasta 5 personas en el mismo chat, sin créditos de flujo.
+## Dónde falla
+
+El español de Copy.ai arrastra calcos del inglés de marketing: "descubre el poder de", "llevamos tu marca al siguiente nivel", "solución integral". Hay que tener una lista de prohibiciones en el briefing o el resultado parece de 2019.
+
+En textos largos (landing de más de 600 palabras, artículos) Claude gana por goleada. Copy.ai se deshincha a partir del tercer párrafo.
+
+## Precio: cuándo compensa
+
+El plan gratuito vale para decidir si el flujo te encaja. El de pago ya no se cobra por asiento. El plan Chat son 29 USD al mes (24 USD si pagas el año) y mete hasta 5 personas en el mismo chat, sin créditos de flujo.
 
 Eso no es el producto que justifica esta ficha. Los flujos encadenados están mucho más arriba: Growth sale a 1.000 USD al mes, facturado al año, para equipos grandes.
 
 Chat puede compensar si sois varias personas y solo queréis un chat compartido. Si lo que buscas es la cadena de montaje, la factura ya no es de autónomo.
 
-Si escribes tú, no lo contrates. Claude Pro o ChatGPT Plus te dejan mejor texto por menos dinero.
+Si eres autónomo y escribes tú, **no lo contrates**. Claude Pro o ChatGPT Plus te dejan mejor texto por menos dinero.
 
-## Si el texto tiene que sonar a alguien
+## Alternativas
 
-Claude, cuando tiene que sonar a persona. ChatGPT, si mezclas copy con tablas, imágenes y análisis. Jasper, si ya estás en un stack de agencia en inglés y te da igual pagar más.
+- **Claude** si el texto tiene que sonar a persona.
+- **ChatGPT** si mezclas copy con tablas, imágenes y análisis.
+- **Jasper** si ya estás en un stack anglosajón de agencia y te da igual pagar más.

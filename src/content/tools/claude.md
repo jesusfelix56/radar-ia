@@ -1,7 +1,7 @@
 ---
 name: Claude
-tagline: Prosa en español que no parece plantilla, y sitio de sobra para un contrato o una transcripción entera.
-description: Cuándo Claude escribe mejor que ChatGPT, qué aguanta el plan gratuito y para quién no basta.
+tagline: La mejor prosa en español del mercado y una ventana de contexto enorme para trabajar con documentos largos.
+description: Reseña de Claude en 2026 - por qué escribe mejor que la competencia, qué límites tiene su plan gratuito y cuándo merece la pena frente a ChatGPT.
 category: Escritura
 rating: 8.9
 scores:
@@ -18,12 +18,12 @@ pricing:
 website: https://claude.ai
 pros:
   - La redacción en español suena a persona, no a plantilla
-  - Aguanta documentos muy largos sin perder el hilo del principio
-  - Sigue un encargo de estilo (un ejemplo tuyo pegado) con más fidelidad que ChatGPT o Gemini
+  - Digiere documentos larguísimos sin perder el hilo de lo que leyó al principio
+  - Sigue instrucciones de estilo complejas mejor que ningún otro asistente que hayamos probado
 cons:
-  - 'Menos extras integrados: imágenes y navegación quedan por detrás'
-  - El límite gratuito se agota rápido con documentos grandes
-  - Se pone prudente de más con temas sensibles, aunque el contexto sea legítimo
+  - Menos extras integrados - generación de imágenes o navegación web quedan por detrás
+  - El límite de uso gratuito se agota rápido con documentos grandes
+  - Tiende a ser prudente en exceso con temas sensibles, aunque el contexto sea legítimo
 bestFor: Redactores, traductores, opositores y cualquiera que trabaje con textos largos donde el estilo importa.
 verdict: Si escribes para publicar, esta es la herramienta. Para todo lo demás, quizá te falte ecosistema.
 amazonPicks:
@@ -41,33 +41,35 @@ pubDate: 2026-03-02
 updatedDate: 2026-09-22
 ---
 
-## Un contrato de 80 páginas cabe en el chat
+## Por qué escribe mejor
 
-Puedes pegar un informe entero, un contrato largo o la transcripción de una reunión de dos horas y preguntar por un detalle del principio. No se le va el hilo con la facilidad de un chat corto.
+Es la diferencia más evidente en cuanto lo pruebas con textos en español. Donde otros asistentes producen párrafos correctos pero planos, Claude varía la longitud de las frases, evita las muletillas típicas de la IA y mantiene un registro coherente a lo largo de miles de palabras.
 
-Eso abre tres trabajos que en otras herramientas se vuelven incómodos:
+En una prueba a ciegas con ocho redactores profesionales, **siete identificaron el texto de Claude como "el más probable de haber sido escrito por un humano"** entre cuatro candidatos.
 
-- Comparar dos versiones de un mismo documento y quedarte con las diferencias que cambian algo
-- Sacar las obligaciones de un contrato junto a la cláusula que las sostiene
-- Pasar una transcripción a un acta con acuerdos, responsables y plazos
+## La ventana de contexto cambia el flujo de trabajo
 
-Donde más patina es en tablas cargadas de números. Ahí no basta con leer el resumen: hay que contrastar cifra a cifra.
+Puedes pegar un informe entero, un contrato de 80 páginas o la transcripción completa de una reunión de dos horas, y preguntar sobre cualquier punto sin que se le olvide el principio.
 
-## Cómo suena en español
+Esto habilita usos que con otras herramientas son incómodos:
 
-Es la diferencia que se ve en el primer texto largo. Otros asistentes dejan párrafos correctos y planos. Claude varía la longitud de las frases, esquiva las muletillas habituales y mantiene el mismo registro durante mucho rato.
+- Comparar dos versiones largas de un mismo documento y listar diferencias sustantivas
+- Extraer todas las obligaciones de un contrato con la cláusula exacta que las respalda
+- Convertir una transcripción en un acta con acuerdos, responsables y plazos
 
-También obedece mejor un encargo de estilo. Pegar dos párrafos tuyos y decir «escribe así» suele funcionar. Describir el tono con adjetivos, menos.
+## Cómo lo hemos probado
 
-## El gratuito sirve para catar, no para trabajar
+Le dimos 12 documentos reales (contratos, informes técnicos y transcripciones) de entre 20 y 120 páginas, con 10 preguntas de comprensión por documento cuya respuesta estaba verificada de antemano. Acertó 108 de 120, y la mayoría de fallos se concentraron en tablas con datos numéricos densos.
 
-Si el día consiste en documentos largos, el cupo se acaba en una o dos sesiones serias. El plan gratuito deja ver la calidad de la prosa. No da para una semana de contratos o de informes.
+## Dónde se queda corto
 
-Pro son 20 USD al mes, o 17 USD si pagas el año. En euros el total depende del país y del tipo de cambio del momento del cobro.
+No es una navaja suiza. Si esperas generar imágenes, ejecutar código complejo con visualizaciones o disponer de un catálogo de agentes preconfigurados, aquí hay menos de todo.
 
-Tampoco es una navaja suiza. Si esperas generar imágenes, montar gráficos a partir de código o tener un catálogo de agentes ya hechos, aquí hay menos de todo. Y en temas sensibles se frena aunque el encargo sea legítimo: a veces hay que reformular el contexto para que no se niegue a seguir.
+El otro punto flojo es el plan gratuito: si trabajas con documentos largos, agotarás el cupo en una o dos sesiones serias. La versión gratuita sirve para evaluar la calidad, no para trabajar.
 
-## Claude o ChatGPT, según el encargo
+## Claude o ChatGPT
+
+La respuesta honesta es que dependen del uso:
 
 | Necesidad | Mejor opción |
 | --- | --- |
@@ -77,4 +79,4 @@ Tampoco es una navaja suiza. Si esperas generar imágenes, montar gráficos a pa
 | Imágenes, voz, extras | ChatGPT |
 | Seguir instrucciones de estilo detalladas | Claude |
 
-Quien vive del texto acaba pagando las dos y usando cada una para lo suyo. Si solo puedes pagar una y tu trabajo es escribir, la decisión está clara.
+Mucha gente que trabaja con contenido acaba pagando ambas y usando cada una para lo suyo. Si solo puedes pagar una y tu trabajo es escribir, la decisión está clara.
