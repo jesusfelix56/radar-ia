@@ -38,7 +38,7 @@ amazonPicks:
 accent: brand
 featured: true
 pubDate: 2026-05-11
-updatedDate: 2026-09-22
+updatedDate: 2026-10-01
 ---
 
 ## Qué es Gemini hoy (y qué no)
@@ -85,3 +85,30 @@ Si solo quieres un chat suelto, ChatGPT Plus o Claude Pro siguen rindiendo más.
 - **ChatGPT** si quieres una sola herramienta para escribir, analizar datos y generar imágenes.
 - **Claude** si el resultado tiene que publicarse en español.
 - **Perplexity** si tu trabajo es investigar, no producir documentos.
+
+## Lo que muestra la página española de suscripciones
+
+La prueba de seis semanas no se ha repetido. El 1 de octubre de 2026 leímos [gemini.google/es/subscriptions](https://gemini.google/es/subscriptions/?hl=es). Los importes de 4,99 € (Plus) y 21,99 € (Pro) que hay más arriba son los de la ficha del 22 de septiembre. En el texto de la página de octubre que pudimos leer, Plus y Pro no traían el precio en euros a la vista. Ultra sí: 99,99 € al mes (límites cinco veces por encima de Pro) y 219,99 € al mes (veinte veces). El checkout manda para Plus y Pro. No reescribimos esas dos cifras como si las hubiéramos visto de nuevo.
+
+Lo que esa página sí describe, y sirve para elegir:
+
+| Plan, según la página | Almacenamiento | Uso en la app Gemini | Dónde mete Gemini |
+| --- | --- | --- | --- |
+| Sin coste | 15 GB | Acceso a 3.6 Flash y acceso variable a 3.1 Pro | La app. La página no lo lista dentro de Docs. |
+| Google AI Plus | 400 GB | El doble que el gratuito, y generación de vídeo | Gmail, Vids y más. 200 puntos de Google Flow. |
+| Google AI Pro | 5 TB | El cuádruple que el gratuito | Gmail, Docs, Vids y otros. 1.000 puntos de Flow. YouTube Premium Lite, con la letra pequeña de la propia página. |
+| Google AI Ultra | 20 TB o más, en el relato de la página | Hasta 20 veces el plan Pro, según el escalón | Lo de Pro, más funciones que la página limita por país. |
+
+La nota al pie dice que los límites de la app se renuevan cada cinco horas hasta un tope semanal, y que se pueden ampliar comprando puntos de IA. También dice que Gemini en Gmail, Documentos y el resto pide mayoría de edad y no está en todos los idiomas.
+
+Al describir Pro, la página habla de una ventana de contexto de 1 millón de tokens y, en el relato comercial, de archivos de hasta 1.500 páginas. Es su texto, no un archivo nuestro medido. Para atar un resumen al documento, el método está en [trabajar solo con el documento](/guias/trabajar-solo-con-el-documento).
+
+La ayuda de Gmail documenta, aparte, una visión general del hilo que pide tener activas las funciones inteligentes. No la mezcles con el panel de pago: son superficies distintas, y el plan que la página de suscripciones asocia a Gemini dentro de Docs es Pro.
+
+## Cómo decidir con esta lectura
+
+1. Si el trabajo cabe en la app y en 15 GB, quédate en el gratuito y anota cuántas veces te corta la ventana de cinco horas.
+2. Plus, con 400 GB y el doble de uso, es el escalón en el que la página mete Gemini en Gmail. Confirma el euro en el checkout. La cifra de septiembre puede haber cambiado.
+3. Pro es el que esa página asocia a Docs, a 5 TB y al cuádruple de uso. Tiene sentido si el día pasa dentro de documentos de Google, que es el caso de la prueba antigua.
+4. Ultra, a 99,99 € o 219,99 €, solo si Pro ya se queda corto. No es un plan para «tener el modelo grande por si acaso».
+5. Antes de pegar un correo de cliente en otro chat, mira [qué no subir](/guias/que-no-subir-a-un-chat). Si el material ya está en Gmail, trabajar dentro de la cuenta evita una copia de más.

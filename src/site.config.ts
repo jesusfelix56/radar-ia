@@ -39,12 +39,19 @@ export const ads = {
   /** Cliente de AdSense (ca-pub-...). */
   client: env.PUBLIC_ADSENSE_CLIENT || 'ca-pub-7494588122793199',
   /**
-   * Con `false` se reservan los huecos, pero no se insertan unidades de anuncio.
+   * Con `false` no se insertan unidades de anuncio.
    * adsbygoogle.js se carga siempre que hay cliente: es el que muestra el mensaje
    * de consentimiento certificado de Google. Este sitio no lo retrasa.
-   * Pásalo a true cuando tengas IDs de bloque reales.
+   * Pásalo a true cuando AdSense esté aprobado y tengas IDs de bloque reales.
    */
   enabled: env.PUBLIC_ADS_ENABLED === 'true',
+  /**
+   * Cajas vacías («Espacio reservado para publicidad»). En false no se pintan:
+   * un hueco sin anuncio perjudica la revisión de AdSense.
+   * El marcado de AdUnit sigue en el código; vuelve a true solo para previsualizar.
+   * No afecta al script de consentimiento ni a Consent Mode.
+   */
+  showPlaceholders: env.PUBLIC_ADS_SHOW_PLACEHOLDERS === 'true',
   slots: {
     header: env.PUBLIC_ADSENSE_SLOT_HEADER || '',
     inArticle: env.PUBLIC_ADSENSE_SLOT_IN_ARTICLE || '',
