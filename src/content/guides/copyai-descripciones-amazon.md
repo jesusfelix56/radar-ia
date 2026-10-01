@@ -1,6 +1,6 @@
 ---
 title: Cómo escribir fichas de Amazon con Copy.ai sin que parezcan de 2019
-description: Briefing, prohibiciones en español y el recorte humano que convierte veinte variantes mediocres en una ficha que se puede publicar.
+description: Cinco líneas tuyas, variantes para mezclar y un recorte de claims. El tope de 200 caracteres es de trabajo, no una norma leída en Seller Central.
 category: Tutorial
 tags:
   - copyai
@@ -16,50 +16,48 @@ amazonPicks:
     price: 22
 featured: true
 pubDate: 2026-08-18
+updatedDate: 2026-10-01
 ---
 
-Copy.ai está hecho para este trabajo. También está hecho en inglés. Si pegas la ficha del fabricante y pulsas el workflow "Amazon Product Description", sale un texto lleno de "descubre el poder de". Esta guía es el filtro que usamos.
+Copy.ai está pensado para sacar variantes. También arrastra el inglés de los anuncios: «descubre el poder de» cabe en una ficha de menaje y en una de tornillos. Esta página es el filtro de redacción. La [ficha de Copy.ai](/herramientas/copy-ai) guarda una prueba antigua de fichas de Amazon, de unas cuatro semanas, y dice que no se ha rehecho. No añadimos minutos ni un porcentaje de edición.
 
-## 1. No empieces en Copy.ai
+## Cinco líneas que no escribe el modelo
 
-En un bloc, cinco líneas tuyas:
+- Qué es, como se lo dirías a alguien que no ha visto el objeto.
+- Quién lo compra. No «todo el mundo».
+- Tres objeciones oídas de verdad: se rompe, es más caro que el genérico, no cabe en el cajón.
+- Qué no es: no es de hostelería, no es de exterior.
+- Palabras que no quieres ver: innovador, revolucionario, premium, «diseñado para tu estilo de vida».
 
-- Qué es el objeto, en una frase de niño de 10 años
-- Quién lo compra de verdad (no "todos")
-- Tres objeciones reales ("se rompe a los dos meses", "es más caro que el genérico")
-- Qué no es (no es profesional de hostelería, no es para exterior)
-- Palabras prohibidas: innovador, revolucionario, calidad premium, "diseñado para tu estilo de vida"
+Si la medida, el material o el peso no están en esas líneas, no están en la ficha. El modelo redondea. Un «aprox.» tuyo es mejor que un 500 ml que en el bote son 400.
 
-Ese briefing es el producto. Copy.ai solo lo expande.
+## El texto, y el contador de Amazon
 
-## 2. El workflow útil
-
-Usa "Product Description" o un infoworkflow de ficha. Pega:
+El prompt de trabajo pide un título de hasta 200 caracteres porque es un tope cómodo para no escribir un párrafo. El 1 de octubre de 2026 no hemos abierto la ayuda de Seller Central que fija el límite del título: está tras el acceso a la cuenta y no es igual en todos los productos. Cuando edites la ficha, manda el contador que te enseñe Amazon. Si te deja menos de 200, se corta el título, no se discute con el chat.
 
 ```
-Idioma: español de España. Tú, no usted.
+Español de España. Tú, no usted.
 Mercado: Amazon.es
 Producto: [nombre]
 Briefing:
-[las cinco líneas]
+[las cinco líneas, con medidas tal como están en el envase]
 
-Prohibido: anglicismos de marketing, emojis, mayúsculas agresivas, "compra ahora".
-Estructura:
-1. Título ≤ 200 caracteres, con marca + medida + uso
-2. 5 bullets: cada uno empieza por un beneficio medible, no por un adjetivo
-3. Párrafo de 80 palabras para la descripción larga
-4. Tabla de especificaciones solo con datos del briefing. Si falta un dato, pon [FALTA]
+Prohibido: anglicismos de eslogan, emojis, mayúsculas enteras, «compra ahora», salud, «el mejor».
+Devuelve:
+1. Título de hasta 200 caracteres: marca, medida y uso. Si el contador de mi cuenta es más bajo, lo acortaré yo.
+2. Cinco viñetas. Cada una abre con un uso o una medida del briefing, no con un adjetivo.
+3. Un párrafo de unas 80 palabras.
+4. Especificaciones solo con datos del briefing. Si falta, [FALTA]. No conviertas unidades.
 ```
 
-## 3. Genera cinco, no una
+Pide cinco títulos y cinco primeras viñetas. Publicar la variante 1 entera es cómo se cuela el eslogan. Montas la ficha: el título de la variante 3, la viñeta de la 1, el párrafo recortado. Lo que no uses, se borra.
 
-Pide 5 variantes del título y 5 del primer bullet. Copy.ai rinde en volumen. Luego **tú** montas la ficha ganadora mezclando. Publicar la variante 1 entera es el error.
+## Diez minutos de lectura, no de inspiración
 
-## 4. El recorte de 10 minutos
+Lee en voz alta. Si te da vergüenza, suele ser el calco del inglés o una promesa que no está en el envase. Quita salud, milagros y «el mejor del mercado» aunque suenen concretos: no los puedes demostrar, y una ficha que afirma de más es un problema de cuenta, no de estilo. No describimos aquí la política de claims de Amazon porque no la hemos leído dentro de Seller Central en esta fecha. El criterio de redacción es no afirmar lo que el briefing no dice.
 
-- Quita cualquier claim de salud, milagro o "el mejor del mercado" (Amazon te puede tumbar la ficha)
-- Cruza medidas con el manual. Copy.ai redondea
-- Lee en voz alta. Si te da vergüenza, está mal
-- Pasa el texto por Claude con: "Quita calcos del inglés. No añadas claims. Conserva datos."
+Cruza cada número con el manual o con la etiqueta. Pasa el texto por Claude solo con esto: «quita calcos del inglés. No añadas claims. Conserva cifras y unidades.»
 
-Ese último paso es el que justifica no usar solo Copy.ai. El [análisis de Copy.ai](/herramientas/copy-ai) explica para qué equipos sí compensa el asiento de pago.
+Las fotos no salen de este flujo. La principal tiene que ser del objeto real: [fotos de producto](/guias/midjourney-fotos-producto).
+
+El plan de chat y los flujos encadenados no cuestan lo mismo. La ficha lo deja con la página de precios leída el 1 de octubre de 2026, y avisa de que en esa tabla no había un plan gratuito. Si el botón que buscas es un workflow de varios pasos, mira allí antes de dar por hecho que está incluido.
