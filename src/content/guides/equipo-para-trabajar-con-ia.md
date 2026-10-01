@@ -1,6 +1,6 @@
 ---
 title: El equipo físico que más rinde si trabajas con IA todos los días
-description: Qué merece la pena comprar de verdad (y qué es postureo) cuando pasas el día con ChatGPT, Claude o Midjourney. Con enlaces a Amazon.
+description: Qué compra cambia el día a día con ChatGPT, Claude o Midjourney, y qué es una etiqueta puesta en un teclado.
 category: Guía
 tags:
   - productividad
@@ -33,44 +33,42 @@ pubDate: 2026-08-08
 updatedDate: 2026-08-25
 ---
 
-La conversación sobre inteligencia artificial se centra en modelos y suscripciones. En la práctica, **el hardware que tienes delante condiciona más el resultado** que pasar de un plan gratuito a uno de pago. Hemos anotado durante un año qué compras sí cambiaron el trabajo y cuáles acabaron en un cajón.
+Se habla de modelos y de suscripciones. En la mesa, lo que tienes delante condiciona más el día que saltar de un plan gratuito a uno de pago: una pantalla pequeña o un micro que se come el final de la frase te frenan aunque el modelo sea bueno.
 
-Nada de esta lista es obligatorio. Si tu presupuesto es cero, empieza por la [guía del stack gratuito](/guias/stack-ia-gratis).
+Nada de esta lista es obligatorio. Si el presupuesto es cero, empieza por la [guía del stack gratuito](/guias/stack-ia-gratis).
 
-## Lo que más rinde, en este orden
+## Empieza por la segunda pantalla
 
-### 1. Una segunda pantalla
-
-No es el gadget más glamuroso y es el que más horas ahorra. Tener el asistente a un lado y el documento, el código o el timeline de vídeo al otro elimina el cambio constante de ventana. Ese cambio no parece mucho; al cabo del día son decenas de interrupciones.
+No es el gadget más lucido y es el que más interrupciones quita. El asistente a un lado y el documento, el código o el timeline al otro. Ese cambio de ventana parece poco. Al cabo del día son decenas.
 
 Un 27" 4K IPS de gama media basta. El ultrapanorámico de 34" es un lujo agradable, no un requisito.
 
-### 2. Un micrófono que no sea el del portátil
+## Luego el micro, si usas la voz
 
-Los modos de voz de ChatGPT, Gemini y Claude **dejan de ser un truco** en cuanto el modelo te entiende a la primera. El micro del portátil capta teclado, aire acondicionado y la media palabra que se come al final de la frase. Un USB de condensador de unos 100 € arregla eso.
+Los modos de voz de ChatGPT, Gemini y Claude dejan de ser un truco cuando el modelo te entiende a la primera. El micro del portátil capta el teclado, el aire acondicionado y se come la media palabra del final. Un USB de condensador de unos 100 € arregla eso.
 
-Si compartes espacio, unos auriculares con micrófono decente son más discretos y rinden casi igual para dictado.
+Si compartes espacio, unos auriculares con micrófono decente son más discretos y rinden casi igual para dictar.
 
-### 3. Tableta gráfica (solo si generas imagen)
+## Tableta solo si retocas imagen
 
-Midjourney y similares producen un 80% del encuadre. El otro 20% —manos, texto, un objeto que sale duplicado— se arregla en un editor. Hacerlo con el ratón es miserable. Una tableta de 80 € se amortiza en la primera semana de encargos.
+Midjourney y similares dejan la mayor parte del encuadre. Lo que queda (una mano, un texto, un objeto duplicado) se arregla en un editor. Hacerlo con el ratón es lento y torpe. Una tableta de unos 80 € se nota en cuanto el retoque es parte del encargo.
 
-Si no generas imagen, sáltate este punto. No hay nada que "aprovechar".
+Si no generas imagen, sáltate este punto. No hay nada que aprovechar.
 
-### 4. Almacenamiento rápido
+## Disco, si generas en lote
 
-Generar vídeo con Runway o series de imagen en lote llena discos a una velocidad que no esperas. Un SSD externo de 2 TB evita el teatro de borrar proyectos a media semana. El disco interno del portátil no está pensado para este ritmo.
+Vídeo o series de imagen llenan el disco antes de lo que esperas. Un SSD externo de 2 TB evita borrar proyectos a media semana. El disco interno del portátil no está pensado para ese ritmo.
 
-## Lo que no hace falta
+## Lo que puedes dejar para más adelante
 
-- **Una torre gaming de 3.000 €.** Las herramientas que analizamos corren en la nube. Tu GPU local no acelera ChatGPT.
-- **Una silla de 800 € el primer mes.** Si vas a sentarte ocho horas, sí importa, pero no es específica de trabajar con IA. Priorízala cuando el resto del entorno ya no duela.
-- **Licencias de software "de IA" de Amazon.** Hay teclados y ratones que se venden con esa etiqueta. No hacen nada que no haga el atajo de copiar y pegar.
+Una torre de 3.000 € no acelera ChatGPT: las herramientas de esta web corren en la nube. Tu GPU local no entra en esa cuenta.
 
-## Cómo comprar sin tirar el dinero
+Una silla cara importa si te sientas ocho horas, pero no es específica de trabajar con IA. Tiene sentido cuando el resto del puesto ya no duele, no como primera compra «para la IA».
 
-1. Empieza por el cuello de botella que ya sientes: pantalla pequeña, micro malo, disco lleno.
-2. Evita el modelo concreto de un unboxing de hace un año. Por eso enlazamos **búsquedas**, no un ASIN que mañana estará descatalogado.
-3. Lee una reseña reciente en Amazon y mira las fotos de clientes, no las de marca.
+Tampoco hacen falta teclados ni ratones vendidos como «de IA». No hacen nada que no haga copiar y pegar.
 
-La selección completa, filtrada por categoría, está en [Recomendados](/recomendados). Cada enlace lleva nuestro identificador de afiliado; tú pagas lo mismo.
+## Cómo no comprar el modelo del unboxing
+
+Empieza por el cuello de botella que ya sientes: pantalla pequeña, micro malo, disco lleno. Evita el modelo concreto de un vídeo de hace un año. Por eso enlazamos búsquedas, no un ASIN que mañana estará descatalogado. Lee una reseña reciente y mira las fotos de quien lo ha comprado, no las de la marca.
+
+La selección filtrada está en [Recomendados](/recomendados). Cada enlace lleva nuestro identificador de afiliado. Tú pagas lo mismo.

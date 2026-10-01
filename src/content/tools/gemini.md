@@ -1,7 +1,7 @@
 ---
 name: Gemini
-tagline: El asistente de Google, integrado de verdad en Gmail, Docs y Drive. Brilla si ya vives en ese ecosistema.
-description: Análisis de Gemini en 2026 - integración con Workspace, calidad frente a ChatGPT y Claude, y cuándo merece la pena pagar Google AI Plus o Pro.
+tagline: El asistente de Google metido en Gmail, Docs y Drive. Tiene sentido si ya trabajas ahí.
+description: Qué aporta Gemini dentro de Workspace, en qué se queda corto al escribir y cuándo pagar Google AI Plus o Pro.
 category: Productividad
 rating: 8.3
 scores:
@@ -17,9 +17,9 @@ pricing:
   note: En España, Google AI Plus sale a 4,99 € al mes (400 GB y el doble de uso). Google AI Pro, con Gemini en Gmail y Docs y 5 TB, son 21,99 € al mes.
 website: https://gemini.google.com
 pros:
-  - Accede a tu Gmail, Drive y Docs sin copiar y pegar nada
-  - El plan gratuito es generoso y no corta el uso a las dos preguntas
-  - Busca en internet con la misma calidad que esperas de Google
+  - Lee tu Gmail, Drive y Docs sin que copies y pegues el hilo
+  - El plan gratuito aguanta un uso diario ligero
+  - Busca en internet con la soltura que se espera de Google
 cons:
   - La prosa en español queda por detrás de Claude y, en textos largos, de ChatGPT
   - Fuera del ecosistema Google pierde buena parte de su ventaja
@@ -41,47 +41,31 @@ pubDate: 2026-05-11
 updatedDate: 2026-09-22
 ---
 
-## Qué es Gemini hoy (y qué no)
+## No le pidas un poema: ábrelo en el hilo
 
-Gemini no es "el ChatGPT de Google". Es un asistente metido dentro de Gmail, Docs, Drive y Chrome. Esa distinción importa: las pruebas de laboratorio donde le pides un poema o un resumen suelto no miden lo que realmente hace bien.
+Gemini no es «el ChatGPT de Google». Es un asistente metido en Gmail, Docs, Drive y Chrome. Pedirle un texto suelto no mide lo que hace bien.
 
-Lo que hace bien es **trabajar con lo que ya tienes**. "Resume los hilos de este cliente de los últimos tres meses y redáctame la respuesta pendiente" funciona porque no tienes que exportar nada.
+Lo que hace bien es trabajar con lo que ya tienes. «Resume los hilos de este cliente de los últimos tres meses y redáctame la respuesta pendiente» funciona porque no exportas nada. En el correo, buena parte de las respuestas salen sin copiar el hilo a otro chat. Eso ChatGPT no lo hace, por bueno que sea el modelo.
 
-## Cómo lo hemos probado
+En Docs, «mejora este texto» suele dejar un barniz genérico. Prueba «marca en comentarios lo que sobra y lo que está ambiguo, no reescribas todavía».
 
-Seis semanas como asistente principal en un flujo real de autónomo:
+## Cuando el enlace no es el dato
 
-1. **Correo**: 80 hilos de clientes, pidiendo resúmenes, borradores de respuesta y seguimiento de pendientes.
-2. **Documentos**: 12 informes en Docs de 8 a 40 páginas, pidiendo reescritura, tablas y coherencia de estilo.
-3. **Búsqueda**: 25 consultas con fuentes, comparadas lado a lado con Perplexity y ChatGPT.
+En búsquedas con fuentes es sólido, aunque Perplexity cita con más disciplina. Gemini a veces resume bien y enlaza mal: el dato cuadra y la URL no. Si vas a publicar la fuente, ábrela.
 
-Medimos cuántas veces hubo que salir de Gemini para terminar el trabajo en otra herramienta.
+La escritura larga en español es el punto débil. Queda por detrás de Claude y, si el texto se alarga, también de ChatGPT. Abusa de enumeraciones y de cierres que recitan lo que ya has leído.
 
-## Dónde brilla de verdad
+Fuera de Google la ventaja se desinfla. Si el equipo vive en Notion, en Microsoft 365 o en un CMS propio, estás pagando una integración que no usas.
 
-La integración con Workspace no es un extra: es el producto. En nuestras pruebas, **el 70% de las tareas de correo se resolvieron sin copiar nada a otro sitio**. Eso no lo hace ChatGPT, por muy bueno que sea el modelo.
+## Plus a 4,99 € o Pro a 21,99 €
 
-En búsqueda con fuentes es sólido, aunque Perplexity sigue citando con más disciplina. Gemini a veces resume bien y enlaza mal: el dato es correcto y la URL no.
-
-> Truco útil: en Docs, en lugar de "mejora este texto", prueba "marca en comentarios lo que sobra y lo que está ambiguo, no reescribas todavía". Reduce el típico barniz genérico.
-
-## Dónde falla
-
-La escritura larga en español es el punto débil. Encargamos los mismos 20 artículos a Gemini, ChatGPT y Claude. Gemini quedó último en naturalidad (6,4 sobre 10 frente a 7,8 de Claude). Abusa de enumeraciones y de conclusiones que recitan el índice.
-
-Fuera de Google, la ventaja se desinfla. Si tu equipo vive en Notion, Microsoft 365 o un CMS propio, estás pagando una integración que no usas.
-
-## Precio: cuándo compensa pagar
-
-El plan gratuito cubre uso diario ligero. El de pago ya no se llama Google One AI Premium. En España hay dos escalones públicos:
+El plan gratuito cubre un uso diario ligero. El de pago ya no se llama Google One AI Premium. En España hay dos escalones públicos:
 
 - **Google AI Plus**, 4,99 € al mes: 400 GB y el doble de uso que el gratuito. Sirve si ya vives en Gmail y Drive y no necesitas el tope.
 - **Google AI Pro**, 21,99 € al mes: 5 TB, cuatro veces más uso y Gemini dentro de Gmail y Docs. Este es el que compensa si el trabajo vive en Workspace.
 
 Si solo quieres un chat suelto, ChatGPT Plus o Claude Pro siguen rindiendo más. El nombre y el almacenamiento cambian seguido: confirma el total en el checkout antes de contratar.
 
-## Alternativas
+## Si tu día no está en Google
 
-- **ChatGPT** si quieres una sola herramienta para escribir, analizar datos y generar imágenes.
-- **Claude** si el resultado tiene que publicarse en español.
-- **Perplexity** si tu trabajo es investigar, no producir documentos.
+ChatGPT, si quieres una sola herramienta para escribir, mirar datos y generar imágenes. Claude, si el texto tiene que publicarse en español. Perplexity, si el trabajo es investigar y no producir el documento.

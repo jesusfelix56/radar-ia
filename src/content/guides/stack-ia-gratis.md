@@ -1,6 +1,6 @@
 ---
 title: Un flujo de trabajo con IA por 0 € al mes
-description: Cómo combinar planes gratuitos para cubrir escritura, imágenes, búsqueda y código sin pagar ninguna suscripción, y en qué punto conviene empezar a pagar.
+description: Cómo cubrir escritura, búsqueda, imágenes y código con planes gratuitos, y en qué momento deja de compensar el malabar.
 category: Tutorial
 tags:
   - gratis
@@ -19,50 +19,30 @@ featured: false
 pubDate: 2026-07-09
 ---
 
-Las suscripciones de IA se acumulan rápido: 20 € aquí, 15 € allá, y de repente estás pagando 80 € al mes por herramientas que usas veinte minutos a la semana. Este es el stack que recomendamos a quien empieza, y cuesta cero.
+Las suscripciones se acumulan sin que se note: 20 € aquí, 15 € allá, y un día son 80 € al mes por herramientas que usas veinte minutos a la semana. Para empezar, se puede cubrir el día a día sin pagar ninguna. El truco no es coleccionar cuentas. Es saber en qué tarea se te van las horas.
 
-## Antes de nada: la pregunta correcta
+## Apunta una semana antes de abrir la cartera
 
-No es "¿qué herramienta de IA me compro?". Es "¿en qué tarea concreta pierdo más horas?". Si no sabes responder a la segunda, cualquier suscripción será dinero tirado.
+La pregunta útil no es «qué herramienta me compro». Es «qué tarea me come el tiempo». Si no sabes responder, cualquier suscripción sobra. Una semana apuntando esas tareas vale más que otra comparativa.
 
-Durante una semana, apunta las tareas que te comen tiempo. Después vuelve aquí.
+## Qué cubre el gratuito, tarea por tarea
 
-## El stack gratuito, tarea por tarea
+**Escribir.** El plan gratuito de un asistente conversacional basta si redactas pocos textos al día. El límite aparece con documentos largos o con mucho volumen. Úsalo como editor: escribe tú el borrador feo y pide crítica. Gasta menos cupo y el texto se parece más a ti.
 
-### Escribir y editar textos
+**Buscar.** El plan gratuito de [Perplexity](/herramientas/perplexity) da para investigación preliminar y para comparar productos durante bastante tiempo. Cuando la fuente importa, este es el hueco que un chat generalista no cubre igual.
 
-El plan gratuito de un buen asistente conversacional cubre de sobra a quien redacta unos pocos textos al día. El límite lo notarás si trabajas con documentos largos o si generas contenido en volumen.
+**Imágenes.** El listón de entrada ha bajado. Hay generadores gratuitos suficientes para ilustrar un blog o unas redes. Pagar tiene sentido cuando lo visual es parte de lo que vendes, no cuando necesitas una cabecera de vez en cuando.
 
-Consejo: usa la IA como **editor**, no como autor. Escribe tú el borrador feo y pide crítica. Consume menos cuota y el resultado es mucho mejor.
+**Código.** Si estudias o mantienes un proyecto de código abierto con cierta tracción, [GitHub Copilot](/herramientas/github-copilot) puede ser gratuito. Comprueba la cuenta: hay gente que cumple y no lo mira.
 
-### Buscar información con fuentes
+**Audio.** Transcribir una reunión de una hora y quedarte con el resumen es de lo que más tiempo devuelve, y las opciones gratuitas cubren casi todo ese caso.
 
-Aquí el plan gratuito de [Perplexity](/herramientas/perplexity) es sorprendentemente generoso. Para investigación preliminar y comparativas de producto, no necesitarás pagar durante mucho tiempo.
+## Cinco pestañas también cuestan
 
-### Generar imágenes
+El coste oculto de cinco cuentas gratuitas es el cambio de contexto: recordar el límite de cada una, copiar de una a otra, volver a explicar el encargo. Si te descubres haciendo malabares, ya estás en el punto en que una suscripción sale más barata que el rato perdido.
 
-Es la categoría donde más ha bajado el listón de entrada. Hay generadores gratuitos con calidad suficiente para ilustrar un blog o unas redes sociales. Pagar solo tiene sentido cuando lo visual es parte de lo que vendes.
+Paga cuando choques con el límite gratuito tres veces en la misma semana, y paga la herramienta con la que chocas, no la que más se anuncia. Si dudas entre ChatGPT y Claude, la comparativa está en [ChatGPT o Claude](/guias/chatgpt-vs-claude).
 
-### Programar
+## «Gratis» no quiere decir «puedo pegar el contrato»
 
-Si eres estudiante o mantienes un proyecto de código abierto con cierta tracción, [GitHub Copilot](/herramientas/github-copilot) es gratuito. Verifica tu cuenta: mucha gente cumple los requisitos y no lo sabe.
-
-### Transcribir audio
-
-Las transcripciones son un caso donde las opciones gratuitas cubren casi todo. Una reunión de una hora se transcribe y resume sin coste, y ese resumen es de las cosas que más tiempo ahorran de todo el stack.
-
-## El error de repartirse entre cinco cuentas
-
-Usar cinco herramientas gratuitas distintas tiene un coste oculto: el cambio de contexto. Abrir cinco pestañas, recordar los límites de cada una y copiar información entre ellas consume más tiempo del que ahorras.
-
-Si te encuentras haciendo malabares, ya has llegado al punto en que una suscripción sale rentable.
-
-## Cuándo empezar a pagar
-
-Nuestra regla, sin sofisticaciones: **paga cuando choques con el límite gratuito tres veces en la misma semana**, y paga por la herramienta con la que chocas, no por la que más se anuncia.
-
-Si dudas entre dos, tenemos la comparativa detallada en [ChatGPT o Claude](/guias/chatgpt-vs-claude).
-
-## Un aviso sobre lo "gratis"
-
-Muchos planes gratuitos entrenan con lo que escribes. Si manejas datos de clientes, información médica o cualquier cosa sujeta a confidencialidad, revisa la política de datos antes de pegar nada. En algunas herramientas se desactiva desde ajustes; en otras solo con el plan de pago.
+Muchos planes gratuitos entrenan con lo que escribes. Si manejas datos de clientes, información médica o cualquier cosa sujeta a confidencialidad, mira la política de datos antes de pegar nada. En algunas herramientas se desactiva desde ajustes. En otras, solo con el plan de pago.
