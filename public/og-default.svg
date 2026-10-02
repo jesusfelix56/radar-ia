@@ -19,9 +19,12 @@
   <rect width="1200" height="630" fill="url(#glow1)" />
   <rect width="1200" height="630" fill="url(#glow2)" />
 
-  <g transform="translate(80 78)">
-    <rect width="56" height="56" rx="14" fill="url(#brand)" />
-    <path d="M14 30 24 40.5 44 18" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+  <g transform="translate(80 78) scale(0.875)">
+    <rect width="64" height="64" rx="16" fill="#1a2438"/>
+    <g fill="none" stroke="#22d3ee" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18.5 16.5V47.5H39"/>
+      <path d="M45.5 17.5 30.5 34.5 18.5 23.5"/>
+    </g>
   </g>
 
   <text x="152" y="118" font-family="Inter, Liberation Sans, Arial, sans-serif" font-size="34" font-weight="700" fill="#ffffff">
