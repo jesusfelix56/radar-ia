@@ -38,7 +38,7 @@ amazonPicks:
 accent: brand
 featured: true
 pubDate: 2026-05-11
-updatedDate: 2026-10-01
+updatedDate: 2026-10-14
 ---
 
 ## Qué es Gemini hoy (y qué no)
@@ -88,16 +88,18 @@ Si solo quieres un chat suelto, ChatGPT Plus o Claude Pro siguen rindiendo más.
 
 ## Lo que muestra la página española de suscripciones
 
-La prueba de seis semanas no se ha repetido. El 1 de octubre de 2026 leímos [gemini.google/es/subscriptions](https://gemini.google/es/subscriptions/?hl=es). Los importes de 4,99 € (Plus) y 21,99 € (Pro) que hay más arriba son los de la ficha del 22 de septiembre. En el texto de la página de octubre que pudimos leer, Plus y Pro no traían el precio en euros a la vista. Ultra sí: 99,99 € al mes (límites cinco veces por encima de Pro) y 219,99 € al mes (veinte veces). El checkout manda para Plus y Pro. No reescribimos esas dos cifras como si las hubiéramos visto de nuevo.
+La prueba de seis semanas no se ha repetido. El 14 de octubre de 2026 leímos [gemini.google/es/subscriptions](https://gemini.google/es/subscriptions/?hl=es). Los importes de 4,99 € (Plus) y 21,99 € (Pro) que hay más arriba son los de la ficha del 22 de septiembre. En el texto de la página que pudimos leer, Plus y Pro no traían el precio en euros a la vista. Ultra sí: 99,99 € al mes (límites cinco veces por encima de Pro) y 219,99 € al mes (veinte veces). El checkout manda para Plus y Pro. No reescribimos esas dos cifras como si las hubiéramos visto de nuevo.
 
 Lo que esa página sí describe, y sirve para elegir:
 
 | Plan, según la página | Almacenamiento | Uso en la app Gemini | Dónde mete Gemini |
 | --- | --- | --- | --- |
-| Sin coste | 15 GB | Acceso a 3.6 Flash y acceso variable a 3.1 Pro | La app. La página no lo lista dentro de Docs. |
-| Google AI Plus | 400 GB | El doble que el gratuito, y generación de vídeo | Gmail, Vids y más. 200 puntos de Google Flow. |
-| Google AI Pro | 5 TB | El cuádruple que el gratuito | Gmail, Docs, Vids y otros. 1.000 puntos de Flow. YouTube Premium Lite, con la letra pequeña de la propia página. |
-| Google AI Ultra | 20 TB o más, en el relato de la página | Hasta 20 veces el plan Pro, según el escalón | Lo de Pro, más funciones que la página limita por país. |
+| Sin coste | 15 GB | «Access to our Flash-Lite model». Ya no cita 3.6 Flash ni un acceso variable a 3.1 Pro. | La app. La página no lo lista dentro de Docs. |
+| Google AI Plus | 400 GB | «Access to our Flash model». El doble que el gratuito, y generación de vídeo. | Gmail, Vids y más. 200 puntos de Google Flow. |
+| Google AI Pro | 5 TB | «Acceso a Gemini 4 Argon», «Access to our Pro model» y «Access to our Flash model». El cuádruple que el gratuito. | Gmail, Docs, Vids y otros. 1.000 puntos de Flow, YouTube Premium Lite, Google Home Premium Standard y límites iniciales en Google Antigravity. |
+| Google AI Ultra | 20 TB o más, en el relato de la página | Hasta 20 veces el plan Pro, según el escalón. También «Acceso a Gemini 4 Argon». | Lo de Pro, más funciones que la página limita por país. |
+
+El 13 de octubre de 2026 [Google](https://blog.google/innovation-and-ai/products/gemini-app/gemini-4-argon-availability/) abrió Gemini 4 Argon en la app para suscriptores de Google AI Pro y Ultra, con despliegue gradual; Plus y el gratuito se quedan fuera por ahora. Google dice que Argon responde más directo, con menos rodeos y sin repetirse: es su texto, no una prueba nuestra. [9to5Google](https://9to5google.com/2026/10/13/gemini-app-4-argon/) escribe que en Pro y Ultra el selector muestra 3.5 Flash-Lite, 3.8 Flash, 3.1 Pro y 4 Argon, y que hay un interruptor nuevo de chat a «tareas».
 
 La nota al pie dice que los límites de la app se renuevan cada cinco horas hasta un tope semanal, y que se pueden ampliar comprando puntos de IA. También dice que Gemini en Gmail, Documentos y el resto pide mayoría de edad y no está en todos los idiomas.
 
@@ -109,6 +111,6 @@ La ayuda de Gmail documenta, aparte, una visión general del hilo que pide tener
 
 1. Si el trabajo cabe en la app y en 15 GB, quédate en el gratuito y anota cuántas veces te corta la ventana de cinco horas.
 2. Plus, con 400 GB y el doble de uso, es el escalón en el que la página mete Gemini en Gmail. Confirma el euro en el checkout. La cifra de septiembre puede haber cambiado.
-3. Pro es el que esa página asocia a Docs, a 5 TB y al cuádruple de uso. Tiene sentido si el día pasa dentro de documentos de Google, que es el caso de la prueba antigua.
+3. Pro es el plan con Argon si no vas a Ultra: la página lo asocia a Docs, a 5 TB y al cuádruple de uso. Tiene sentido si el día pasa dentro de documentos de Google, que es el caso de la prueba antigua.
 4. Ultra, a 99,99 € o 219,99 €, solo si Pro ya se queda corto. No es un plan para «tener el modelo grande por si acaso».
 5. Antes de pegar un correo de cliente en otro chat, mira [qué no subir](/guias/que-no-subir-a-un-chat). Si el material ya está en Gmail, trabajar dentro de la cuenta evita una copia de más.

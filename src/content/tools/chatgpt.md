@@ -1,7 +1,7 @@
 ---
 name: ChatGPT
 tagline: 'Un solo sitio para escribir, mirar un Excel, subir un PDF y, si hace falta, salir a internet.'
-description: Plan gratuito, Go y Plus en España, y qué ha anunciado OpenAI de la familia GPT-6.
+description: Plan gratuito, Go y Plus en España, y qué modelo de la familia GPT-6 enseña el chat según el plan.
 category: Productividad
 rating: 9.1
 scores:
@@ -24,7 +24,7 @@ cons:
   - Sigue inventando fechas, cifras y referencias con mucha seguridad
   - Los límites de uso del plan de pago no se explican con claridad
   - En textos largos en español el tono se repite y hay que corregirlo a mano
-  - 'Astra, Sol y Luna no llegan al mismo sitio: el plan, el chat estándar, Work, Codex y la app de escritorio no ofrecen lo mismo'
+  - 'Astra, Sol y Luna no llegan al mismo sitio: el plan, el chat, Work y Codex no ofrecen lo mismo'
 bestFor: Quien quiere una sola herramienta para casi todo y no le apetece pagar cinco suscripciones.
 verdict: Si este año solo vas a pagar una suscripción de IA, esta sigue siendo la más difícil de sustituir.
 amazonPicks:
@@ -39,7 +39,7 @@ amazonPicks:
 accent: brand
 featured: true
 pubDate: 2026-02-14
-updatedDate: 2026-09-30
+updatedDate: 2026-10-14
 ---
 
 ## El PDF, el Excel y el correo
@@ -64,26 +64,32 @@ En textos largos cae en el mismo molde: frases de tres partes, un arranque de co
 
 ## La familia GPT-6, según OpenAI
 
-Esto no sale de una medición propia. No hemos medido porcentajes con la familia GPT-6. Lo que sigue sale de anuncios públicos de OpenAI y de la cobertura del Dev Day, para quien elige entre gratuito, Go, Plus y Pro.
+Esto no sale de una medición propia. No hemos medido porcentajes con la familia GPT-6. Lo que sigue sale de anuncios públicos de OpenAI, de su centro de ayuda y de la cobertura del Dev Day, para quien elige entre gratuito, Go, Plus y Pro. El blog del 7 de octubre y la ayuda los leímos el 14 de octubre de 2026.
 
 No es un solo modelo. **GPT-6 Astra** es el de más capacidad. En su anuncio, el despliegue llega a Plus, Pro, Business y Enterprise, y a la API como `gpt-6-astra`. El uso entra en la cuota de la suscripción; si no basta, se pueden comprar créditos. Pro, Business y Enterprise incluyen además **GPT-6 Astra Pro**. En Enterprise, OpenAI indica que el acceso puede llegar apagado hasta que un administrador lo active.
 
-**GPT-6 Sol** y **GPT-6 Luna** son el escalón más rápido y barato. El 22 de septiembre de 2026 OpenAI los añadió a la familia. Están en ChatGPT Work y en Codex para Plus, Pro, Business, Enterprise y Edu. El plan gratuito y Go pueden usar Luna en la app de escritorio. En ese anuncio, Sol y Luna todavía no están en el chat estándar. En la API se llaman `gpt-6-sol` y `gpt-6-luna`.
+**GPT-6 Sol** y **GPT-6 Luna** son el escalón más rápido y barato. El 22 de septiembre de 2026 OpenAI los añadió a la familia. En ese anuncio están en ChatGPT Work y en Codex para Plus, Pro, Business, Enterprise y Edu, y el plan gratuito y Go podían usar Luna en la app de escritorio. En la API se llaman `gpt-6-sol` y `gpt-6-luna`.
 
-**GPT-6.1 Sol**, anunciado el 29 de septiembre de 2026, es una mejora de Sol. OpenAI dice que se acerca a Astra en programación con agentes, uso del ordenador y trabajo profesional, a una quinta parte del precio estándar de entrada y de salida de Astra en la API (2 USD y 10 USD por millón de tokens). La entrada cacheada sale a 0,10 USD por millón. El identificador es `gpt-6.1-sol`. También va a ChatGPT Work y Codex para Plus y los mismos planes de pago superiores, y OpenAI indica que aún no está en el chat estándar.
+El 7 de octubre de 2026 el [blog de OpenAI](https://openai.com/index/gpt-6-for-everyone/) anunció GPT-6 con Intelligent UI en la pestaña Chat. Ese día el despliegue empezaba en Plus, Pro, Business y Enterprise. Al día siguiente, en Free y Go. El blog dice que el chat usa GPT-6 Sol en Plus, Pro, Business y Enterprise, y GPT-6 Luna en Free y Go. Intelligent UI, en ese texto, son respuestas con elementos visuales e interactivos (gráficos, botones, formularios, tablas) dentro del chat. El mismo anuncio dice que los modelos de Work y Codex no cambian con esta versión.
+
+La [ayuda de modelos](https://help.openai.com/en/articles/20001354-gpt-6-and-other-models-in-chatgpt), actualizada hacia el 10 de octubre de 2026, precisa el menú. «GPT-6» sustituye a «Latest». Con GPT-6 elegido, GPT-6 Sol mueve Instant, Medium, High y Extra High. El nivel Pro se llama «GPT-6 Pro», funciona con GPT-6 Astra y está en ChatGPT para Pro de 100 USD, Pro de 200 USD, Business y Enterprise. La ayuda escribe que los planes Plus incluyen GPT-6 Astra en ChatGPT Work y Codex. En su tabla por plan, Plus incluye Medium y High, y deja fuera Extra High y Pro.
+
+Esa ayuda no coincide con el blog en el plan gratuito. Dice que Free y Go reciben **GPT-5.6 Luna** como modelo por defecto, y que «Think» usa GPT-5.6 Luna. El blog habla de GPT-6 Luna para Free y Go. La [página de precios](https://chatgpt.com/pricing) marca «GPT-6 Luna: Yes» en Free y Go, y «Unlimited text chats with GPT-6» en Free. Es un despliegue por fases. Manda lo que veas en el selector.
+
+**GPT-6.1 Sol**, anunciado el 29 de septiembre de 2026, es una mejora de Sol. OpenAI dice que se acerca a Astra en programación con agentes, uso del ordenador y trabajo profesional, a una quinta parte del precio estándar de entrada y de salida de Astra en la API (2 USD y 10 USD por millón de tokens). La entrada cacheada sale a 0,10 USD por millón. El identificador es `gpt-6.1-sol`. Sigue como opción de ChatGPT Work y Codex, aparte del chat, para Plus y los mismos planes de pago superiores.
 
 **Dots** no es otro modelo de chat. [TechCrunch](https://techcrunch.com/2026/09/29/openai-launches-dots-its-bubbly-agentic-avatar/) recoge el anuncio del Dev Day del 29 de septiembre de 2026: un asistente impulsado por GPT-6 Astra que persigue objetivos en segundo plano, al margen de un chat concreto. Según esa cobertura, empieza en ChatGPT para usuarios Pro y Business Premium en mercados elegibles, y se lanza desde Codex o desde ChatGPT.
 
 | Quién | Qué recoge el anuncio |
 | --- | --- |
-| Gratuito y Go | Luna en la app de escritorio. El anuncio de Astra no incluye estos planes. Sol y 6.1 Sol, tampoco. |
-| Plus | Astra, dentro de la cuota. Sol, Luna y 6.1 Sol en ChatGPT Work y Codex, no en el chat estándar. |
-| Pro | Lo de Plus, más Astra Pro. Dots, según TechCrunch, en mercados elegibles. |
-| Work y Codex | Sol, Luna y 6.1 Sol para Plus y planes superiores (también Business, Enterprise y Edu). No sustituyen al chat estándar. |
+| Gratuito y Go | El blog del 7 de octubre pone GPT-6 Luna en el chat. La ayuda pone GPT-5.6 Luna por defecto, y Think con ese modelo. La página de precios marca «GPT-6 Luna: Yes». Manda el selector. |
+| Plus | En el chat, GPT-6 Sol en Instant, Medium y High. La ayuda no incluye Extra High ni el nivel Pro. Astra queda en Work y Codex. |
+| Pro | Chat con Sol y, además, GPT-6 Pro (Astra) en Pro de 100 USD, Pro de 200 USD, Business y Enterprise. Dots, según TechCrunch, en mercados elegibles. |
+| Work y Codex | Sol, Luna y 6.1 Sol, como en septiembre, para Plus y planes superiores (también Business, Enterprise y Edu). El blog del 7 de octubre dice que esta versión no los cambia. 6.1 Sol sigue fuera del chat. |
 
 Si el selector de tu cuenta no coincide con esta tabla, manda el selector. Los anuncios describen el acceso por plan y advierten de un despliegue por fases.
 
-Fuentes: [GPT-6 Astra](https://openai.com/index/gpt-6-astra/), [GPT-6 Sol y Luna](https://openai.com/index/introducing-gpt-6-sol-and-luna/), [GPT-6.1 Sol](https://openai.com/index/introducing-gpt-6-1-sol) y la pieza de TechCrunch sobre Dots, enlazada arriba.
+Fuentes: [GPT-6 Astra](https://openai.com/index/gpt-6-astra/), [GPT-6 Sol y Luna](https://openai.com/index/introducing-gpt-6-sol-and-luna/), [GPT-6.1 Sol](https://openai.com/index/introducing-gpt-6-1-sol), [GPT-6 para todo el mundo](https://openai.com/index/gpt-6-for-everyone/) (7 de octubre de 2026), la [ayuda de modelos en ChatGPT](https://help.openai.com/en/articles/20001354-gpt-6-and-other-models-in-chatgpt) y la pieza de TechCrunch sobre Dots, enlazada arriba.
 
 ## Gratis, Go o Plus
 
@@ -93,7 +99,7 @@ Plus, a esos 23 €, compensa si cumples al menos dos de estas condiciones:
 
 - Lo usas más de 30 minutos al día
 - Trabajas con archivos (PDF, Excel, imágenes) de forma habitual
-- Necesitas el modelo de más capacidad que OpenAI anuncia para Plus (hoy, GPT-6 Astra) y no te basta Luna en el escritorio
+- Necesitas GPT-6 Astra en ChatGPT Work o Codex, que es donde la ayuda lo incluye en Plus. En el chat, el nivel Pro (GPT-6 Pro, con Astra) es de Pro, Business y Enterprise
 
 Si solo redactas correos sueltos, el plan gratuito te sobra. Go encaja si el gratuito se te queda corto y no vas a usar Astra, Work ni Codex.
 
