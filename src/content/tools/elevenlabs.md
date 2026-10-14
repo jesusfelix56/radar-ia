@@ -42,7 +42,7 @@ amazonPicks:
 accent: amber
 featured: false
 pubDate: 2026-06-03
-updatedDate: 2026-10-01
+updatedDate: 2026-10-14
 ---
 
 ## La calidad en español, en concreto
@@ -75,6 +75,8 @@ El precio se calcula por caracteres, no por minutos, y ahí es donde la gente se
 La FAQ de esa página dice que, en los planes de pago, los créditos no usados pueden pasar hasta dos meses (el saldo puede llegar a tres veces la cuota mensual) si no bajas de plan ni cancelas. El anual equivale a dos meses de regalo en el cálculo que publican ellos.
 
 Sobre el coste por carácter, la misma FAQ responde que en los modelos V2 Multilingual un carácter de texto equivale a un crédito, y resume el texto a voz en torno a 1 crédito por carácter. La [ayuda de modelos](https://help.elevenlabs.io/hc/en-us/articles/17883183930129-What-models-do-you-offer-and-what-is-the-difference-between-them) repite ese 1 a 1 en la interfaz para Multilingual v2, e incluye el español entre los idiomas de ese modelo. No convertimos 10.000 créditos en «unos 10 minutos»: si el modelo cobra un crédito por carácter, son unos 10.000 caracteres. Los minutos dependen de cómo esté escrito el guion.
+
+El 28 de septiembre de 2026 [ElevenLabs anunció Eleven v4 y Eleven v4 Turbo](https://elevenlabs.io/es/blog/eleven-v4), con más de 90 idiomas y la invitación «Crea una cuenta gratis para empezar a generar con Eleven v4»; la escucha de esta ficha es anterior a v4 y no se ha repetido.
 
 El contador práctico es el de siempre: pega un guion real en un editor, mira el número de caracteres y compáralo con 10.000 o con 30.000. La [documentación de texto a voz](https://elevenlabs.io/docs/overview/capabilities/text-to-speech) dice que conservas la propiedad del audio generado y que el uso comercial pide un plan de pago.
 

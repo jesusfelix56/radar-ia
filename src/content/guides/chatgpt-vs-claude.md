@@ -17,7 +17,7 @@ amazonPicks:
     price: 35
 featured: true
 pubDate: 2026-06-18
-updatedDate: 2026-09-30
+updatedDate: 2026-10-14
 ---
 
 Las comparativas de asistentes suelen ser la lista de características de cada web, traducida. Aquí va lo que cambia el trabajo: el texto que vas a publicar, la hoja, el documento largo y la factura.
@@ -57,7 +57,7 @@ Las suscripciones individuales cuestan casi lo mismo. Las dos tienen plan gratui
 
 Si solo vas a pagar una, el precio no debería ser el criterio. Lo que decide es en qué se te van las horas.
 
-El mapa de modelos de ChatGPT cambió con los anuncios de septiembre de 2026, y esta comparativa no añade una prueba propia de esa familia. OpenAI sitúa GPT-6 Astra en Plus, Pro, Business y Enterprise (dentro de la cuota, con créditos extra si hace falta) y Astra Pro en Pro, Business y Enterprise. Sol, Luna y GPT-6.1 Sol van a ChatGPT Work y Codex para Plus y planes de pago superiores; Luna, también a la app de escritorio en los planes gratuito y Go. En esos anuncios, Sol, Luna y 6.1 Sol aún no están en el chat estándar. El detalle, con fuentes, está en el [análisis de ChatGPT](/herramientas/chatgpt).
+El mapa de modelos de ChatGPT cambió el 7 de octubre de 2026, y esta comparativa no añade una prueba propia de esa familia. En el chat, el blog de OpenAI pone GPT-6 Sol en los planes de pago y GPT-6 Luna en Free y Go; la ayuda habla de GPT-5.6 Luna en Free y Go. GPT-6 Pro, con Astra, queda en Pro, Business y Enterprise, y GPT-6.1 Sol sigue solo en Work y Codex. El detalle, con fuentes, está en el [análisis de ChatGPT](/herramientas/chatgpt).
 
 ## Según a qué te dediques
 
