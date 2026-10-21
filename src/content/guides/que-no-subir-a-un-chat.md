@@ -12,6 +12,7 @@ relatedTools:
   - claude
   - gemini
 pubDate: 2026-10-01
+updatedDate: 2026-10-21
 ---
 
 Esta guía es de redacción. Ordena lo que publican la Agencia Española de Protección de Datos y los propios fabricantes. No hay una prueba de uso nueva, ni una medición de «cuántas veces se filtra un dato». Si el caso es de tu empresa, manda la política interna. Esto no es un dictamen.
@@ -56,6 +57,8 @@ La [ayuda de OpenAI sobre controles de datos](https://help.openai.com/en/article
 El chat temporal es otra vía. OpenAI indica que no aparece en el historial, no crea recuerdos y no se usa para mejorar los modelos, y que la conversación se conserva 30 días por seguridad y después se borra. La misma ayuda avisa de que un pulgar arriba o abajo puede enviar la conversación asociada a entrenamiento si das esa opinión. Apagar el interruptor y luego valorar una respuesta no es el mismo gesto.
 
 En un plan personal, ese interruptor también cubre las tareas de Codex, según la FAQ. Codex tiene un ajuste aparte para entrenar con entornos completos. Cambiar el de ChatGPT no cambia ese otro.
+
+El 20 de octubre de 2026 las [notas de versión](https://help.openai.com/en/articles/6825453-chatgpt-release-notes) describen los chats bloqueados. Se ocultan del historial, de los fijados y de la búsqueda, y se abren con un PIN de cuatro cifras o con la autenticación del dispositivo. El despliegue es gradual en Free, Go, Plus y Pro. La misma nota dice que los ajustes de retención y de mejora del modelo no cambian. No sustituye al interruptor de entrenamiento ni al chat temporal.
 
 ### Claude
 

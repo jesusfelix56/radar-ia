@@ -16,7 +16,7 @@ amazonPicks:
     price: 24
 featured: false
 pubDate: 2026-08-20
-updatedDate: 2026-10-01
+updatedDate: 2026-10-21
 ---
 
 Abrir `index.ts`, seleccionar cuatrocientas líneas y preguntar «explícame esto» produce un cuento coherente. A veces coincide con el repo. A veces describe capas que no existen, con la misma seguridad. En un código que no has escrito, el contexto es lo que está abierto y lo que acabas de ejecutar. Esta guía es ese orden. No es una medición de aciertos.
@@ -67,4 +67,4 @@ Si hay tests de esa acción, ábrelos y pregunta qué comportamiento fijan y cu�
 
 Un mono-repo con doce servicios, o un YAML de orquestación que no cabe en lo que tienes abierto, no se entiende con una pregunta. Recorta un zip sin secretos —sin `.env`, sin claves— y pide el mismo mapa en otro chat, o sigue servicio por servicio. No subas credenciales para «que tenga contexto». Qué no pegar, también fuera del código, está en [qué no subir a un chat](/guias/que-no-subir-a-un-chat).
 
-Los planes y el tope de completados del gratuito están en la [ficha de Copilot](/herramientas/github-copilot), documentación leída el 1 de octubre de 2026. Entender un repo gasta chat, no solo tabulador. Si el panel se corta a mitad de un flujo, no completes tú el final «porque se veía venir».
+Los planes y el tope de completados del gratuito están en la [ficha de Copilot](/herramientas/github-copilot), documentación leída el 21 de octubre de 2026. En esa lectura, los 2.000 completados son del plan Free. Student y los planes de pago dejan el autocompletado fuera de los créditos. Entender un repo gasta chat, no solo tabulador. Si el panel se corta a mitad de un flujo, no completes tú el final «porque se veía venir».

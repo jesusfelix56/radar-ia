@@ -1,6 +1,6 @@
 ---
 title: "BORRADOR – Qué incluye el plan gratuito de ChatGPT (octubre de 2026)"
-description: Qué marca la página de precios de ChatGPT en el plan gratuito, Go y Plus, leída el 14 de octubre de 2026. Sin prueba propia.
+description: Qué marca la página de precios de ChatGPT en el plan gratuito, Go y Plus. Lectura del 14 de octubre de 2026, releída el 21. Sin prueba propia.
 category: Guía
 tags:
   - gratis
@@ -9,6 +9,7 @@ relatedTools:
   - chatgpt
 draft: true
 pubDate: 2026-10-14
+updatedDate: 2026-10-21
 ---
 
 > BORRADOR. Falta la parte de prueba propia: Jesús añadirá sus capturas y lo que vea con su cuenta gratuita. No publicar hasta entonces.
@@ -47,7 +48,11 @@ Si el archivo es un contrato o el correo de un cliente, el tope de subidas no es
 
 ## Qué modelo usa el gratuito
 
-El [blog del 7 de octubre](https://openai.com/index/gpt-6-for-everyone/) y la página de precios ponen GPT-6 Luna en el gratuito y en Go: en precios, «GPT-6 Luna: Yes»; en la ficha Free, «Unlimited text chats with GPT-6». La ayuda dice otra cosa: el modelo por defecto de Free y Go es GPT-5.6 Luna, «Think» usa ese modelo, y con el despliegue por fases manda el selector de la cuenta.
+El [blog del 7 de octubre](https://openai.com/index/gpt-6-for-everyone/) pone GPT-6 Luna en el gratuito y en Go. La ficha Free de la [página de precios](https://chatgpt.com/pricing), releída el 21 de octubre de 2026, sigue abriendo con «Unlimited text chats with GPT-6». Esa misma tabla marca «GPT-5.6 Luna: No» en Free y en Go.
+
+La [ayuda de modelos](https://help.openai.com/en/articles/20001354-gpt-6-and-other-models-in-chatgpt), abierta el 21 de octubre y actualizada unas horas antes, dice otra cosa: el modelo por defecto de Free y Go es GPT-5.6 Luna, «Think» usa ese modelo, y GPT-6 en el menú se está desplegando en cuentas de pago. Si no aparece, la ayuda dice que la cuenta puede no tenerlo todavía. Manda el selector.
+
+El 20 de octubre las [notas de versión](https://help.openai.com/en/articles/6825453-chatgpt-release-notes) añaden los chats bloqueados también en el plan gratuito: se ocultan del historial y se abren con un PIN o con la autenticación del dispositivo. La nota dice que los ajustes de retención y de mejora del modelo no cambian. Las presentaciones de ChatGPT Slides, en esa misma nota, no entran en el gratuito: van a Pro, Business y Enterprise con Space.
 
 ## Go y Plus, en euros
 

@@ -14,7 +14,7 @@ pricing:
   from: 20
   currency: USD
   period: mes
-  note: Lista pública del 1 de octubre de 2026, en USD. Pro son 20 USD al mes; el hub en inglés indica también 200 USD al año. El centro de ayuda deja unas 3 búsquedas Pro al día en el gratuito.
+  note: El 21 de octubre de 2026 el hub muestra Pro a 17 USD al mes y Max a 167 USD al mes, ambos con facturación anual. El 1 de octubre Pro figuraba a 20 USD al mes o 200 USD al año, y Max a 200 USD al mes. El centro de ayuda, en esa lectura, deja unas 3 búsquedas Pro al día en el gratuito.
 website: https://www.perplexity.ai
 pros:
   - Cada afirmación viene con su fuente enlazada y numerada
@@ -38,7 +38,7 @@ amazonPicks:
 accent: brand
 featured: true
 pubDate: 2026-05-11
-updatedDate: 2026-10-01
+updatedDate: 2026-10-21
 ---
 
 ## Qué es
@@ -47,7 +47,7 @@ Perplexity es un buscador que redacta la respuesta y numera las fuentes. Pregunt
 
 Eso es toda la propuesta, y es la diferencia frente a un asistente que responde de memoria. Si lo que quieres es un texto con tu voz, Perplexity no es la herramienta: para eso miramos [Claude](/herramientas/claude) o [ChatGPT](/herramientas/chatgpt).
 
-Hay dos capas en esta ficha. La prueba de 60 preguntas es uso real nuestro y no la hemos vuelto a medir en octubre de 2026. Los precios y los cupos salen de páginas públicas de Perplexity leídas ese día. Cuando dos páginas oficiales no dicen lo mismo, lo dejamos escrito en vez de quedarnos con la frase que queda mejor.
+Hay dos capas en esta ficha. La prueba de 60 preguntas es uso real nuestro y no la hemos vuelto a medir en octubre de 2026. Los precios y los cupos salen de páginas públicas de Perplexity: la tarifa de abajo mezcla la lectura del 1 de octubre con la del 21. Cuando dos páginas oficiales no dicen lo mismo, lo dejamos escrito en vez de quedarnos con la frase que queda mejor.
 
 ## Para quién encaja
 
@@ -63,13 +63,17 @@ Importes en dólares de lista. En España el cargo puede salir en euros y no es 
 
 | Plan | Precio que vimos publicado | Qué acompaña a ese precio |
 | --- | --- | --- |
-| Free | 0 USD | En la [comparativa del centro de ayuda](https://www.perplexity.ai/help-center/en/articles/11187416-which-perplexity-subscription-plan-is-right-for-you): búsquedas básicas prácticamente ilimitadas, 3 búsquedas Pro al día, 1 consulta Research al mes, subida de archivos limitada y sin elección de modelos avanzados ni generación de imágenes. |
-| Pro | 20 USD al mes | La [página de precios](https://www.perplexity.ai/hub/pricing) lo lista a 20 USD al mes (acceso ampliado a Computer, 4.000 créditos de bonificación, deep research, modelos punteros, elegir modelo, documentos y apps, más cupo y memoria). El [hub en inglés](https://www.perplexity.ai/en-GB/hub) añade «o 200 USD al año». |
-| Max | 200 USD al mes | En la misma página de precios: más uso de Computer, más créditos y los límites altos. No lo hemos contratado para esta actualización. |
+| Free | 0 USD | El 1 de octubre, la [comparativa del centro de ayuda](https://www.perplexity.ai/help-center/en/articles/11187416-which-perplexity-subscription-plan-is-right-for-you) dejaba búsquedas básicas prácticamente ilimitadas, 3 búsquedas Pro al día, 1 consulta Research al mes, subida de archivos limitada y sin elección de modelos avanzados ni generación de imágenes. El 21 de octubre esa página no se pudo reabrir. La [página de precios](https://www.perplexity.ai/hub/pricing), leída ese día, describe el gratuito como acceso a los modelos punteros con un uso semanal limitado. |
+| Pro | 17 USD al mes con facturación anual, en la lectura del 21 de octubre | La misma página de precios lo acompaña de acceso ampliado a Computer, modelos avanzados y elección de modelo. La [página de Pro](https://www.perplexity.ai/pro) lista, en esa tarifa anual, 4.000 créditos de bonificación, deep research, documentos y apps, y más cupo y memoria. El 1 de octubre el precio a la vista era 20 USD al mes, y el hub en inglés añadía 200 USD al año. |
+| Max | 167 USD al mes con facturación anual, en la lectura del 21 de octubre | En la página de Pro: uso máximo de Computer, 35.000 créditos de bonificación, 10.000 créditos mensuales, investigación de nivel experto y acceso prioritario. El 1 de octubre la página de precios lo listaba a 200 USD al mes. No lo hemos contratado. |
 
-Hay un choque que conviene leer antes de pagar. El hub en inglés dice que Pro añade «unlimited Pro Search». La tabla del centro de ayuda, más concreta, describe el cupo de Pro como límites semanales de «uso medio», no como un número fijo ni como ilimitado. El de Research, en esa misma tabla, pasa a límites mensuales. Cuando dos páginas de la misma empresa no coinciden, el cupo real es el aviso que ves en tu cuenta al hacer la consulta. No publicamos aquí un «ilimitado» como si estuviera cerrado.
+17 USD al mes por doce meses son 204 USD, no los 200 USD al año de la lectura del 1 de octubre. 167 USD al mes por doce son 2.004 USD. Esta lectura no traía el cargo único del año ni un precio aparte si pagas mes a mes. Hasta ver el checkout, no damos por retirada la tarifa de 20 USD y de 200 USD. Manda la pantalla de pago.
 
-Esos «4.000 créditos de bonificación» del plan de 20 USD salen escritos en la página de precios. La página no explica, en lo que pudimos leer, a cuántas búsquedas equivalen. No convertimos esa cifra en consultas.
+La FAQ de la página de precios, el 21 de octubre, dice que Pro sube todos los límites y añade Computer, fuentes de pago (nombra PitchBook y Statista), búsqueda en la web, en archivos y en apps, un «model council» y la elección de modelo. De Max dice que incluye lo de Pro con límites más altos en Deep Research, en la generación de archivos y en las subidas, más vídeo al mes y varias pasadas de ese model council. No traduce esas frases a un número de búsquedas.
+
+El choque de cupos de la lectura del 1 de octubre sigue escrito porque el centro de ayuda no se pudo reabrir. Entonces el hub hablaba de «unlimited Pro Search» y la tabla de ayuda, de límites semanales de «uso medio», no de un número fijo ni de un ilimitado. El de Research, en esa tabla, pasaba a límites mensuales. Cuando dos páginas de la misma empresa no coinciden, el cupo real es el aviso que ves en tu cuenta al hacer la consulta.
+
+Esos créditos de bonificación salen escritos en la página de Pro. La página no explica, en lo que pudimos leer, a cuántas búsquedas equivalen. No convertimos 4.000, ni 35.000, ni 10.000 en consultas.
 
 Education Pro aparece en el centro de ayuda como descuento para estudiantes y docentes verificados. El precio concreto no estaba en la tabla que leímos: si te aplica, míralo en el checkout.
 
@@ -114,7 +118,7 @@ Si dudas entre pagar este buscador u otra suscripción que ya tienes, la [lista 
 ## Cómo decidir
 
 1. Anota una semana qué preguntas haces. Si casi ninguna exige una fuente que puedas enseñar, no pagues un buscador: paga, si acaso, el asistente con el que escribes.
-2. Quédate en el gratuito mientras te basten las búsquedas básicas y las 3 Pro al día que describe el centro de ayuda.
-3. Pasa a Pro cuando subas archivos, elijas modelo o investigues varias veces al día. Cuenta 20 USD al mes, o 200 USD al año si el checkout te ofrece lo que dice el hub en inglés. No des por hecho un cupo infinito: la tabla de ayuda habla de límites semanales.
-4. Max, a 200 USD al mes en la página de precios, solo tiene sentido si Pro ya se te queda corto. No es un plan «por si acaso».
+2. Quédate en el gratuito mientras te basten las búsquedas básicas. Las 3 Pro al día son la tabla del centro de ayuda del 1 de octubre, que el 21 no se pudo reabrir. Ese día la página de precios hablaba de un uso semanal limitado, sin repetir el 3.
+3. Pasa a Pro cuando subas archivos, elijas modelo o investigues varias veces al día. El 21 de octubre la página enseña 17 USD al mes con facturación anual. El 1 de octubre eran 20 USD al mes o 200 USD al año. Mira el total en el checkout. No des por hecho un cupo infinito: la tabla de ayuda del 1 de octubre hablaba de límites semanales.
+4. Max solo tiene sentido si Pro ya se te queda corto. El 21 de octubre la página lo enseña a 167 USD al mes con facturación anual; el 1 de octubre, a 200 USD al mes. No es un plan «por si acaso».
 5. Antes de citar, abre la fuente. Ese paso no viene incluido en ninguna tarifa.

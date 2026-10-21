@@ -14,7 +14,7 @@ pricing:
   from: 20
   currency: EUR
   period: mes
-  note: Lista de claude.com/pricing del 1 de octubre de 2026, en USD y sin impuestos. Pro son 20 USD al mes, o 17 USD al mes pagando el año (200 USD por adelantado). Max empieza en 100 USD al mes, solo mensual, con 5 o 20 veces el uso de Pro por sesión de cinco horas. El gratuito no publica un número fijo de mensajes.
+  note: Lista de claude.com/pricing del 21 de octubre de 2026, en USD y sin impuestos. Pro son 20 USD al mes, o 17 USD al mes pagando el año (200 USD por adelantado). Max empieza en 100 USD al mes, solo mensual. Design, Slides y Docs figuran también en el gratuito. El gratuito no publica un número fijo de mensajes.
 website: https://claude.ai
 pros:
   - La redacción en español suena a persona, no a plantilla
@@ -38,7 +38,7 @@ amazonPicks:
 accent: accent
 featured: true
 pubDate: 2026-03-02
-updatedDate: 2026-10-01
+updatedDate: 2026-10-21
 ---
 
 ## Por qué escribe mejor
@@ -81,17 +81,25 @@ La respuesta honesta es que dependen del uso:
 
 Mucha gente que trabaja con contenido acaba pagando ambas y usando cada una para lo suyo. Si solo puedes pagar una y tu trabajo es escribir, la decisión está clara.
 
-## Precios y cupos publicados el 1 de octubre de 2026
+## Precios y cupos, leídos el 21 de octubre de 2026
 
-La prueba de documentos de más arriba no se ha repetido para esta actualización. Lo que sigue sale de [claude.com/pricing](https://claude.com/pricing), leída ese día. Los importes son de lista, en dólares y sin impuestos. En España el checkout puede mostrar euros.
+La prueba de documentos de más arriba no se ha repetido para esta actualización. Lo que sigue sale de [claude.com/pricing](https://claude.com/pricing), leída ese día, y del artículo [Build live dashboards and animate explainers with Claude](https://claude.com/resources/articles/dashboards-and-motion). Los importes son de lista, en dólares y sin impuestos. En España el checkout puede mostrar euros.
 
 | Plan | Precio que muestra la página | Qué añade la misma tabla |
 | --- | --- | --- |
-| Free | 0 USD | Chat en web, escritorio y móvil, búsqueda web, artefactos, proyectos (hasta 5) y ejecución de código. Claude Code figura como no incluido. |
-| Pro | 20 USD al mes, o 17 USD al mes si pagas el año (200 USD por adelantado) | Más uso, proyectos sin el tope de cinco, Claude Code, Design, Slides, Docs, investigación y Claude en Microsoft 365 y en Chrome. |
-| Max | Desde 100 USD al mes, solo mensual | Todo lo de Pro, más 5 o 20 veces el uso de Pro por sesión de cinco horas, límites de salida más altos y prioridad en horas punta. |
+| Free | 0 USD | Chat en web, escritorio y móvil, búsqueda web, artefactos, memoria, modo de voz, proyectos (hasta 5) y ejecución de código. Design, Slides y Docs figuran aquí. Claude Code, Research, Claude Science y Dashboards, no. |
+| Pro | 20 USD al mes, o 17 USD al mes si pagas el año (200 USD por adelantado) | Más uso, proyectos sin el tope de cinco, Claude Code, Claude Science, Dashboards (beta), Research, más modelos y Claude en Chrome, en Microsoft 365 y en Outlook. |
+| Max | Desde 100 USD al mes, solo mensual | Todo lo de Pro, más 5 o 20 veces el uso de Pro por sesión de cinco horas, límites de salida más altos, prioridad en horas punta y créditos de API al mes: 100 USD en Max 5x y 200 USD en Max 20x. |
 
-La FAQ de esa página dice que no hay un número fijo de mensajes. El cupo se reinicia en una ventana de cinco horas, y los planes de pago añaden límites semanales. Web, escritorio, móvil y Claude Code beben del mismo saldo. Pro ofrece al menos cinco veces más uso por sesión que el gratuito. Si llegas al tope, puedes esperar, subir de plan o, en los de pago, activar créditos de uso a precio de API. El contador está en Ajustes, Uso.
+El 1 de octubre esta ficha trataba Design, Slides y Docs como cosa de pago. El 21 de octubre la tabla los marca en el gratuito. El artículo de Anthropic dice que han salido de beta y están en todos los planes, incluido Free, y que en Claude se han hecho más de 45 millones de documentos, presentaciones y diseños: es su cifra, no un recuento nuestro. Dashboards está en beta en los planes de pago. El mismo texto lo describe como un panel que se conecta a una plataforma de datos (nombran BigQuery, Databricks, Snowflake o un CRM como Salesforce) y que enseña la consulta detrás de cada cifra. Motion, la animación que se descarga en MP4, está en beta en Team y Enterprise. En la tabla de planes individuales sale como no incluido.
+
+Para un administrador de Enterprise, ese artículo dice que Docs, Slides y Design se activan por defecto el 15 de octubre de 2026. La web suelta de Design, en claude.ai/design, sigue hasta el 14 de diciembre de 2026.
+
+La tabla de modelos marca Sonnet y Haiku en el gratuito. Opus no está en Free y sí en Pro y en Max. Fable no está en el gratuito; en Pro entra como créditos de uso y en Max figura al 50 % de los límites semanales. No hemos medido esos modelos. Es la casilla de la tabla.
+
+El modo de voz figura en el gratuito y en los de pago. No hemos comparado esa voz con la de otras herramientas.
+
+La FAQ de la página de precios dice que no hay un número fijo de mensajes. El cupo se reinicia en una ventana de cinco horas, y los planes de pago añaden límites semanales. Web, escritorio, móvil y Claude Code beben del mismo saldo. Pro ofrece al menos cinco veces más uso por sesión que el gratuito. Si llegas al tope, puedes esperar, subir de plan o, en los de pago, activar créditos de uso a precio de API. El contador está en Ajustes, Uso.
 
 La ventana de contexto figura como «hasta 1 millón» y la tabla avisa de que varía según el modelo. No la trates como una promesa de que cualquier PDF entra entero.
 
@@ -104,6 +112,6 @@ En Free, Pro y Max el entrenamiento es opt-out, según la misma tabla. El [centr
 ## Cómo decidir con esta tarifa
 
 1. Gasta el gratuito en un documento real, no en una pregunta suelta. Con cinco proyectos tienes sitio para un encargo de prueba.
-2. Pasa a Pro cuando el corte de cinco horas te pare en un día de trabajo, o cuando necesites Claude Code o los documentos de pago (Design, Slides, Docs). Cuenta 20 USD al mes, o 200 USD al año.
-3. Max, desde 100 USD al mes, es para quien ya se queda corto en Pro durante la sesión. No tiene precio anual en esa página.
+2. Pasa a Pro cuando el corte de cinco horas te pare en un día de trabajo, o cuando necesites Claude Code, Research, Claude Science o Dashboards. Design, Slides y Docs ya no son el motivo: la tabla los marca en el gratuito. Cuenta 20 USD al mes, o 200 USD al año.
+3. Max, desde 100 USD al mes, es para quien ya se queda corto en Pro durante la sesión. La tabla añade créditos de API, 100 USD al mes en el escalón 5x y 200 USD en el 20x. No tiene precio anual en esa página.
 4. Cancela en Ajustes, Facturación, al menos 24 horas antes de la renovación si pagaste en la web. La FAQ dice que, en el Espacio Económico Europeo y el Reino Unido, dentro de los 14 días de desistimiento, la solicitud de reembolso se hace en la propia app.

@@ -39,7 +39,7 @@ amazonPicks:
 accent: brand
 featured: true
 pubDate: 2026-02-14
-updatedDate: 2026-10-14
+updatedDate: 2026-10-21
 ---
 
 ## El PDF, el Excel y el correo
@@ -90,6 +90,22 @@ Esa ayuda no coincide con el blog en el plan gratuito. Dice que Free y Go recibe
 Si el selector de tu cuenta no coincide con esta tabla, manda el selector. Los anuncios describen el acceso por plan y advierten de un despliegue por fases.
 
 Fuentes: [GPT-6 Astra](https://openai.com/index/gpt-6-astra/), [GPT-6 Sol y Luna](https://openai.com/index/introducing-gpt-6-sol-and-luna/), [GPT-6.1 Sol](https://openai.com/index/introducing-gpt-6-1-sol), [GPT-6 para todo el mundo](https://openai.com/index/gpt-6-for-everyone/) (7 de octubre de 2026), la [ayuda de modelos en ChatGPT](https://help.openai.com/en/articles/20001354-gpt-6-and-other-models-in-chatgpt) y la pieza de TechCrunch sobre Dots, enlazada arriba.
+
+## Lo que OpenAI publicó el 20 y el 21 de octubre de 2026
+
+Esto tampoco sale de una medición propia. Las [notas de versión](https://help.openai.com/en/articles/6825453-chatgpt-release-notes) del 20 de octubre añaden cuatro cosas que esta ficha no tenía el día 14.
+
+**Chats bloqueados.** Se ocultan del historial, de los fijados y de la búsqueda, y se abren con un PIN de cuatro cifras o con la autenticación del dispositivo. El despliegue es gradual, en Free, Go, Plus y Pro, en la web, en iOS, en Android y en la app de escritorio nueva. El menú es el de los tres puntos, «Lock chat». La misma nota dice que los ajustes de retención y de mejora del modelo no cambian. Bloquear un chat no apaga el entrenamiento. El matiz está en [qué no subir a un chat](/guias/que-no-subir-a-un-chat).
+
+**Presentaciones.** ChatGPT Slides arma una presentación a partir de una conversación, de archivos o de un esquema, y se sigue trabajando en Space. Se puede retocar texto, imágenes, formas y gráficos, invitar a otras personas y, en la web, exportar a PowerPoint, PDF o Google Slides. Llega a cuentas Pro, Business y Enterprise que tengan Space, en la web y en la app de escritorio. El arranque que describe la nota es pedirlo en Work, dentro de Space.
+
+**GPT-6 Pro.** En la pestaña de chat, la nota dice que las respuestas van más rápido, que usa mejor los plugins y que varios agentes pueden repartirse una tarea. El avance se ve en la conversación. Llega a cuentas Pro elegibles. En un espacio de empresa depende del administrador y del despliegue.
+
+**Voz.** Entran GPT-Live-1.1 y una versión mini, GPT-Live-1.1 Quip. Entre las voces nuevas hay español de México, además de francés, alemán, hindi, japonés, coreano y Bubbie en inglés. La nota no lista un acento de España. Las voces que ves dependen de la región y de la cuenta. Se eligen en Ajustes, Voz. La nota no dice en qué planes entra.
+
+La [ayuda de modelos](https://help.openai.com/en/articles/20001354-gpt-6-and-other-models-in-chatgpt), abierta el 21 de octubre y con marca de actualización de unas horas antes, mantiene el choque con el blog del 7 de octubre. Free y Go reciben GPT-5.6 Luna, Think usa ese modelo, y GPT-6 en el menú se está desplegando en cuentas de pago. Si no lo ves, la ayuda dice que tu cuenta puede no tenerlo todavía. La [página de precios](https://chatgpt.com/pricing), leída el mismo día, sigue abriendo el gratuito con «Unlimited text chats with GPT-6» y marca «GPT-5.6 Luna: No» en Free y en Go. Manda el selector.
+
+Esa ayuda añade un corte de Pro que el 14 de octubre no estaba. En Pro de 200 USD, al llegar al límite semanal de GPT-6 Pro, el chat pasa a GPT-5.6 Thinking en Medium. En Pro de 100 USD, GPT-6 Pro y GPT-5.6 Sol Pro comparten un cupo semanal. Cambiar de uno a otro no da más mensajes cuando ese cupo se acaba.
 
 ## Gratis, Go o Plus
 

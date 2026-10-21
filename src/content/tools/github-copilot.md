@@ -14,7 +14,7 @@ pricing:
   from: 10
   currency: EUR
   period: mes
-  note: Docs de GitHub leídas el 1 de octubre de 2026. Pro son 10 USD al mes y 1.500 créditos de IA (1.000 base y 500 flex). El gratuito limita el autocompletado a 2.000 completados al mes. Copilot Student es gratis para estudiantes verificados.
+  note: Docs de GitHub leídas el 21 de octubre de 2026. Pro son 10 USD al mes y 1.500 créditos de IA (1.000 base y 500 flex). El gratuito limita el autocompletado a 2.000 completados al mes. En Student y en los planes de pago, la facturación individual deja ese autocompletado fuera de los créditos.
 website: https://github.com/features/copilot
 pros:
   - Se integra en VS Code, JetBrains y Neovim sin fricción
@@ -42,7 +42,7 @@ amazonPicks:
 accent: lime
 featured: false
 pubDate: 2026-04-08
-updatedDate: 2026-10-01
+updatedDate: 2026-10-21
 ---
 
 ## Qué hace bien
@@ -87,27 +87,29 @@ Si programas de forma profesional, la cuenta es fácil: ahorrando media hora a l
 
 ## Planes publicados en la documentación
 
-Cifras de [Plans for GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans), leídas el 1 de octubre de 2026. Dólares al mes.
+Cifras de [Plans for GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans) y de la [facturación por uso de los planes individuales](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals), leídas el 21 de octubre de 2026. Dólares al mes. Un crédito de IA equivale a 0,01 USD.
 
 | Plan | Precio | Créditos de IA al mes | Autocompletado |
 | --- | --- | --- | --- |
 | Free | 0 USD | Un cupo. La tabla no publica la cifra. | 2.000 completados al mes. El modelo se elige en automático. |
-| Student | 0 USD, estudiantes verificados | Un cupo, sin cifra en la tabla | La página de planes no le pone el tope de 2.000. |
-| Pro | 10 USD | 1.500 en total: 1.000 base y 500 flex | El tope de 2.000 está escrito para el plan Free. |
-| Pro+ | 39 USD | 7.000 (3.900 base y 3.100 flex) | Igual que la fila anterior: el tope explícito es el del gratuito. |
-| Max | 100 USD | 20.000 (10.000 base y 10.000 flex) | El mismo matiz. |
+| Student | 0 USD, estudiantes verificados | Un cupo, sin cifra en la tabla | Completados ilimitados, en la página de facturación individual. Modelo en automático. |
+| Pro | 10 USD | 1.500 en total: 1.000 base y 500 flex | No se cobra en créditos. La misma página lo deja ilimitado en todos los planes de pago. |
+| Pro+ | 39 USD | 7.000 (3.900 base y 3.100 flex) | Igual que Pro. |
+| Max | 100 USD | 20.000 (10.000 base y 10.000 flex) | Igual que Pro. |
 
-Los créditos base se gastan antes. El tramo flex se aplica solo, en el IDE, en GitHub.com y en la CLI, según la [página de facturación por uso](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals). Free y Student eligen modelo en automático. Docentes verificados y mantenedores de proyectos de código abierto populares pueden optar a Pro sin pagar: la documentación lo dice como posibilidad, no como un alta automática.
+Los créditos base se gastan antes. El tramo flex se aplica solo, en el IDE, en GitHub.com y en la CLI. Free y Student eligen modelo en automático. Docentes verificados y mantenedores de proyectos de código abierto populares pueden optar a Pro sin pagar: la documentación lo dice como posibilidad, no como un alta automática.
 
-En los planes de organización, la misma documentación sí escribe que el autocompletado y las sugerencias de siguiente edición no se cobran en créditos y siguen ilimitados. Business sale a 19 USD por asiento al mes (1.900 créditos por usuario) y Enterprise a 39 USD (3.900). Ese párrafo es de los planes de empresa. No lo copies tal cual al Pro individual.
+El 1 de octubre esta ficha dejaba el «autocompletado ilimitado» solo en los planes de empresa, porque la página individual no lo cerraba. El 21 de octubre sí lo cierra: el autocompletado y las sugerencias de siguiente edición no se cobran en créditos y siguen ilimitados en todos los planes de pago. El tope de 2.000 queda escrito para Free. Los créditos siguen siendo el cupo del chat, de la CLI, del agente en la nube, de Spaces, de Spark y de los agentes de terceros. Los créditos incluidos no pasan de mes: se pierden y el cupo vuelve entero a las 00:00:00 UTC del día 1, no el día en que te suscribiste. Si el panel muestra otro contador, manda el panel.
 
-La frase antigua de esta ficha, «el autocompletado no gasta créditos», encaja con lo que GitHub escribe para los planes de pago de organización. En el individual, lo que la página deja cerrado es el tope de 2.000 completados en Free y el cupo de créditos del chat y del agente. Si tu panel muestra otro contador, manda el panel.
+En un plan de pago, la misma página aplica un 10 % de descuento en el coste del modelo cuando eliges el modelo en automático, en el chat, en la CLI, en la app de Copilot o en el agente en la nube. En Max, ese descuento del modo automático es del 30 % hasta el 28 de octubre de 2026.
+
+Business sale a 19 USD por asiento al mes (1.900 créditos por usuario) y Enterprise a 39 USD (3.900). El uso por encima del fondo de la empresa se cobra a 0,01 USD por crédito. El autocompletado, también ahí, queda fuera de los créditos.
 
 ## Cómo decidir esta semana
 
 1. Empieza por Free si tu cuenta no tiene un asiento de empresa. Gasta los 2.000 completados en el lenguaje en el que trabajas de verdad.
-2. Pro, a 10 USD, cuando el corte del gratuito te para y quieres elegir modelo. Mira los 1.500 créditos en el panel, no en un resumen de terceros.
-3. Pro+ o Max cuando ese cupo se acaba en la primera quincena. Subir de precio no revisa el código por ti: la regla de no aceptar lo que no entiendes sigue en la sección de más arriba.
-4. Si estudias con verificación, mira Copilot Student antes de pagar. Si das clase o mantienes un proyecto popular, mira la elegibilidad de Pro gratuito en la misma documentación.
+2. Pro, a 10 USD, cuando el corte del gratuito te para y quieres elegir modelo. Lo que se acaba en Pro son los 1.500 créditos del chat y del agente, no el tabulador. Míralos en el panel, no en un resumen de terceros.
+3. Pro+ o Max cuando ese cupo se acaba en la primera quincena. Subir de precio no revisa el código por ti: la regla de no aceptar lo que no entiendes sigue en la sección de más arriba. El 30 % de Max en el modo automático caduca el 28 de octubre de 2026.
+4. Si estudias con verificación, mira Copilot Student antes de pagar: el autocompletado, en la página de facturación, no tiene el tope de 2.000. Si das clase o mantienes un proyecto popular, mira la elegibilidad de Pro gratuito en la misma documentación.
 
 Las guías de [VS Code desde cero](/guias/copilot-vscode-desde-cero) y de [tests](/guias/copilot-tests-desde-cero) siguen siendo el cómo. Esta sección es solo la tarifa.
