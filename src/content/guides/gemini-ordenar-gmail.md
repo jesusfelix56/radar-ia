@@ -16,10 +16,10 @@ amazonPicks:
     price: 32
 featured: false
 pubDate: 2026-08-17
-updatedDate: 2026-10-01
+updatedDate: 2026-10-28
 ---
 
-Vaciar una bandeja no es pedirle a un modelo que «resuma 2024». Es buscar por remitente, decidir qué exige una acción y archivar el resto a mano. Gemini puede ayudarte a leer un hilo. No es un motivo universal para pagar la suscripción: la [ficha](/herramientas/gemini) separa qué plan asocia la página de Google a Gmail y a Docs, con la lectura del 1 de octubre de 2026. Si el panel no aparece, la cuenta no lo tiene o el administrador lo ha quitado. No hay un truco.
+Vaciar una bandeja no es pedirle a un modelo que «resuma 2024». Es buscar por remitente, decidir qué exige una acción y archivar el resto a mano. Gemini puede ayudarte a leer un hilo. No es un motivo universal para pagar la suscripción: la [ficha](/herramientas/gemini) separa qué plan asocia la página de Google a Gmail y a Docs, con la lectura del 28 de octubre de 2026. Si el panel no aparece, la cuenta no lo tiene o el administrador lo ha quitado. No hay un truco.
 
 Una versión anterior decía que cinco búsquedas cubren el 80 % del ruido. Ese porcentaje no sale de un recuento. Cinco remitentes bien elegidos suelen vaciar más que un resumen de toda la bandeja. Cuántos, lo ves tú en la búsqueda.
 

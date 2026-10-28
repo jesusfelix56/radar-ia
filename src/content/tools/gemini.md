@@ -14,7 +14,7 @@ pricing:
   from: 4.99
   currency: EUR
   period: mes
-  note: En España, Google AI Plus sale a 4,99 € al mes (400 GB y el doble de uso). Google AI Pro, con Gemini en Gmail y Docs y 5 TB, son 21,99 € al mes.
+  note: Tabla de Google One España leída el 28 de octubre de 2026. Plus, 4,99 € al mes (la celda de almacenamiento dice «400 GB or 2 TB»). Pro, 21,99 € y 5 TB. Ultra 5x, 99,99 € y 20 TB. Ultra 20x, 219,99 € y 30 TB.
 website: https://gemini.google.com
 pros:
   - Accede a tu Gmail, Drive y Docs sin copiar y pegar nada
@@ -38,7 +38,7 @@ amazonPicks:
 accent: brand
 featured: true
 pubDate: 2026-05-11
-updatedDate: 2026-10-14
+updatedDate: 2026-10-28
 ---
 
 ## Qué es Gemini hoy (y qué no)
@@ -75,8 +75,8 @@ Fuera de Google, la ventaja se desinfla. Si tu equipo vive en Notion, Microsoft 
 
 El plan gratuito cubre uso diario ligero. El de pago ya no se llama Google One AI Premium. En España hay dos escalones públicos:
 
-- **Google AI Plus**, 4,99 € al mes: 400 GB y el doble de uso que el gratuito. Sirve si ya vives en Gmail y Drive y no necesitas el tope.
-- **Google AI Pro**, 21,99 € al mes: 5 TB, cuatro veces más uso y Gemini dentro de Gmail y Docs. Este es el que compensa si el trabajo vive en Workspace.
+- **Google AI Plus**, 4,99 € al mes: el doble de uso que el gratuito. La página de suscripciones de Gemini habla de 400 GB; la tabla de Google One España, el 28 de octubre de 2026, escribe «400 GB or 2 TB» en esa celda. Sirve si ya vives en Gmail y Drive y no necesitas el tope. No incluye la traducción de voz de Meet: el anuncio del 22 de octubre no lo pone en la lista.
+- **Google AI Pro**, 21,99 € al mes: 5 TB, cuatro veces más uso y Gemini dentro de Gmail y Docs. Este es el que compensa si el trabajo vive en Workspace. También es el plan de consumo con el que la ayuda de Meet asocia 90 minutos de traducción de voz por reunión.
 
 Si solo quieres un chat suelto, ChatGPT Plus o Claude Pro siguen rindiendo más. El nombre y el almacenamiento cambian seguido: confirma el total en el checkout antes de contratar.
 
@@ -88,16 +88,18 @@ Si solo quieres un chat suelto, ChatGPT Plus o Claude Pro siguen rindiendo más.
 
 ## Lo que muestra la página española de suscripciones
 
-La prueba de seis semanas no se ha repetido. El 14 de octubre de 2026 leímos [gemini.google/es/subscriptions](https://gemini.google/es/subscriptions/?hl=es). Los importes de 4,99 € (Plus) y 21,99 € (Pro) que hay más arriba son los de la ficha del 22 de septiembre. En el texto de la página que pudimos leer, Plus y Pro no traían el precio en euros a la vista. Ultra sí: 99,99 € al mes (límites cinco veces por encima de Pro) y 219,99 € al mes (veinte veces). El checkout manda para Plus y Pro. No reescribimos esas dos cifras como si las hubiéramos visto de nuevo.
+La prueba de seis semanas no se ha repetido. El 28 de octubre de 2026 leímos otra vez [gemini.google/es/subscriptions](https://gemini.google/es/subscriptions/?hl=es) y la [tabla de planes de Google One en España](https://one.google.com/intl/es_es/about/). En el texto de suscripciones, Plus y Pro seguían sin el precio en euros a la vista. Ultra sí: 99,99 € al mes y 219,99 € al mes. La tabla de Google One sí pone las cuatro cifras: Plus 4,99 €, Pro 21,99 €, Ultra 5x 99,99 € (20 TB) y Ultra 20x 219,99 € (30 TB). El almacenamiento de Plus, en esa celda, dice «400 GB or 2 TB»; la página de suscripciones sigue hablando de 400 GB. El checkout de tu cuenta manda si las dos pantallas no coinciden.
+
+Esa página de suscripciones lista ahora Gemini Notebook en el gratuito, en Plus, en Pro y en Ultra, con más resúmenes de audio según el plan. No lo hemos usado.
 
 Lo que esa página sí describe, y sirve para elegir:
 
 | Plan, según la página | Almacenamiento | Uso en la app Gemini | Dónde mete Gemini |
 | --- | --- | --- | --- |
 | Sin coste | 15 GB | «Access to our Flash-Lite model». Ya no cita 3.6 Flash ni un acceso variable a 3.1 Pro. | La app. La página no lo lista dentro de Docs. |
-| Google AI Plus | 400 GB | «Access to our Flash model». El doble que el gratuito, y generación de vídeo. | Gmail, Vids y más. 200 puntos de Google Flow. |
+| Google AI Plus | 400 GB en la página de suscripciones. La tabla de Google One dice «400 GB or 2 TB». | «Access to our Flash model». El doble que el gratuito, y generación de vídeo. | Gmail, Vids y más. 200 puntos de Google Flow. |
 | Google AI Pro | 5 TB | «Acceso a Gemini 4 Argon», «Access to our Pro model» y «Access to our Flash model». El cuádruple que el gratuito. | Gmail, Docs, Vids y otros. 1.000 puntos de Flow, YouTube Premium Lite, Google Home Premium Standard y límites iniciales en Google Antigravity. |
-| Google AI Ultra | 20 TB o más, en el relato de la página | Hasta 20 veces el plan Pro, según el escalón. También «Acceso a Gemini 4 Argon». | Lo de Pro, más funciones que la página limita por país. |
+| Google AI Ultra | 20 TB en el escalón de 99,99 € y 30 TB en el de 219,99 €, según la tabla de Google One. La página de suscripciones dice «a partir de 20 TB». | Hasta 20 veces el plan Pro, según el escalón. También «Acceso a Gemini 4 Argon». | Lo de Pro, más funciones que la página limita por país. En Flow, el texto de suscripciones habla de 10.000 o 25.000 puntos. |
 
 El 13 de octubre de 2026 [Google](https://blog.google/innovation-and-ai/products/gemini-app/gemini-4-argon-availability/) abrió Gemini 4 Argon en la app para suscriptores de Google AI Pro y Ultra, con despliegue gradual; Plus y el gratuito se quedan fuera por ahora. Google dice que Argon responde más directo, con menos rodeos y sin repetirse: es su texto, no una prueba nuestra. [9to5Google](https://9to5google.com/2026/10/13/gemini-app-4-argon/) escribe que en Pro y Ultra el selector muestra 3.5 Flash-Lite, 3.8 Flash, 3.1 Pro y 4 Argon, y que hay un interruptor nuevo de chat a «tareas».
 
@@ -107,10 +109,18 @@ Al describir Pro, la página habla de una ventana de contexto de 1 millón de to
 
 La ayuda de Gmail documenta, aparte, una visión general del hilo que pide tener activas las funciones inteligentes. No la mezcles con el panel de pago: son superficies distintas, y el plan que la página de suscripciones asocia a Gemini dentro de Docs es Pro.
 
+## Traducción de voz en Meet
+
+El 22 de octubre de 2026 [Google anunció](https://workspaceupdates.googleblog.com/2026/10/real-time-speech-translation-in-google-Meet-expands-to-63-languages-with-automatic-language-detection.html) que la traducción de voz de Meet pasa a 63 idiomas, en la web y en Android e iOS, con detección automática y el control en cada participante. Lo atribuyen a un modelo que llaman Gemini 3.5 Live Translate. No hemos entrado en una reunión para oírlo.
+
+El 28 de octubre, la [ayuda en inglés](https://support.google.com/meet/answer/16221730?hl=en) describe ese menú y lista el castellano, el catalán, el gallego y el euskera. El portugués va marcado como brasileño; el español no se parte en variantes. La [ayuda en español](https://support.google.com/meet/answer/16221730?hl=es), el mismo día, sigue en el sistema anterior: un solo par de idiomas por reunión, entre el inglés y seis lenguas, y lo enciende quien organiza. Si tu botón dice «Habilitar traducción para todos», manda esa pantalla, no el anuncio.
+
+El anuncio reparte el despliegue. Lanzamiento rápido desde el 22 de octubre. Lanzamiento programado desde el 2 de noviembre, hasta 15 días. En consumo, la ayuda en inglés asocia 90 minutos por reunión a Google AI Pro y 8 horas a Google AI Ultra. Plus no sale en esa lista ni en la del anuncio. Tampoco está en emisiones en directo ni en la grabación. En una sala con hardware de Meet se oye a quien está fuera, pero lo que se dice en la sala no se traduce. Hay unos segundos de retraso. Google dice que no guarda el audio ni entrena modelos con la voz: es su frase.
+
 ## Cómo decidir con esta lectura
 
 1. Si el trabajo cabe en la app y en 15 GB, quédate en el gratuito y anota cuántas veces te corta la ventana de cinco horas.
-2. Plus, con 400 GB y el doble de uso, es el escalón en el que la página mete Gemini en Gmail. Confirma el euro en el checkout. La cifra de septiembre puede haber cambiado.
+2. Plus, con el doble de uso, es el escalón en el que la página de suscripciones mete Gemini en Gmail. El 28 de octubre la tabla de Google One España lo marca a 4,99 €. No cuenta para la traducción de voz de Meet.
 3. Pro es el plan con Argon si no vas a Ultra: la página lo asocia a Docs, a 5 TB y al cuádruple de uso. Tiene sentido si el día pasa dentro de documentos de Google, que es el caso de la prueba antigua.
 4. Ultra, a 99,99 € o 219,99 €, solo si Pro ya se queda corto. No es un plan para «tener el modelo grande por si acaso».
 5. Antes de pegar un correo de cliente en otro chat, mira [qué no subir](/guias/que-no-subir-a-un-chat). Si el material ya está en Gmail, trabajar dentro de la cuenta evita una copia de más.

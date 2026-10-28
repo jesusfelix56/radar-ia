@@ -12,9 +12,9 @@ scores:
 pricing:
   hasFreePlan: true
   from: 6
-  currency: EUR
+  currency: USD
   period: mes
-  note: Precios leídos el 1 de octubre de 2026. El gratuito da 10.000 créditos al mes, sin acumulación. Starter son 6 USD y 30.000 créditos. En la interfaz, la FAQ cifra el texto a voz en torno a 1 crédito por carácter.
+  note: Precios releídos el 28 de octubre de 2026, en USD. El gratuito da 10.000 créditos al mes, sin acumulación. Starter son 6 USD y 30.000 créditos (la página marca el primer mes a 1 USD hasta el 1 de noviembre). La FAQ sigue en torno a 1 crédito por carácter en V2 Multilingual.
 website: https://elevenlabs.io
 pros:
   - Las voces en castellano tienen entonación y pausas convincentes
@@ -42,7 +42,7 @@ amazonPicks:
 accent: amber
 featured: false
 pubDate: 2026-06-03
-updatedDate: 2026-10-14
+updatedDate: 2026-10-28
 ---
 
 ## La calidad en español, en concreto
@@ -63,18 +63,22 @@ Con un minuto de audio limpio consigue un clon reconocible; con diez minutos, un
 
 ## La factura: el punto que nadie te cuenta
 
-El precio se calcula por caracteres, no por minutos, y ahí es donde la gente se lleva sorpresas. La prueba con oyentes de más arriba no se ha repetido en octubre. La tarifa, sí: sale de [elevenlabs.io/pricing](https://elevenlabs.io/pricing), leída el 1 de octubre de 2026.
+El precio se calcula por caracteres, no por minutos, y ahí es donde la gente se lleva sorpresas. La prueba con oyentes de más arriba no se ha repetido. La tarifa sale de [elevenlabs.io/pricing](https://elevenlabs.io/pricing), releída el 28 de octubre de 2026. Los importes de lista no se han movido desde la lectura del 1 de octubre, y son dólares, no euros.
 
 | Plan | Precio mensual publicado | Créditos al mes |
 | --- | --- | --- |
 | Free | 0 USD | 10.000. No se acumulan. |
-| Starter | 6 USD (el anual equivale a 5 USD al mes: se pagan 10 meses) | 30.000 |
+| Starter | 6 USD de lista. Primer mes a 1 USD hasta el 1 de noviembre. El anual equivale a 5 USD al mes. | 30.000 |
 | Creator | 22 USD, 11 USD el primer mes | 121.000 |
 | Pro | 99 USD | 600.000 |
 
 La FAQ de esa página dice que, en los planes de pago, los créditos no usados pueden pasar hasta dos meses (el saldo puede llegar a tres veces la cuota mensual) si no bajas de plan ni cancelas. El anual equivale a dos meses de regalo en el cálculo que publican ellos.
 
-Sobre el coste por carácter, la misma FAQ responde que en los modelos V2 Multilingual un carácter de texto equivale a un crédito, y resume el texto a voz en torno a 1 crédito por carácter. La [ayuda de modelos](https://help.elevenlabs.io/hc/en-us/articles/17883183930129-What-models-do-you-offer-and-what-is-the-difference-between-them) repite ese 1 a 1 en la interfaz para Multilingual v2, e incluye el español entre los idiomas de ese modelo. No convertimos 10.000 créditos en «unos 10 minutos»: si el modelo cobra un crédito por carácter, son unos 10.000 caracteres. Los minutos dependen de cómo esté escrito el guion.
+Sobre el coste por carácter, la misma FAQ responde que en los modelos V2 Multilingual un carácter de texto equivale a un crédito, y resume el texto a voz en torno a 1 crédito por carácter. La [ayuda de modelos](https://help.elevenlabs.io/hc/en-us/articles/17883183930129-What-models-do-you-offer-and-what-is-the-difference-between-them) repite ese 1 a 1 en la interfaz para Multilingual v2, e incluye el español entre los idiomas de ese modelo. Si el modelo cobra un crédito por carácter, 10.000 créditos son unos 10.000 caracteres. Los minutos de tu guion dependen de cómo esté escrito.
+
+La tabla comparativa de esa misma página, el 28 de octubre, ya pone una fila «Minutes included» junto a los planes. Leyendo las celdas en el orden Free, Starter, Creator, Pro, Scale y Business, salen unos 10, 30, 121, 600, 1.800 y 6.000 minutos. Es la equivalencia que publican ellos, no un cronómetro nuestro. El primer mes a 1 USD del Starter es un recuadro con fecha de caducidad: si el 1 de noviembre ya no está, el precio es el de la FAQ, 6 USD.
+
+El 20 de octubre de 2026 [ElevenLabs presentó Eleven Realtime](https://elevenlabs.io/blog/realtime): dos modelos de voz a voz, v1 Mini y v1 Max, para montar un agente que escucha y responde. Al día siguiente anunciaron [Realtime Translation](https://elevenlabs.io/blog/realtime-translation), en alfa y solo para clientes enterprise de la API. No entra en la prueba de locución de esta ficha, y no lo hemos probado.
 
 El 28 de septiembre de 2026 [ElevenLabs anunció Eleven v4 y Eleven v4 Turbo](https://elevenlabs.io/es/blog/eleven-v4), con más de 90 idiomas y la invitación «Crea una cuenta gratis para empezar a generar con Eleven v4»; la escucha de esta ficha es anterior a v4 y no se ha repetido.
 

@@ -16,7 +16,7 @@ amazonPicks:
     price: 45
 featured: false
 pubDate: 2026-08-22
-updatedDate: 2026-10-01
+updatedDate: 2026-10-28
 ---
 
 Gemini en Documentos resume el texto que tiene delante. Si la transcripción mezcla voces y no hay decisiones, el resumen también. El trabajo está en el audio, en los nombres y en no dejar que el acta se vuelva un párrafo amable. Esto es redacción para una reunión interna de tres cuartos de hora. No es un dictamen sobre si puedes grabar.
@@ -25,7 +25,9 @@ Gemini en Documentos resume el texto que tiene delante. Si la transcripción mez
 
 Graba solo si quienes están en la sala saben que se graba y, en una empresa, si la política interna lo permite. En una entrevista o con un cliente, se pregunta. Sin eso, no hay prompt que valga. No hemos citado un artículo concreto del Código Penal ni de la ley de protección de datos para este caso: si la reunión es sensible, pregunta dentro de la empresa. Qué no pegar después en un chat personal está en [qué no subir a un chat](/guias/que-no-subir-a-un-chat).
 
-Un solo micro en el centro de la mesa. El portátil a cuatro metros graba el ventilador. Si Meet te ofrece transcripción, descárgala. A veces ya trae el nombre de quien habla; si no, lo marcas tú. No describimos aquí el menú exacto de Meet: no lo hemos vuelto a recorrer el 1 de octubre de 2026.
+Un solo micro en el centro de la mesa. El portátil a cuatro metros graba el ventilador. Si Meet te ofrece transcripción, descárgala. A veces ya trae el nombre de quien habla; si no, lo marcas tú. No describimos aquí el menú de la transcripción.
+
+La traducción de voz en directo no es esa transcripción. El 22 de octubre de 2026 [Google anunció](https://workspaceupdates.googleblog.com/2026/10/real-time-speech-translation-in-google-Meet-expands-to-63-languages-with-automatic-language-detection.html) el paso a 63 idiomas. El 28 de octubre la [ayuda en español](https://support.google.com/meet/answer/16221730?hl=es) seguía explicando el sistema de un solo par de idiomas, y la [ayuda en inglés](https://support.google.com/meet/answer/16221730?hl=en) ya el menú nuevo. El resumen está en la [ficha de Gemini](/herramientas/gemini). No mezcles las dos ayudas para sacar el acta.
 
 ## Del audio al texto con nombres
 
@@ -33,7 +35,7 @@ Si el texto no dice quién habla, el acta no puede tener responsables. Marca a m
 
 La ayuda de [Gemini en Documentos de Google](https://support.google.com/docs/answer/14206696?hl=es), leída el 1 de octubre de 2026, dice que el panel se abre con «Pregunta a Gemini», arriba a la derecha, y que hace falta un plan apto de Workspace o de IA de Google, o el programa de experimentos en cuentas personales. Al abrir un documento con texto puedes ver un resumen en el panel. Para resumir un trozo, se selecciona y se pide el resumen de esa selección. El historial del panel se pierde al actualizar, al cerrar el documento o si te quedas sin conexión. Si quieres conservar la respuesta, insértala en el documento.
 
-Qué plan asocia la página española de suscripciones a Docs o a Gmail está en la [ficha de Gemini](/herramientas/gemini), con la lectura del 1 de octubre y el aviso de que Plus y Pro no mostraron el precio en euros ese día. No lo reescribimos aquí.
+Qué plan asocia la página española de suscripciones a Docs o a Gmail está en la [ficha de Gemini](/herramientas/gemini), con la lectura del 28 de octubre de 2026. No lo reescribimos aquí.
 
 Pega la transcripción en un documento y selecciona solo esa transcripción, no notas viejas de otra reunión.
 

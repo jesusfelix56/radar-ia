@@ -12,9 +12,9 @@ scores:
 pricing:
   hasFreePlan: false
   from: 29
-  currency: EUR
+  currency: USD
   period: mes
-  note: Página de precios del 1 de octubre de 2026. Chat son 29 USD al mes (24 USD al mes en el anual) y hasta 5 asientos. Growth son 1.000 USD al mes, facturados al año, con 20.000 créditos de flujo. En esa tabla no había plan gratuito.
+  note: Página de precios releída el 28 de octubre de 2026. Chat son 29 USD al mes (24 USD al mes en el anual) y hasta 5 asientos. Growth son 1.000 USD al mes, facturados al año, con 20.000 créditos de flujo. En esa tabla no había plan gratuito.
 website: https://www.copy.ai
 pros:
   - Flujos ya montados para anuncios, fichas de Amazon y secuencias de email
@@ -38,7 +38,7 @@ amazonPicks:
 accent: amber
 featured: true
 pubDate: 2026-08-10
-updatedDate: 2026-10-01
+updatedDate: 2026-10-28
 ---
 
 ## Qué es Copy.ai (y qué no es)
@@ -71,7 +71,7 @@ En textos largos (landing de más de 600 palabras, artículos) Claude gana por g
 
 ## Precio: cuándo compensa
 
-En [copy.ai/prices](https://www.copy.ai/prices), leída el 1 de octubre de 2026, el plan Chat son 29 USD al mes, o 24 USD al mes si pagas el año (288 USD). Incluye 5 asientos, palabras de chat sin límite según la tarjeta, proyectos de chat y acceso a modelos de OpenAI, Anthropic y Gemini. En esa tabla no aparecía un plan gratuito. Si el alta te ofrece uno, el cupo es el de la pantalla de registro, no el de esta ficha.
+En [copy.ai/prices](https://www.copy.ai/prices), releída el 28 de octubre de 2026, el plan Chat sigue en 29 USD al mes, o 24 USD al mes si pagas el año (288 USD). Incluye 5 asientos, palabras de chat sin límite según la tarjeta, proyectos de chat y acceso a modelos de OpenAI, Anthropic y Gemini. En esa tabla no aparecía un plan gratuito. Si el alta te ofrece uno, el cupo es el de la pantalla de registro, no el de esta ficha. El importe de esa página es en dólares, no en euros.
 
 Los flujos encadenados están en otro escalón. Growth sale a 1.000 USD al mes, facturado al año (12.000 USD), con 75 asientos y 20.000 créditos de flujo al mes. Expansion son 2.000 USD al mes (24.000 USD al año), 150 asientos y 45.000 créditos. Scale son 3.000 USD al mes (36.000 USD al año), 200 asientos y 75.000 créditos. Enterprise no publica precio en esa página.
 

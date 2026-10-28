@@ -16,7 +16,7 @@ amazonPicks:
     price: 109
 featured: true
 pubDate: 2026-08-18
-updatedDate: 2026-10-01
+updatedDate: 2026-10-28
 ---
 
 ElevenLabs locuta un texto. Un episodio es el guion, los cortes y no usar una voz que no puedes usar. Doce minutos es un ejemplo de duración, no una prueba. La escucha con oyentes de la [ficha](/herramientas/elevenlabs) es antigua y allí se dice que no se ha repetido en octubre.
@@ -56,6 +56,6 @@ Esta guía normalizaba a −16 LUFS. No es una cifra que hayamos medido, ni la d
 
 ## El cupo
 
-No conviertas el episodio en minutos de tarifa. La ficha, con la página de precios leída el 1 de octubre de 2026, cuenta créditos y, para Multilingual v2, un carácter por crédito, con el español entre los idiomas de ese modelo. Cuenta los caracteres del guion y compáralos con 10.000 del gratuito o con 30.000 del Starter, que son las cifras de esa lectura. Un semanario puede no caber en el gratuito. Lo ves en el contador. El uso comercial, en la documentación que enlaza la ficha, pide un plan de pago.
+No conviertas el episodio en minutos de tarifa. La ficha, con la página de precios releída el 28 de octubre de 2026, cuenta créditos y, para Multilingual v2, un carácter por crédito, con el español entre los idiomas de ese modelo. Cuenta los caracteres del guion y compáralos con 10.000 del gratuito o con 30.000 del Starter. La tabla de precios ya resume minutos (unos 10 en el gratuito): es la equivalencia de ellos. Un semanario puede no caber en el gratuito. Lo ves en el contador. El uso comercial, en la documentación que enlaza la ficha, pide un plan de pago.
 
 [Ficha de ElevenLabs](/herramientas/elevenlabs).

@@ -16,7 +16,7 @@ amazonPicks:
     price: 22
 featured: true
 pubDate: 2026-08-18
-updatedDate: 2026-10-01
+updatedDate: 2026-10-28
 ---
 
 Copy.ai está pensado para sacar variantes. También arrastra el inglés de los anuncios: «descubre el poder de» cabe en una ficha de menaje y en una de tornillos. Esta página es el filtro de redacción. La [ficha de Copy.ai](/herramientas/copy-ai) guarda una prueba antigua de fichas de Amazon, de unas cuatro semanas, y dice que no se ha rehecho. No añadimos minutos ni un porcentaje de edición.
@@ -60,4 +60,4 @@ Cruza cada número con el manual o con la etiqueta. Pasa el texto por Claude sol
 
 Las fotos no salen de este flujo. La principal tiene que ser del objeto real: [fotos de producto](/guias/midjourney-fotos-producto).
 
-El plan de chat y los flujos encadenados no cuestan lo mismo. La ficha lo deja con la página de precios leída el 1 de octubre de 2026, y avisa de que en esa tabla no había un plan gratuito. Si el botón que buscas es un workflow de varios pasos, mira allí antes de dar por hecho que está incluido.
+El plan de chat y los flujos encadenados no cuestan lo mismo. La ficha lo deja con la página de precios releída el 28 de octubre de 2026, y avisa de que en esa tabla no había un plan gratuito. Si el botón que buscas es un workflow de varios pasos, mira allí antes de dar por hecho que está incluido.

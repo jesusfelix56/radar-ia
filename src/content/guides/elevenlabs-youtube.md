@@ -16,7 +16,7 @@ amazonPicks:
     price: 55
 featured: false
 pubDate: 2026-08-23
-updatedDate: 2026-10-01
+updatedDate: 2026-10-28
 ---
 
 YouTube perdona mal una voz que se aplana a los diez minutos. ElevenLabs no locuta «un vídeo»: locuta el texto que le pegas, y lo cobra por caracteres. Esta guía corta el guion para que puedas repetir un trozo sin regenerar el resto. No es una prueba de oyentes. El 65 % de la [ficha](/herramientas/elevenlabs) es de una escucha antigua, y la ficha dice que no se ha repetido.
@@ -43,7 +43,7 @@ Nombra `01-apertura.wav`, `02-paso.wav`. WAV si el editor te lo ofrece; si solo 
 
 ## Caracteres, no minutos
 
-La ficha, con [elevenlabs.io/pricing](https://elevenlabs.io/pricing) leída el 1 de octubre de 2026, no convierte créditos en minutos. En la ayuda de modelos que enlaza, Multilingual v2 cuenta un carácter como un crédito e incluye el español. Diez mil créditos del plan gratuito son unos diez mil caracteres de ese modelo, no «unos diez minutos». El minuto depende de cómo esté escrito el guion y de la velocidad.
+La ficha, con [elevenlabs.io/pricing](https://elevenlabs.io/pricing) releída el 28 de octubre de 2026, sigue contando créditos. En la ayuda de modelos que enlaza, Multilingual v2 cuenta un carácter como un crédito e incluye el español. Diez mil créditos del plan gratuito son unos diez mil caracteres de ese modelo. La tabla de precios ya resume unos diez minutos en el gratuito: es la equivalencia de ellos, no la de esta guía. El minuto de tu guion depende de cómo esté escrito y de la velocidad.
 
 Pega el guion en un editor, mira el recuento y compáralo con el cupo de tu plan. Un vídeo a la semana puede no caber en el gratuito; eso se ve en el contador, no en una regla de «diez minutos piden el plan de pago». La [documentación de texto a voz](https://elevenlabs.io/docs/overview/capabilities/text-to-speech) que cita la ficha dice que el uso comercial pide un plan de pago. Si el vídeo es el negocio, léelo allí antes de publicar.
 
