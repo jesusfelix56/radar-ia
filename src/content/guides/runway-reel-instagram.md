@@ -16,7 +16,7 @@ amazonPicks:
     price: 18
 featured: false
 pubDate: 2026-08-20
-updatedDate: 2026-10-01
+updatedDate: 2026-11-04
 ---
 
 Quince segundos es una decisión de esta guía: un producto, una acción, un comercio pequeño. No es el tope de Instagram y no es un reel que hayamos publicado para medirlo. La ayuda [«Record a reel on Instagram»](https://help.instagram.com/2720958398006062/), leída el 1 de octubre de 2026, dice que puedes grabar y editar vídeos de hasta 20 minutos, sumando clips, y avisa de que los reels de más de 3 minutos no se recomiendan a audiencias nuevas. Cabe un anuncio largo. No por eso conviene pedirle a Runway un plano de un cuarto de minuto.
@@ -57,15 +57,23 @@ Baja la música hasta que se entienda la voz, si la hay. No fijamos un LUFS. El 
 
 ## Créditos, con la tabla de ellos
 
-La ayuda [«How do credits work?»](https://help.runwayml.com/hc/en-us/articles/15124877443219-How-do-credits-work), leída el 1 de octubre de 2026, dice que el plan gratuito deposita 125 créditos una sola vez y que no caducan. Standard da 625 al mes, y caducan en la fecha de facturación. Pro figura en esa tabla con 2.250. Gen-4.5, en el ejemplo de la misma página, gasta 12 créditos por segundo: 60 en un clip de 5 segundos, o 120 en uno de 10.
+La ayuda [«How do credits work?»](https://help.runwayml.com/hc/en-us/articles/15124877443219-How-do-credits-work), releída el 4 de noviembre de 2026, dice que el plan gratuito deposita 125 créditos una sola vez y que no caducan. Standard da 625 al mes, y caducan en la fecha de facturación. Pro figura en esa tabla con 2.250. Gen-4.5, en el ejemplo de la misma página, gasta 12 créditos por segundo: 60 en un clip de 5 segundos, o 120 en uno de 10.
 
-La cuenta, con esas cifras y sin haber generado nada nosotros hoy:
+La cuenta de Gen-4.5, con esas cifras y sin haber generado nada nosotros:
 
-- Un clip de 5 segundos en Gen-4.5 son 60 créditos.
+- Un clip de 5 segundos son 60 créditos.
 - Tres planos, una toma cada uno, son 180.
 - Tres tomas de cada plano, nueve generaciones, son 540. Eso es casi el mes de Standard (625), y no incluye el clip que descartes después.
 - En el gratuito, 125 créditos dan para dos clips de 5 segundos (120) y sobran 5. Un clip de 10 segundos son 120.
 
-Si en tu cuenta el modelo no es Gen-4.5, la tabla de [runway.com/pricing](https://runway.com/pricing) manda, no esta multiplicación. Los dólares del plan están en la ficha, con esa página de precios leída el mismo 1 de octubre. No los repetimos. Los créditos comprados, según la ayuda, empiezan en 1.000 y no están en el plan gratuito.
+Esa multiplicación es solo Gen-4.5. En [runway.com/pricing](https://runway.com/pricing), leída el mismo 4 de noviembre, Kling 4.0 a 1080p figura a 118 créditos por 5 segundos, y a 89 con el aviso de un 25 % de descuento en generaciones de Kling 4.0 hasta el 30 de noviembre. Seedance 2.0 Pro a 1080p no va en clips de 5 segundos: la celda dice 160 créditos por 4 segundos.
+
+Con las cifras de Kling 4.0 a 1080p, también sin haber generado nada:
+
+- Un clip de 5 segundos son 118 créditos de lista, o 89 mientras la tabla publique ese descuento.
+- Tres planos, una toma cada uno, son 354 de lista o 267 con el descuento.
+- Nueve generaciones son 1.062 de lista o 801 con el descuento. Las dos pasan de los 625 de Standard.
+
+El plan gratuito, en esa página de precios, habla de una selección de modelos para probar, no de todos. No des por hecho que Kling o Seedance caben en los 125 créditos. Si el selector abre otro modelo, para y mira la tabla antes del primer clic. Los dólares del plan, y el desacuerdo entre la página de precios y la ayuda sobre si Standard incluye todos los modelos, están en la [ficha](/herramientas/runway), con la lectura del 4 de noviembre. Los créditos comprados, según la ayuda, empiezan en 1.000 y no están en el plan gratuito.
 
 Cierra el briefing antes de la primera generación. Explorar «a ver qué sale» es la forma de gastar los 125 en un paisaje que no es tu producto. La prueba antigua de la ficha ya avisaba de presuponer varios intentos por plano. El tres o cuatro que sale allí es de aquel encargo, no una regla nueva.
