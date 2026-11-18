@@ -17,7 +17,7 @@ amazonPicks:
     price: 35
 featured: true
 pubDate: 2026-06-18
-updatedDate: 2026-10-14
+updatedDate: 2026-11-18
 ---
 
 Las comparativas de asistentes suelen ser la lista de características de cada web, traducida. Aquí va lo que cambia el trabajo: el texto que vas a publicar, la hoja, el documento largo y la factura.
@@ -57,7 +57,9 @@ Las suscripciones individuales cuestan casi lo mismo. Las dos tienen plan gratui
 
 Si solo vas a pagar una, el precio no debería ser el criterio. Lo que decide es en qué se te van las horas.
 
-El mapa de modelos de ChatGPT cambió el 7 de octubre de 2026, y esta comparativa no añade una prueba propia de esa familia. En el chat, el blog de OpenAI pone GPT-6 Sol en los planes de pago y GPT-6 Luna en Free y Go; la ayuda habla de GPT-5.6 Luna en Free y Go. GPT-6 Pro, con Astra, queda en Pro, Business y Enterprise, y GPT-6.1 Sol sigue solo en Work y Codex. El detalle, con fuentes, está en el [análisis de ChatGPT](/herramientas/chatgpt).
+El mapa de modelos de ChatGPT cambió el 7 de octubre de 2026, y esta comparativa no añade una prueba propia de esa familia. En el chat, el blog de OpenAI pone GPT-6 Sol en los planes de pago y GPT-6 Luna en Free y Go; la ayuda habla de GPT-5.6 Luna en Free y Go. GPT-6 Pro, con Astra, queda en Pro, Business y Enterprise, y GPT-6.1 Sol sigue solo en Work y Codex. El detalle de esa familia, con fuentes, está en el [análisis de ChatGPT](/herramientas/chatgpt).
+
+El [changelog de la API](https://developers.openai.com/api/docs/changelog) anota el 17 de noviembre de 2026 la entrada de `gpt-6.2-astra` y `gpt-6.2-sol`. El [anuncio](https://openai.com/index/introducing-gpt-6-2-astra-sol), leído el 18 de noviembre, los coloca en ChatGPT Work y en Codex para Plus, Pro, Enterprise y Edu, y en la API. La [ayuda de Work y Codex](https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex), leída el mismo día, dice que el despliegue no los añade al Chat normal, que también puede llegar a Business y a los espacios de Healthcare y FedRAMP, y que si no salen en el selector es que esa cuenta aún no los tiene. Aquí no se han usado. Las notas de escritura de arriba son de la redacción anterior: este párrafo solo recoge dónde publica OpenAI el modelo.
 
 ## Según a qué te dediques
 
